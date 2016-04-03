@@ -44,17 +44,17 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);
+	__webpack_require__(11);
 	//
-	__webpack_require__(2);
-	__webpack_require__(3);
-	__webpack_require__(4);
-	__webpack_require__(5);
-	__webpack_require__(6);
-	__webpack_require__(7);
-	__webpack_require__(8);
-	__webpack_require__(9);
-	__webpack_require__(10);
+	__webpack_require__(12);
+	__webpack_require__(13);
+	__webpack_require__(14);
+	__webpack_require__(15);
+	__webpack_require__(16);
+	__webpack_require__(17);
+	__webpack_require__(18);
+	__webpack_require__(19);
+	__webpack_require__(20);
 
 
 
@@ -65,7 +65,17 @@
 			
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
 /***/ function(module, exports) {
 
 	angular.module("myComponents", []);
@@ -74,7 +84,7 @@
 
 
 /***/ },
-/* 2 */
+/* 12 */
 /***/ function(module, exports) {
 
 	var myTextField = {
@@ -97,7 +107,7 @@
 
 
 /***/ },
-/* 3 */
+/* 13 */
 /***/ function(module, exports) {
 
 	var myCheckbox = {
@@ -116,7 +126,7 @@
 
 
 /***/ },
-/* 4 */
+/* 14 */
 /***/ function(module, exports) {
 
 	var myDateField = {
@@ -162,7 +172,7 @@
 
 
 /***/ },
-/* 5 */
+/* 15 */
 /***/ function(module, exports) {
 
 	var myDisplayCheckField = {
@@ -183,7 +193,7 @@
 	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
 
 /***/ },
-/* 6 */
+/* 16 */
 /***/ function(module, exports) {
 
 	var myDisplayField = {
@@ -204,7 +214,7 @@
 	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
 
 /***/ },
-/* 7 */
+/* 17 */
 /***/ function(module, exports) {
 
 	var modalButtons = {
@@ -228,7 +238,7 @@
 
 
 /***/ },
-/* 8 */
+/* 18 */
 /***/ function(module, exports) {
 
 	var modalHeader = {
@@ -245,7 +255,7 @@
 
 
 /***/ },
-/* 9 */
+/* 19 */
 /***/ function(module, exports) {
 
 	var mySelectList = {
@@ -272,7 +282,7 @@
 
 
 /***/ },
-/* 10 */
+/* 20 */
 /***/ function(module, exports) {
 
 	var mySpinner= {
