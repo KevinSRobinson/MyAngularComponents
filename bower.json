@@ -1,9 +1,9 @@
 {
   "name": "my-angular-components",
   "authors": [
-    "ormeau@volunteernow.co.uk <ormeau@volunteernow.co.uk>"
+    "Kevin Robinson <ormeau@volunteernow.co.uk>"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "#My Common Angular Components",
   "main": "my-angular-components.js",
   "moduleType": [
@@ -13,13 +13,5 @@
     "angular": ">=1.5.0"
   },
   "license": "MIT",
-  "homepage": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "app/components/",
-    "test",
-    "tests"
-  ]
+  "homepage": "" 
 }
