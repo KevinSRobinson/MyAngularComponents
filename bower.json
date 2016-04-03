@@ -3,6 +3,7 @@
   "authors": [
     "ormeau@volunteernow.co.uk <ormeau@volunteernow.co.uk>"
   ],
+  "version": "0.0.1",
   "description": "#My Common Angular Components",
   "main": "my-angular-components.js",
   "moduleType": [
