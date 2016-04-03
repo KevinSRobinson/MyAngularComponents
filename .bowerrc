@@ -2,9 +2,6 @@
   "directory": "app/components/",
   "analytics": false,
   "timeout": 120000,
-  "registry": {
-    "search": [
-      "https://seamusjunior:Eastwood44@www.myget.org/F/volunteernow/bower/"
-    ]
-  }
+  "registry": "https://seamusjunior:Eastwood44@www.myget.org/F/volunteernow/bower/"   
+  
 }
