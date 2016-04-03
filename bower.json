@@ -1,0 +1,21 @@
+{
+  "name": "myangularcomponents",
+  "authors": [
+    "ormeau@volunteernow.co.uk <ormeau@volunteernow.co.uk>"
+  ],
+  "description": "#My Common Angular Components",
+  "main": "app.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components/",
+    "test",
+    "tests"
+  ]
+}
