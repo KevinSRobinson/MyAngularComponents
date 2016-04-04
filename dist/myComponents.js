@@ -195,11 +195,11 @@
 	        ngModel: '='
 	    },
 	    template: ["<div class='row'>",
-	                    "<div class='col-sm-2'>",
+	                    "<div class='col-sm-8'>",
 	                         "<label class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></label>",
 	                    "</div>",
-	                    "<div class='col-sm-8'>",
-	                         "<i ng-show='$ctrl.ngModel' class='fa fa-check'></i>",
+	                    "<div class='col-sm-2'>",
+	                         "<i ng-show='$ctrl.ngModel' class='fa fa-check fa-3x'></i>",
 	                    "</div>",
 	                 "</div>"].join("")
 	};
