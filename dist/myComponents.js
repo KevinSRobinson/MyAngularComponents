@@ -47,11 +47,18 @@
 	__webpack_require__(1);
 	//
 	__webpack_require__(2);
+
+	__webpack_require__(12);
 	__webpack_require__(3);
+
+
 	__webpack_require__(4);
+
 
 	__webpack_require__(5);
 	__webpack_require__(6);
+
+
 	__webpack_require__(7);
 	__webpack_require__(8);
 	__webpack_require__(9);
@@ -199,7 +206,7 @@
 	                         "<label class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></label>",
 	                    "</div>",
 	                    "<div class='col-sm-2'>",
-	                         "<i ng-show='$ctrl.ngModel' class='fa fa-check fa-3x'></i>",
+	                         "<i ng-show='$ctrl.ngModel' class='fa fa-check fa-2x'></i>",
 	                    "</div>",
 	                 "</div>"].join("")
 	};
@@ -311,6 +318,26 @@
 
 
 
+
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	var myTextareaField = {
+	  bindings: {
+	    fieldLabel: "@",
+	    fieldName: "@",
+	    ngModel: "="
+	  },
+	  template: ["<div class='form-group'>",
+	              " <label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
+	              " <textarea type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel'",
+	            "</div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myTextareaField", myTextareaField);
 
 
 /***/ }
