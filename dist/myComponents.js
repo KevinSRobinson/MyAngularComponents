@@ -101,7 +101,7 @@
 /* 3 */
 /***/ function(module, exports) {
 
-	var myDispalyTextareaField = {
+	var myDisplayTextareaField = {
 	  bindings: {
 	    fieldLabel: "@",
 	    fieldName: "@",
@@ -114,7 +114,7 @@
 	};
 
 
-	angular.module("myComponents").component("myDispalyTextareaField", myDispalyTextareaField);
+	angular.module("myComponents").component("myDisplayTextareaField", myDispalyTextareaField);
 
 
 /***/ },
