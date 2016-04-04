@@ -4,8 +4,8 @@ var myDispalyTextareaField = {
         ngModel: '='
     },
     template: [
-        "ddasdasdasddd<strong>{{$ctrl.fieldLabel}}</strong>",
-        "{{$ctrl}}"].join("")
+        "<strong>{{$ctrl.fieldLabel}}</strong>",
+        "{{$ctrl.ngModel}}"].join("")
 };
 
 
