@@ -4,9 +4,13 @@ var myCheckboxField = {
     fieldLabel: "@",
     icon: "@"
   },
-  template: ["<div class='col-md-12' style='margin-top: 10px'>",
-                  "<checkbox class='btn-success' ng-model='$ctrl.ngModel'></checkbox>",
-                  "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
+  template: ["<div class='row'>",
+                "<div class='col-md-4' style='margin-top: 10px'>",
+                    "<input type='checkbox' ng-model='$ctrl.ngModel'></checkbox>",
+                  "</div>",
+                   "<div class='col-md-8' style='margin-top: 10px'>",
+                    "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
+                "</div>",
              "</div>"].join("")
 };
 
