@@ -1,4 +1,4 @@
-var myCheckbox = {
+var myCheckboxField = {
   bindings: {
     ngModel: "=",
     fieldLabel: "@",
@@ -10,4 +10,4 @@ var myCheckbox = {
              "</div>"].join("")
 };
 
-angular.module("myComponents").component("myCheckbox",myCheckbox);
+angular.module("myComponents").component("myCheckboxField", myCheckboxField);

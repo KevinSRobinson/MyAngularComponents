@@ -50,6 +50,8 @@
 	__webpack_require__(3);
 	__webpack_require__(4);
 	__webpack_require__(5);
+
+	__webpack_require__(12);
 	__webpack_require__(6);
 	__webpack_require__(7);
 	__webpack_require__(8);
@@ -101,16 +103,14 @@
 /* 3 */
 /***/ function(module, exports) {
 
-	var myDisplayTextareaField = {
-	  bindings: {
-	    fieldLabel: "@",
-	    fieldName: "@",
-	    ngModel: "="
-	  },
-	  template: ["<div class='form-group'>",
-	              " <label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
-	              " <textarea type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel'",
-	            "</div>"].join("")
+	var myDispalyTextareaField = {
+	   bindings: {
+	        fieldLabel: '@',
+	        ngModel: '='
+	    },
+	    template: [
+	        "ddasdasdasddd<strong>{{$ctrl.fieldLabel}}</strong>",
+	        "{{$ctrl}}"].join("")
 	};
 
 
@@ -121,7 +121,7 @@
 /* 4 */
 /***/ function(module, exports) {
 
-	var myCheckbox = {
+	var myCheckboxField = {
 	  bindings: {
 	    ngModel: "=",
 	    fieldLabel: "@",
@@ -133,7 +133,7 @@
 	             "</div>"].join("")
 	};
 
-	angular.module("myComponents").component("myCheckbox",myCheckbox);
+	angular.module("myComponents").component("myCheckboxField", myCheckboxField);
 
 
 /***/ },
@@ -308,6 +308,25 @@
 
 
 
+
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	var myCheckboxField = {
+	  bindings: {
+	    ngModel: "=",
+	    fieldLabel: "@",
+	    icon: "@"
+	  },
+	  template: ["<div class='col-md-12' style='margin-top: 10px'>",
+	                  "<checkbox class='btn-success' ng-model='$ctrl.ngModel'></checkbox>",
+	                  "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
+	             "</div>"].join("")
+	};
+
+	angular.module("myComponents").component("myCheckboxField", myCheckboxField);
 
 
 /***/ }

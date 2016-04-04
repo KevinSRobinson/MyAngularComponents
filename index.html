@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="dist/myComponents.js"></script>
+</head>
+
+<body ng-app="myComponents">
+    <h1>asdasdasd</h1>
+    <script>
+        angular.module("myComponents", []).controller("examples", function(){
+            var vm = this;
+            console.log("my");
+            vm.exampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol";
+                 
+        });
+        
+    </script>
+    <div ng-controller="examples as vm">
+        {{vm.exampleText}}
+        <my-display-textarea-field1 ng-model="vm.exampleText" field-label="sdfsdfsdfsdfsdf"></my-display-textarea-field>
+    </div>
+
+</body>
+
+</html>
