@@ -1,4 +1,4 @@
-var myTextareaField = {
+var myDisaplyTextareaField = {
   bindings: {
     fieldLabel: "@",
     fieldName: "@",
@@ -11,4 +11,4 @@ var myTextareaField = {
 };
 
 
-angular.module("myComponents").component("myTextareaField", myTextareaField);
+angular.module("myComponents").component("myDisaplyTextareaField", myDisaplyTextareaField);
