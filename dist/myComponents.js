@@ -49,9 +49,8 @@
 	__webpack_require__(2);
 	__webpack_require__(3);
 	__webpack_require__(4);
-	__webpack_require__(5);
 
-	__webpack_require__(12);
+	__webpack_require__(5);
 	__webpack_require__(6);
 	__webpack_require__(7);
 	__webpack_require__(8);
@@ -121,25 +120,6 @@
 /* 4 */
 /***/ function(module, exports) {
 
-	var myCheckboxField = {
-	  bindings: {
-	    ngModel: "=",
-	    fieldLabel: "@",
-	    icon: "@"
-	  },
-	  template: ["<div class='col-md-12' style='margin-top: 10px'>",
-	                  "<checkbox class='btn-success' ng-model='$ctrl.ngModel'></checkbox>",
-	                  "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
-	             "</div>"].join("")
-	};
-
-	angular.module("myComponents").component("myCheckboxField", myCheckboxField);
-
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
 	var myDateField = {
 	  bindings: {
 	    ngModel: "=",
@@ -180,6 +160,25 @@
 
 	angular.module('myComponents').component('myComponents', myDateField);
 
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	var myCheckboxField = {
+	  bindings: {
+	    ngModel: "=",
+	    fieldLabel: "@",
+	    icon: "@"
+	  },
+	  template: ["<div class='col-md-12' style='margin-top: 10px'>",
+	                  "<checkbox class='btn-success' ng-model='$ctrl.ngModel'></checkbox>",
+	                  "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
+	             "</div>"].join("")
+	};
+
+	angular.module("myComponents").component("myCheckboxField", myCheckboxField);
 
 
 /***/ },
@@ -308,25 +307,6 @@
 
 
 
-
-
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-	var myCheckboxField = {
-	  bindings: {
-	    ngModel: "=",
-	    fieldLabel: "@",
-	    icon: "@"
-	  },
-	  template: ["<div class='col-md-12' style='margin-top: 10px'>",
-	                  "<checkbox class='btn-success' ng-model='$ctrl.ngModel'></checkbox>",
-	                  "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
-	             "</div>"].join("")
-	};
-
-	angular.module("myComponents").component("myCheckboxField", myCheckboxField);
 
 
 /***/ }
