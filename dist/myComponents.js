@@ -115,8 +115,8 @@
 	        ngModel: '='
 	    },
 	    template: [
-	        "<strong>{{$ctrl.fieldLabel}}</strong>",
-	        "{{$ctrl.ngModel}}"].join("")
+	        "<div class='well'><strong>{{$ctrl.fieldLabel}}</strong>",
+	        "<p>{{$ctrl.ngModel}}</p></div>"].join("")
 	};
 
 
