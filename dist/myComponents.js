@@ -48,22 +48,22 @@
 	//
 	__webpack_require__(2);
 
-	__webpack_require__(12);
 	__webpack_require__(3);
-
-
 	__webpack_require__(4);
 
 
 	__webpack_require__(5);
+
+
 	__webpack_require__(6);
-
-
 	__webpack_require__(7);
+
+	__webpack_require__(5);
 	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
+	__webpack_require__(12);
 
 
 
@@ -109,6 +109,26 @@
 /* 3 */
 /***/ function(module, exports) {
 
+	var myTextareaField = {
+	  bindings: {
+	    fieldLabel: "@",
+	    fieldName: "@",
+	    ngModel: "="
+	  },
+	  template: ["<div class='form-group'>",
+	              " <label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
+	              " <textarea type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel'",
+	            "</div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myTextareaField", myTextareaField);
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
 	var myDispalyTextareaField = {
 	   bindings: {
 	        fieldLabel: '@',
@@ -124,7 +144,7 @@
 
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports) {
 
 	var myDateField = {
@@ -161,16 +181,16 @@
 	    this.open = function () {
 	      this.opened = true;
 	    };
-	  }
+	  } 
 	};
 
 
-	angular.module('myComponents').component('myComponents', myDateField);
+	angular.module('myComponents').component('myDateField', myDateField);
 
 
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports) {
 
 	var myCheckboxField = {
@@ -193,7 +213,7 @@
 
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports) {
 
 	var myDisplayCheckField = {
@@ -214,7 +234,7 @@
 	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	var myDisplayField = {
@@ -235,7 +255,7 @@
 	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	var modalButtons = {
@@ -259,7 +279,7 @@
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	var modalHeader = {
@@ -276,7 +296,7 @@
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	var mySelectList = {
@@ -303,7 +323,7 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	var mySpinner= {
@@ -318,26 +338,6 @@
 
 
 
-
-
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-	var myTextareaField = {
-	  bindings: {
-	    fieldLabel: "@",
-	    fieldName: "@",
-	    ngModel: "="
-	  },
-	  template: ["<div class='form-group'>",
-	              " <label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
-	              " <textarea type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel'",
-	            "</div>"].join("")
-	};
-
-
-	angular.module("myComponents").component("myTextareaField", myTextareaField);
 
 
 /***/ }
