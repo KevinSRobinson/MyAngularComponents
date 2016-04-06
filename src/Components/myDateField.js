@@ -32,9 +32,9 @@ var myDateField = {
     this.open = function () {
       this.opened = true;
     };
-  }
+  } 
 };
 
 
-angular.module('myComponents').component('myComponents', myDateField);
+angular.module('myComponents').component('myDateField', myDateField);
 
