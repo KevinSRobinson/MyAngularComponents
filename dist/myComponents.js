@@ -158,34 +158,38 @@
 	    "<label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
 	    "<div class='input-group'>",
 	    "<input type='text' class='form-control'",
-	    " name='{{fieldName}}' id='{{fieldName}}",
-	    " is-open='$ctrl.opened' ",
-	    " uib-datepicker-popup='{{$ctrl.format}}' ",
-	    " datepicker-options='$ctrl.dateOptions' ",
-	    " ng-model='$ctrl.ngModel' />",
+	    " uib-datepicker-popup ng-model='$ctrl.ngModel' datepicker-options='$ctrl.dateOptions' is-open='$ctrl.popup1.opened'/> ",
 	    "<span class='input-group-btn'>",
-	    "<button type='button' class='btn btn-default' ng-click='$ctrl.open()'><i class='glyphicon glyphicon-calendar'></i></button>",
+	    "<button type='button' class='btn btn-default' ng-click='$ctrl.open()'>" +
+	    "<i class='fa fa-calendar'></i></button>",
 	    " </span>",
 	    "</div>"].join(""),
 	  controller: function () {
-	    this.opened = false;
-
+	    // this.opened = false;
+	    //
 	    this.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
 	    this.format = this.formats[0];
 
 	    this.dateOptions = {
 	      formatYear: 'yy',
-	      startingDay: 1
+	      startingDay: 1,
+	      minDate: new Date()
+	    };
+
+	    this.popup1 = {
+	      opened: false
 	    };
 
 	    this.open = function () {
-	      this.opened = true;
+	      this.popup1.opened = true;
 	    };
-	  } 
+
+	  }
 	};
 
 
-	angular.module('myComponents').component('myDateField', myDateField);
+	var app = angular.module('myComponents')
+	  .component('myDateField', myDateField);
 
 
 
