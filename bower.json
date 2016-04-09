@@ -10,16 +10,15 @@
   "moduleType": [
     "globals"
   ],
+  
    "dependencies": {
     "angular": ">=1.5.0"
   },
   "license": "MIT",
   "homepage": "" ,
   "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "web/**/.*",
+    "web/node_modules",
+    "web/bower_components"
   ]
 }
