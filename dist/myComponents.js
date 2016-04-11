@@ -64,10 +64,10 @@
 	__webpack_require__(10);
 	__webpack_require__(11);
 	__webpack_require__(12);
-
+	__webpack_require__(13);
 
 	//Directives
-	__webpack_require__(13);
+	__webpack_require__(14);
 
 
 
@@ -350,6 +350,25 @@
 
 /***/ },
 /* 13 */
+/***/ function(module, exports) {
+
+	var myErrorMessage = {
+	  bindings:{
+	    ngModel:"="
+	  },
+	  template:  "<h3>{{$ctrl.ngModel.data}}</h3><div id=errorMessage' style='margin-top: 10px;' " +
+	            " ng-show='$ctrl.ngModel.data'>" +
+	            " <div class='well' style='color: white; background: red; font-size: large' role='alert'>" +
+	            " <i class='fa fa-warning'></i>{{$ctrl.ngModel.data.ExceptionMessage}}</div>" +
+	            " </div>"
+	};
+
+
+	angular.module("myComponents").component("myErrorMessage", myErrorMessage);
+
+
+/***/ },
+/* 14 */
 /***/ function(module, exports) {
 
 	var myPanel=  function () {
