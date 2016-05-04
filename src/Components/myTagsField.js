@@ -6,7 +6,7 @@ var myTagsMultiSelect = {
     tags: "="
   },
   template: ["<div class='form-group'>",
-              "<label for='tags'>{{$ctrl.fieldLabel}}</label>",
+              "<span for='tags'>{{$ctrl.fieldLabel}}</span>",
               "<ui-select multiple ng-model='$ctrl.ngModel' id='tags' >",
               "<ui-select-match placeholder='Select Tag...'>{{$item.Name}}</ui-select-match>",
               "<ui-select-choices repeat='tag in $ctrl.tags'>",

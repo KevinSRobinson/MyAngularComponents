@@ -96,11 +96,8 @@
 	    fieldName: "@",
 	    ngModel: "="
 	  },
-	  controller: function () {
-	    console.log(this);
-	  },
 	  template: ["<div class='form-group'>",
-	              " <label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
+	              " <span class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</span>",
 	              " <input type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel'",
 	            "</div>"].join("")
 	};
@@ -120,7 +117,7 @@
 	    ngModel: "="
 	  },
 	  template: ["<div class='form-group'>",
-	              " <label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
+	              " <span class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</span>",
 	              " <textarea type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel'",
 	            "</div>"].join("")
 	};
@@ -211,6 +208,7 @@
 	                "<div class='col-md-2' style='margin-top: 10px'>",
 	                    "<checkbox class='btn-success' type='checkbox' ng-model='$ctrl.ngModel'></checkbox>",
 	                  "</div>",
+	                  
 	                   "<div class='col-md-10' style='margin-top: 10px'>",
 	                    "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
 	                "</div>",
@@ -252,7 +250,7 @@
 	    },
 	    template: ["<div class='row'>",
 	                    "<div class='col-sm-6'>",
-	                         "<label class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></label>",
+	                         "<span class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></span>",
 	                    "</div>",
 	                    "<div class='col-sm-6'>",
 	                         "{{$ctrl.ngModel}}",

@@ -5,7 +5,7 @@ var myDisplayField = {
     },
     template: ["<div class='row'>",
                     "<div class='col-sm-6'>",
-                         "<label class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></label>",
+                         "<span class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></span>",
                     "</div>",
                     "<div class='col-sm-6'>",
                          "{{$ctrl.ngModel}}",
