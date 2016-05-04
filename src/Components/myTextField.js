@@ -1,4 +1,6 @@
 var myTextField = {
+  
+  require: ["^form", "ngModel"],
   bindings: {
     fieldLabel: "@",
     fieldName: "@",

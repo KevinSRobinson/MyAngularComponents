@@ -91,6 +91,8 @@
 /***/ function(module, exports) {
 
 	var myTextField = {
+	  
+	  require: ["^form", "ngModel"],
 	  bindings: {
 	    fieldLabel: "@",
 	    fieldName: "@",
@@ -111,6 +113,7 @@
 /***/ function(module, exports) {
 
 	var myTextareaField = {
+	      require: ["^form", "ngModel"],
 	  bindings: {
 	    fieldLabel: "@",
 	    fieldName: "@",
@@ -149,6 +152,7 @@
 /***/ function(module, exports) {
 
 	var myDateField = {
+	      require: ["^form", "ngModel"],
 	  bindings: {
 	    ngModel: "=",
 	    fieldName: "=",

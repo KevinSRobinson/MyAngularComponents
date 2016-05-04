@@ -1,4 +1,5 @@
 var myDateField = {
+      require: ["^form", "ngModel"],
   bindings: {
     ngModel: "=",
     fieldName: "=",
