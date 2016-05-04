@@ -4,11 +4,12 @@ var myTextField = {
   bindings: {
     fieldLabel: "@",
     fieldName: "@",
-    ngModel: "="
+    ngModel: "=",
+    required: "@",
   },
   template: ["<div class='form-group'>",
               " <span class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</span>",
-              " <input type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel'",
+              " <input type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel' ng-required='{{ $ctrl.required }}'>",
             "</div>"].join("")
 };
 
