@@ -2,7 +2,7 @@ var myCreateButton = {
     bindings: {
         click: "&"
     },
-    template: ["<div class='btn btn-default' id='create'",
+    template: ["<div class='btn btn-success' id='create'",
                 " ng-click='$ctrl.click()' >" ,
                 " <i class='fa fa-plus' ></i>",
                 " </div>"

@@ -69,6 +69,7 @@
 	__webpack_require__(14);
 	__webpack_require__(15);
 	__webpack_require__(16);
+	__webpack_require__(18);
 
 	//Directives
 	__webpack_require__(17);
@@ -518,6 +519,29 @@
 
 
 	var app = angular.module("myComponents").directive("myPanel", myPanel);
+
+
+/***/ },
+/* 18 */
+/***/ function(module, exports) {
+
+	var myCreateButton = {
+	    bindings: {
+	        click: "&"
+	    },
+	    template: ["<div class='btn btn-success' id='create'",
+	                " ng-click='$ctrl.click()' >" ,
+	                " <i class='fa fa-plus' ></i>",
+	                " </div>"
+	    ].join(",")
+
+	};
+
+
+	angular.module("myComponents").component("myCreateButton", myCreateButton);
+
+
+
 
 
 /***/ }
