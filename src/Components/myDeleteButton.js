@@ -2,7 +2,7 @@ var myDeleteButton = {
     bindings: {
         click: "&"
     },
-    template: ["<div class='btn btn-danger' id='create'",
+    template: ["<div class='btn btn-danger' id='delete'",
                 " ng-click='$ctrl.click()' >" ,
                 " <i class='fa fa fa-times' ></i>",
                 " </div>"
