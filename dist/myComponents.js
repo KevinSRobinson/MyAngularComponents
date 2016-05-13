@@ -489,7 +489,7 @@
 	        var vm = this;
 	        
 	        if(vm.id==undefined){
-	            vm.id = "Edit"
+	            vm.id = "edit"
 	        }
 	    
 	    },
