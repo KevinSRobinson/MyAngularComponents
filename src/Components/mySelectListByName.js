@@ -2,14 +2,15 @@ var mySelectListByName = {
   bindings: {
     ngModel: "=",
     items: "=",
-    fieldLabel: "@"
+    fieldLabel: "@",
+    fiedlName: "@"
   },
   controller: function(){
 
   },
   template: ["<div class='form-group'>",
                 " <label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
-                  "<select ng-model='$ctrl.ngModel' class='form-control' convert-to-number>",
+                  "<select ng-model='$ctrl.ngModel' id='$ctrl.fieldName' class='form-control' convert-to-number>",
                 " <option ng-repeat='option in $ctrl.items' value='{{option.Name}}'>{{option.Name}}</option>",
                   "</select>",
             "</div>"].join("")

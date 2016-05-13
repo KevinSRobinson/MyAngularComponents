@@ -1,17 +1,19 @@
 var myEditButton = {
     bindings: {
-        ngClick: "&"
+        click: "&",
+        id: "@",
+        
     },
-    template: ["<div class='btn btn-default' ",
-                " ng-click='$ctrl.ngClick(site)' >" ,
-                " <i class='fa fa-bars' ></i>",
-                " </div>"
-    ].join(",")
-
+    controllerAs: "vm",
+    controller: function () {
+        var vm = this;
+        
+        if(vm.id==undefined){
+            vm.id = "Edit"
+        }
+    
+    },
+    template: "<button class='btn btn-success btn-sm' id='{{ vm.id }}' ng-click='vm.click(user)'>Edit<i class='fa fa-bars' ></i></button>"
 };
 
-
 angular.module("myComponents").component("myEditButton", myEditButton);
-
-
-

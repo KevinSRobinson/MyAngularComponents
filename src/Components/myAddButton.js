@@ -1,6 +1,6 @@
 var myAddButton = {
     bindings: {
-        ngClick: "&"
+        click: "&"
     },
     template: ["<div class='btn btn-default' id='add'",
                 " ng-click='$ctrl.ngClick(site)' >" ,

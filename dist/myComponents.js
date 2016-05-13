@@ -66,6 +66,10 @@
 	__webpack_require__(12);
 	__webpack_require__(13);
 
+	__webpack_require__(15);
+	__webpack_require__(16);
+
+
 	//Directives
 	__webpack_require__(14);
 
@@ -250,18 +254,27 @@
 /***/ function(module, exports) {
 
 	var myDisplayField = {
-	    bindings: {
-	        fieldLabel: '@',
-	        ngModel: '='
-	    },
-	    template: ["<div class='row'>",
-	                    "<div class='col-sm-6'>",
-	                         "<span class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></span>",
-	                    "</div>",
-	                    "<div class='col-sm-6'>",
-	                         "{{$ctrl.ngModel}}",
-	                    "</div>",
-	                 "</div>"].join("")
+		    bindings: {
+		        fieldLabel: '@',
+		        ngModel: '=',
+				fieldLabelWitdh: "@"
+		    },
+			controllerAs: "vm",
+			controller: function () {
+				var vm = this;
+				
+				if(vm.fieldLabelWitdh == undefined) {
+					vm.fieldLabelWitdh = "col-md-4"
+				};
+			},
+		    template: ["<div class='row'>",
+		                    "<div class='{{vm.fieldLabelWitdh}}'>",
+		                         "<label class='control-label'><strong>{{vm.fieldLabel}}</strong></label>",
+		                    "</div>",
+		                    "<div class='col-sm-6'>",
+		                         "{{vm.ngModel}}",
+		                    "</div>",
+		                 "</div>"].join("")
 	};
 
 	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
@@ -401,6 +414,85 @@
 
 
 	var app = angular.module("myComponents").directive("myPanel", myPanel);
+
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	var myPageTitle = {
+	    bindings: {
+	        title: "@"
+	    },
+	    controllerAs: "vm",
+	    template: "<H1 id='pagetitle'>{{ vm.title }}</H1>"
+	};
+
+
+	angular.module("myComponents").component("myPageTitle", myPageTitle);
+
+
+
+
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+	var myStatusMessage = {
+	    bindings: {
+	        ngModel: "<",
+	        form: "<",
+	        successMessage:"@"
+	    },
+	    controllerAs: "vm",
+	    controller: function () {
+	        var vm = this;
+	        vm.message = "";
+	        vm.error = false;
+	        vm.success = false;
+
+
+	        vm.$onChanges =  function (ddd) {
+	            vm.error = false;
+	            vm.success = false;
+
+	            if (vm.ngModel != null) {
+	                if (vm.ngModel.ExceptionMessage != undefined) {
+	                    console.log(vm.ngModel);
+	                    vm.error = true;
+	                    vm.message = vm.ngModel.ExceptionMessage;
+	                }
+	                else if (vm.ngModel != "") {
+	                    vm.success = true;
+	                    vm.message = vm.successMessage;
+	                }
+	            }
+	        };
+
+	    },
+	    template: ["<div ng-hide='vm.form.$dirty'>",
+	        " <div id='errorMessage' style='margin-top: 10px;' ng-show='vm.error'>",
+	        " <div class='well' style='color: white; background: red; font-size: large' role='alert'>",
+	        " <i class='fa fa-warning'></i>{{vm.message}}<br>",
+	        "<small>This is a system error.  An alert has been send to the developer and will let you know when this has been fixed.</small>",
+	        " </div>",
+	        "  </div>",
+	        "<div id='successMessage' style='margin-top: 10px;' ng-show='vm.success'>",
+	        " <div class='well' style='color: white; background: green; font-size: large' role='alert'>",
+	        " <i class='fa fa-check'></i>{{vm.message}}",
+	        " </div>",
+	        " </div>",
+	        " </div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myStatusMessage", myStatusMessage);
+
+
+
+
+
 
 
 /***/ }
