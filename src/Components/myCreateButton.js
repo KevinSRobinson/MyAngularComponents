@@ -4,9 +4,8 @@ var myCreateButton = {
     },
     template: ["<div class='btn btn-success' id='create'",
                 " ng-click='$ctrl.click()' >" ,
-                " <i class='fa fa-plus' ></i>",
-                " </div>"
-    ].join(",")
+                " Create <i class='fa fa-plus'></i>",
+                " </div>"].join(",")
 
 };
 

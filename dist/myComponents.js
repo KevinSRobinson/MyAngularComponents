@@ -70,6 +70,8 @@
 	__webpack_require__(15);
 	__webpack_require__(16);
 	__webpack_require__(18);
+	__webpack_require__(19);
+
 
 	//Directives
 	__webpack_require__(17);
@@ -531,14 +533,36 @@
 	    },
 	    template: ["<div class='btn btn-success' id='create'",
 	                " ng-click='$ctrl.click()' >" ,
-	                " <i class='fa fa-plus' ></i>",
+	                " Create <i class='fa fa-plus'></i>",
+	                " </div>"].join(",")
+
+	};
+
+
+	angular.module("myComponents").component("myCreateButton", myCreateButton);
+
+
+
+
+
+/***/ },
+/* 19 */
+/***/ function(module, exports) {
+
+	var myDeleteButton = {
+	    bindings: {
+	        click: "&"
+	    },
+	    template: ["<div class='btn btn-danger' id='create'",
+	                " ng-click='$ctrl.click()' >" ,
+	                " <i class='fa fa fa-times' ></i>",
 	                " </div>"
 	    ].join(",")
 
 	};
 
 
-	angular.module("myComponents").component("myCreateButton", myCreateButton);
+	angular.module("myComponents").component("myDeleteButton", myDeleteButton);
 
 
 
