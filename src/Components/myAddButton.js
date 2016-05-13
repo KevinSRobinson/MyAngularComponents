@@ -1,9 +1,9 @@
-var myAddButton = {
+var myCreateButton = {
     bindings: {
         click: "&"
     },
-    template: ["<div class='btn btn-default' id='add'",
-                " ng-click='$ctrl.ngClick(site)' >" ,
+    template: ["<div class='btn btn-default' id='create'",
+                " ng-click='$ctrl.click()' >" ,
                 " <i class='fa fa-plus' ></i>",
                 " </div>"
     ].join(",")
@@ -11,7 +11,7 @@ var myAddButton = {
 };
 
 
-angular.module("myComponents").component("myAddButton", myAddButton);
+angular.module("myComponents").component("myCreateButton", myCreateButton);
 
 
 

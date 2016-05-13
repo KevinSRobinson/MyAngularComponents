@@ -66,12 +66,12 @@
 	__webpack_require__(12);
 	__webpack_require__(13);
 
+	__webpack_require__(14);
 	__webpack_require__(15);
-	__webpack_require__(16);
 
 
 	//Directives
-	__webpack_require__(14);
+	__webpack_require__(16);
 
 
 
@@ -396,30 +396,6 @@
 /* 14 */
 /***/ function(module, exports) {
 
-	var myPanel=  function () {
-	    return {
-	        restrict:"E",
-	        transclude:true,
-	        scope:{ 
-	            title:"@title",
-	            fieldname: "@fieldname"
-	        },
-	        template:"<div class='panel panel-success'>" +
-	        "<div class='panel-heading' id='{{fieldname}}'>{{title}}</div>" +
-	        "<div class='panel-body' ng-transclude></div>" +
-	        "</div>",
-	        replace:true
-	    };
-	};
-
-
-	var app = angular.module("myComponents").directive("myPanel", myPanel);
-
-
-/***/ },
-/* 15 */
-/***/ function(module, exports) {
-
 	var myPageTitle = {
 	    bindings: {
 	        title: "@"
@@ -436,7 +412,7 @@
 
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports) {
 
 	var myStatusMessage = {
@@ -493,6 +469,30 @@
 
 
 
+
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+	var myPanel=  function () {
+	    return {
+	        restrict:"E",
+	        transclude:true,
+	        scope:{ 
+	            title:"@title",
+	            fieldname: "@fieldname"
+	        },
+	        template:"<div class='panel panel-success'>" +
+	        "<div class='panel-heading' id='{{fieldname}}'>{{title}}</div>" +
+	        "<div class='panel-body' ng-transclude></div>" +
+	        "</div>",
+	        replace:true
+	    };
+	};
+
+
+	var app = angular.module("myComponents").directive("myPanel", myPanel);
 
 
 /***/ }
