@@ -68,10 +68,10 @@
 
 	__webpack_require__(14);
 	__webpack_require__(15);
-
+	__webpack_require__(16);
 
 	//Directives
-	__webpack_require__(16);
+	__webpack_require__(17);
 
 
 
@@ -473,6 +473,31 @@
 
 /***/ },
 /* 16 */
+/***/ function(module, exports) {
+
+	var myEditButton = {
+	    bindings: {
+	        click: "&",
+	        id: "@",
+	        
+	    },
+	    controllerAs: "vm",
+	    controller: function () {
+	        var vm = this;
+	        
+	        if(vm.id==undefined){
+	            vm.id = "Edit"
+	        }
+	    
+	    },
+	    template: "<button class='btn btn-success btn-sm' id='{{ vm.id }}' ng-click='vm.click(user)'>Edit<i class='fa fa-bars' ></i></button>"
+	};
+
+	angular.module("myComponents").component("myEditButton", myEditButton);
+
+
+/***/ },
+/* 17 */
 /***/ function(module, exports) {
 
 	var myPanel=  function () {
