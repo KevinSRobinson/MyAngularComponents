@@ -61,6 +61,7 @@
 	__webpack_require__(5);
 	__webpack_require__(8);
 	__webpack_require__(9);
+	__webpack_require__(20);
 	__webpack_require__(10);
 	__webpack_require__(11);
 	__webpack_require__(12);
@@ -69,12 +70,12 @@
 	__webpack_require__(14);
 	__webpack_require__(15);
 	__webpack_require__(16);
+	__webpack_require__(17);
 	__webpack_require__(18);
-	__webpack_require__(19);
 
 
 	//Directives
-	__webpack_require__(17);
+	__webpack_require__(19);
 
 
 
@@ -88,7 +89,7 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	angular.module("myComponents", []);
+	angular.module("myComponents", ['ngAnimate', 'ui.bootstrap']);
 
 
 
@@ -305,7 +306,7 @@
 	    template: ["<div class='modal-footer'>",
 	        "<span><button type='submit' id='save' class='btn btn-primary btn-large pull-left'",
 	        " ng-click='vm.save()'>{{vm.savetext}}</button>",
-	        "<button type='button'  class='btn btn-default pull-left'",
+	        "<button type='button'  class='btn btn-default pull-left' id='close'",
 	        "ng-click='vm.close()'>Close</button>",
 	        "</span>",
 	        "</div>"].join("")
@@ -503,6 +504,50 @@
 /* 17 */
 /***/ function(module, exports) {
 
+	var myCreateButton = {
+	    bindings: {
+	        click: "&"
+	    },
+	    template: ["<div class='btn btn-success' id='create'",
+	                " ng-click='$ctrl.click()' >" ,
+	                " Create <i class='fa fa-plus'></i>",
+	                " </div>"].join(",")
+
+	};
+
+
+	angular.module("myComponents").component("myCreateButton", myCreateButton);
+
+
+
+
+
+/***/ },
+/* 18 */
+/***/ function(module, exports) {
+
+	var myDeleteButton = {
+	    bindings: {
+	        click: "&"
+	    },
+	    template: ["<div class='btn btn-danger' id='delete'",
+	                " ng-click='$ctrl.click()' >" ,
+	                " Delete<i class='fa fa fa-times' ></i> ",
+	                " </div>"].join(",")
+
+	};
+
+
+	angular.module("myComponents").component("myDeleteButton", myDeleteButton);
+
+
+
+
+
+/***/ },
+/* 19 */
+/***/ function(module, exports) {
+
 	var myPanel=  function () {
 	    return {
 	        restrict:"E",
@@ -524,48 +569,28 @@
 
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports) {
 
-	var myCreateButton = {
-	    bindings: {
-	        click: "&"
-	    },
-	    template: ["<div class='btn btn-success' id='create'",
-	                " ng-click='$ctrl.click()' >" ,
-	                " Create <i class='fa fa-plus'></i>",
-	                " </div>"].join(",")
+	var okModalButtons = {
 
+	    bindings: {
+	        ok: "&"        
+	    },
+	    controllerAs: "vm",
+	      controller: function(){
+	        var vm = this;
+	     
+	      },
+	    template: ["<div class='modal-footer'>",
+	        "<span>",
+	        "<button type='button'  class='btn btn-default pull-left' id='close'",
+	        "ng-click='vm.ok()'>OK</button>",
+	        "</span>",
+	        "</div>"].join("")
 	};
 
-
-	angular.module("myComponents").component("myCreateButton", myCreateButton);
-
-
-
-
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	var myDeleteButton = {
-	    bindings: {
-	        click: "&"
-	    },
-	    template: ["<div class='btn btn-danger' id='delete'",
-	                " ng-click='$ctrl.click()' >" ,
-	                " <i class='fa fa fa-times' ></i>",
-	                " </div>"
-	    ].join(",")
-
-	};
-
-
-	angular.module("myComponents").component("myDeleteButton", myDeleteButton);
-
-
-
+	var app = angular.module("myComponents").component("okModalButtons", okModalButtons);
 
 
 /***/ }

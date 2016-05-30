@@ -1,3 +1,3 @@
-angular.module("myComponents", []);
+angular.module("myComponents", ['ngAnimate', 'ui.bootstrap']);
 
 

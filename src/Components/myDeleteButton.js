@@ -4,9 +4,8 @@ var myDeleteButton = {
     },
     template: ["<div class='btn btn-danger' id='delete'",
                 " ng-click='$ctrl.click()' >" ,
-                " <i class='fa fa fa-times' ></i>",
-                " </div>"
-    ].join(",")
+                " Delete<i class='fa fa fa-times' ></i> ",
+                " </div>"].join(",")
 
 };
 
