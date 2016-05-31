@@ -576,7 +576,7 @@
 	var okModalButtons = {
 
 	    bindings: {
-	        ok: "&ok"        
+	       close: "&close",     
 	    },
 	    controllerAs: "vm",
 	      controller: function(){
@@ -586,7 +586,7 @@
 	    template: ["<div class='modal-footer'>",
 	        "<span>",
 	        "<button type='button'  class='btn btn-default pull-left' id='close'",
-	        "ng-click='vm.ok()'>OK</button>",
+	        "ng-click='vm.close()'>OK</button>",
 	        "</span>",
 	        "</div>"].join("")
 	};
