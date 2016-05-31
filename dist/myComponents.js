@@ -585,7 +585,7 @@
 	      },
 	    template: ["<div class='modal-footer'>",
 	        "<span>",
-	        "<button type='button'  class='btn btn-default pull-left' id='close'",
+	        "<button type='button'  class='btn btn-default pull-left' id='close' ",
 	        "ng-click='vm.close()'>OK</button>",
 	        "</span>",
 	        "</div>"].join("")
