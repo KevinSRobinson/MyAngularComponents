@@ -1,7 +1,7 @@
 var okModalButtons = {
 
     bindings: {
-        ok: "&"        
+        ok: "&ok"        
     },
     controllerAs: "vm",
       controller: function(){
