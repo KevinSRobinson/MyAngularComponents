@@ -62,21 +62,21 @@
 
 	__webpack_require__(8);
 	__webpack_require__(9);
-	__webpack_require__(20);
 	__webpack_require__(10);
 	__webpack_require__(11);
 	__webpack_require__(12);
 	__webpack_require__(13);
-
 	__webpack_require__(14);
+
 	__webpack_require__(15);
 	__webpack_require__(16);
 	__webpack_require__(17);
 	__webpack_require__(18);
+	__webpack_require__(19);
 
 
 	//Directives
-	__webpack_require__(19);
+	__webpack_require__(20);
 
 
 
@@ -320,6 +320,31 @@
 /* 10 */
 /***/ function(module, exports) {
 
+	var okModalButtons = {
+
+	  bindings: {
+	    close: "&close",
+	  },
+	  controllerAs: "vm",
+	  controller: function () {
+	    var vm = this;
+
+	  },
+	  template: ["<div class='modal-footer'>",
+	    "<span>",
+	    "<button  class='btn btn-default pull-left' id='close' ",
+	    "ng-click='vm.close()'>OK</button>",
+	    "</span>",
+	    "</div>"].join("")
+	};
+
+	var app = angular.module("myComponents").component("okModalButtons", okModalButtons);
+
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
 	var modalHeader = {
 	    bindings: {
 	        title: "@"
@@ -334,7 +359,7 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	var mySelectList = {
@@ -361,7 +386,7 @@
 
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports) {
 
 	var mySpinner= {
@@ -379,7 +404,7 @@
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 	var myErrorMessage = {
@@ -398,7 +423,7 @@
 
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports) {
 
 	var myPageTitle = {
@@ -417,7 +442,7 @@
 
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports) {
 
 	var myStatusMessage = {
@@ -477,7 +502,7 @@
 
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports) {
 
 	var myEditButton = {
@@ -502,7 +527,7 @@
 
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports) {
 
 	var myCreateButton = {
@@ -524,7 +549,7 @@
 
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports) {
 
 	var myDeleteButton = {
@@ -546,7 +571,7 @@
 
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports) {
 
 	var myPanel=  function () {
@@ -567,31 +592,6 @@
 
 
 	var app = angular.module("myComponents").directive("myPanel", myPanel);
-
-
-/***/ },
-/* 20 */
-/***/ function(module, exports) {
-
-	var okModalButtons = {
-
-	    bindings: {
-	       close: "&close",     
-	    },
-	    controllerAs: "vm",
-	      controller: function(){
-	        var vm = this;
-	     
-	      },
-	    template: ["<div class='modal-footer'>",
-	        "<span>",
-	        "<button  class='btn btn-default pull-left' id='close' ",
-	        "ng-click='vm.close()'>OK</button>",
-	        "</span>",
-	        "</div>"].join("")
-	};
-
-	var app = angular.module("myComponents").component("okModalButtons", okModalButtons);
 
 
 /***/ }
