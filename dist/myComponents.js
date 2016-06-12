@@ -73,10 +73,10 @@
 	__webpack_require__(17);
 	__webpack_require__(18);
 	__webpack_require__(19);
-	__webpack_require__(21);
+	__webpack_require__(20);
 
 	//Directives
-	__webpack_require__(20);
+	__webpack_require__(21);
 
 
 
@@ -574,30 +574,6 @@
 /* 20 */
 /***/ function(module, exports) {
 
-	var myPanel=  function () {
-	    return {
-	        restrict:"E",
-	        transclude:true,
-	        scope:{ 
-	            title:"@title",
-	            fieldname: "@fieldname"
-	        },
-	        template:"<div class='panel panel-success'>" +
-	        "<div class='panel-heading' id='{{fieldname}}'>{{title}}</div>" +
-	        "<div class='panel-body' ng-transclude></div>" +
-	        "</div>",
-	        replace:true
-	    };
-	};
-
-
-	var app = angular.module("myComponents").directive("myPanel", myPanel);
-
-
-/***/ },
-/* 21 */
-/***/ function(module, exports) {
-
 	var myFilterTextbox = {
 
 	  require: ["ngModel"],
@@ -617,6 +593,30 @@
 
 
 	angular.module("myComponents").component("myFilterTextbox", myFilterTextbox);
+
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	var myPanel=  function () {
+	    return {
+	        restrict:"E",
+	        transclude:true,
+	        scope:{ 
+	            title:"@title",
+	            fieldname: "@fieldname"
+	        },
+	        template:"<div class='panel panel-success'>" +
+	        "<div class='panel-heading' id='{{fieldname}}'>{{title}}</div>" +
+	        "<div class='panel-body' ng-transclude></div>" +
+	        "</div>",
+	        replace:true
+	    };
+	};
+
+
+	var app = angular.module("myComponents").directive("myPanel", myPanel);
 
 
 /***/ }

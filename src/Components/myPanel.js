@@ -8,7 +8,7 @@ var myPanel = {
         icon: "@"
     },
     template: "<div class='panel panel-default {{style}}'>" +
-    "<div class='panel-heading' id='{{fieldname}}'><i class='fa {{icon}}'></i>{{title}}</div>" +
+    "<div class='panel-heading' id='{{fieldname}}'><i class='fa fa-{{icon}}'></i>{{title}}</div>" +
     "<div class='panel-body' ng-transclude></div>" +
     "</div>",
     replace: true
