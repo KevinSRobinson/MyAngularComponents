@@ -600,7 +600,7 @@
 
 	var myFilterTextbox = {
 
-	  require: ["^form", "ngModel"],
+	  require: ["ngModel"],
 	  bindings: {
 	    fieldLabel: "@",
 	    fieldName: "@",
