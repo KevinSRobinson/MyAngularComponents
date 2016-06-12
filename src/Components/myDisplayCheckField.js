@@ -12,5 +12,4 @@ var myDisplayCheckField = {
                     "</div>",
                  "</div>"].join("")
 };
-
 angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
