@@ -76,7 +76,7 @@
 	__webpack_require__(20);
 
 
-	__webpack_require__(22);
+	__webpack_require__(21);
 
 
 
@@ -595,8 +595,7 @@
 
 
 /***/ },
-/* 21 */,
-/* 22 */
+/* 21 */
 /***/ function(module, exports) {
 
 	var myPanel = {
