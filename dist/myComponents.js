@@ -73,7 +73,7 @@
 	__webpack_require__(17);
 	__webpack_require__(18);
 	__webpack_require__(19);
-
+	__webpack_require__(21);
 
 	//Directives
 	__webpack_require__(20);
@@ -592,6 +592,31 @@
 
 
 	var app = angular.module("myComponents").directive("myPanel", myPanel);
+
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	var myFilterTextbox = {
+
+	  require: ["^form", "ngModel"],
+	  bindings: {
+	    fieldLabel: "@",
+	    fieldName: "@",
+	    ngModel: "=",
+	    required: "@",
+	  },
+	  template: ["<div class='input-group'>",
+	    "<input class='form-control' id='search' ng-model='vm.ngModel' name='q' placeholder='Search for' required>",
+	    "<span class='input-group-btn'>",
+	    "  <i class='fa fa-search'></i>",
+	    "</span>",
+	    "</div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myFilterTextbox", myFilterTextbox);
 
 
 /***/ }
