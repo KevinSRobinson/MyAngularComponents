@@ -76,7 +76,7 @@
 	__webpack_require__(20);
 
 
-	__webpack_require__(21);
+	__webpack_require__(22);
 
 
 
@@ -595,28 +595,26 @@
 
 
 /***/ },
-/* 21 */
+/* 21 */,
+/* 22 */
 /***/ function(module, exports) {
 
-	var myPanel=  function () {
-	    return {
-	        restrict:"E",
-	        transclude:true,
-	        scope:{ 
-	            title:"@title",
-	            fieldname: "@fieldname"
-	        },
-	        template:"<div class='panel panel-success'>" +
-	        "<div class='panel-heading' id='{{fieldname}}'>{{title}}</div>" +
-	        "<div class='panel-body' ng-transclude></div>" +
-	        "</div>",
-	        replace:true
-	    };
+	var myPanel = {
+	    transclude: true,
+	    bindings: {
+	        title: "@",
+	        fieldName: "@",
+	        style: "@",
+	        icon: "@"
+	    },
+	    controllerAs:"vm",
+	    template: "<div class='panel panel-default {{vm.style}}'>" +
+	    "<div class='panel-heading' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}}'></i>{{vm.title}}</div>" +
+	    "<div class='panel-body' ng-transclude></div>" +
+	    "</div>",
 	};
 
-
-	var app = angular.module("myComponents").directive("myPanel", myPanel);
-
+	angular.module("myComponents").component("myPanel", myPanel);
 
 /***/ }
 /******/ ]);
