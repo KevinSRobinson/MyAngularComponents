@@ -2,13 +2,14 @@ var myPanel = {
     restrict: "E",
     transclude: true,
     bindings: {
-        title: "@title",
-        fieldname: "@fieldname",
+        title: "@",
+        fieldName: "@",
         style: "@",
         icon: "@"
     },
-    template: "<div class='panel panel-default {{style}}'>" +
-    "<div class='panel-heading' id='{{fieldname}}'><i class='fa fa-{{icon}}'></i>{{title}}</div>" +
+    controllerAs:"vm",
+    template: "<div class='panel panel-default {{vm.style}}'>" +
+    "<div class='panel-heading' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}}'></i>{{vm.title}}</div>" +
     "<div class='panel-body' ng-transclude></div>" +
     "</div>",
     replace: true
