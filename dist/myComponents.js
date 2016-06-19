@@ -46,37 +46,39 @@
 
 	__webpack_require__(1);
 	//
+
 	__webpack_require__(2);
-
 	__webpack_require__(3);
+
 	__webpack_require__(4);
-
-
 	__webpack_require__(5);
 
 
 	__webpack_require__(6);
+
+
 	__webpack_require__(7);
-
-	__webpack_require__(5);
-
 	__webpack_require__(8);
+
+	__webpack_require__(6);
+
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
 	__webpack_require__(12);
 	__webpack_require__(13);
 	__webpack_require__(14);
-
 	__webpack_require__(15);
+
 	__webpack_require__(16);
 	__webpack_require__(17);
 	__webpack_require__(18);
 	__webpack_require__(19);
 	__webpack_require__(20);
-
-
 	__webpack_require__(21);
+
+
+	__webpack_require__(22);
 
 
 
@@ -99,19 +101,63 @@
 /* 2 */
 /***/ function(module, exports) {
 
+	var myPopover = {
+	    bindings: {
+	        ngModel: "<"
+	    },
+	    controllerAs: "vm",
+	    template: ["<span class='glyphicon glyphicon glyphicon-question-sign' ",
+	        " style='font-size: large;color: blue;' ",
+	        " uib-popover='{{vm.ngModel}}'",
+	        "  popover-trigger='mouseenter' ",
+	        " popover-placement='right'",
+	        " aria-hidden='true'>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myPopover", myPopover);
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
 	var myTextField = {
-	  
-	  require: ["^form", "ngModel"],
-	  bindings: {
-	    fieldLabel: "@",
-	    fieldName: "@",
-	    ngModel: "=",
-	    required: "@",
-	  },
-	  template: ["<div class='form-group'>",
-	              " <span class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</span>",
-	              " <input type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel' ng-required='{{ $ctrl.required }}'>",
-	            "</div>"].join("")
+	    bindings: {
+	        fieldLabel: "@",
+	        fieldName: "@",
+	        ngModel: "=",
+	        required: "@",
+	        toolTip:"@"
+	    },
+	    controllerAs:"vm",
+	    controller: function () {
+	        var vm = this;
+	        
+	        
+	        if(vm.toolTip)
+	        {
+	            vm.showToolTip = true;
+	        }
+	                
+	        
+	        
+	        if (vm.fieldName == null) {
+	            vm.fieldName = vm.fieldLabel.replace(" ", "");
+	            console.log(vm.fieldName);
+	        }
+
+	        if (vm.required == null ) {
+	            vm.required = false;
+	        }
+	    },
+	    template: ["<div class='form-group'>",
+	        " <label class='control-label'  >{{vm.fieldLabel}}</label>",
+	        " <div class='input-group'>",
+	        " <input type='text'  class='form-control' id='{{vm.fieldName}}' ng-model='vm.ngModel' ng-required='{{ vm.required }}'>",
+	        "   <div class='input-group-addon' ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
+	        " </div>",
+	        "</div>"].join("")
 	};
 
 
@@ -119,7 +165,7 @@
 
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports) {
 
 	var myTextareaField = {
@@ -141,7 +187,7 @@
 
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports) {
 
 	var myDispalyTextareaField = {
@@ -159,7 +205,7 @@
 
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports) {
 
 	var myDateField = {
@@ -210,7 +256,7 @@
 
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports) {
 
 	var myCheckboxField = {
@@ -234,7 +280,7 @@
 
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	var myDisplayCheckField = {
@@ -254,7 +300,7 @@
 	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	var myDisplayField = {
@@ -284,7 +330,7 @@
 	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	var modalButtons = {
@@ -316,7 +362,7 @@
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	var okModalButtons = {
@@ -341,7 +387,7 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	var modalHeader = {
@@ -358,7 +404,7 @@
 
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports) {
 
 	var mySelectList = {
@@ -385,7 +431,7 @@
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 	var mySpinner= {
@@ -403,7 +449,7 @@
 
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports) {
 
 	var myErrorMessage = {
@@ -422,7 +468,7 @@
 
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports) {
 
 	var myPageTitle = {
@@ -441,7 +487,7 @@
 
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports) {
 
 	var myStatusMessage = {
@@ -501,7 +547,7 @@
 
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports) {
 
 	var myEditButton = {
@@ -526,7 +572,7 @@
 
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports) {
 
 	var myCreateButton = {
@@ -548,7 +594,7 @@
 
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports) {
 
 	var myDeleteButton = {
@@ -570,7 +616,7 @@
 
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports) {
 
 	var myFilterTextbox = {
@@ -595,7 +641,7 @@
 
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports) {
 
 	var myPanel = {

@@ -1,16 +1,39 @@
 var myTextField = {
-  
-  require: ["^form", "ngModel"],
-  bindings: {
-    fieldLabel: "@",
-    fieldName: "@",
-    ngModel: "=",
-    required: "@",
-  },
-  template: ["<div class='form-group'>",
-              " <span class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</span>",
-              " <input type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel' ng-required='{{ $ctrl.required }}'>",
-            "</div>"].join("")
+    bindings: {
+        fieldLabel: "@",
+        fieldName: "@",
+        ngModel: "=",
+        required: "@",
+        toolTip:"@"
+    },
+    controllerAs:"vm",
+    controller: function () {
+        var vm = this;
+        
+        
+        if(vm.toolTip)
+        {
+            vm.showToolTip = true;
+        }
+                
+        
+        
+        if (vm.fieldName == null) {
+            vm.fieldName = vm.fieldLabel.replace(" ", "");
+            console.log(vm.fieldName);
+        }
+
+        if (vm.required == null ) {
+            vm.required = false;
+        }
+    },
+    template: ["<div class='form-group'>",
+        " <label class='control-label'  >{{vm.fieldLabel}}</label>",
+        " <div class='input-group'>",
+        " <input type='text'  class='form-control' id='{{vm.fieldName}}' ng-model='vm.ngModel' ng-required='{{ vm.required }}'>",
+        "   <div class='input-group-addon' ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
+        " </div>",
+        "</div>"].join("")
 };
 
 
