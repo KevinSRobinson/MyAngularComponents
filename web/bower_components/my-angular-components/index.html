@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <!-- AngularJS -->
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="node_modules/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="node_modules/font-awesome/css/font-awesome.css"></script>
+
+    <script type="text/javascript" src="dist/myComponents.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        padding: 100px;
+    }
+</style>
+<body ng-app="myComponents">
+<script>
+    angular.module("myComponents").controller("examples", function () {
+        var vm = this;
+
+        vm.exampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol";
+
+        vm.date = new Date();
+
+        vm.FirstName = "kevin";
+
+    });
+
+</script>
+<div ng-controller="examples as vm">
+
+
+
+
+
+
+
+    <my-text-field field-label="First Name"
+                   tool-tip="setsetsetset"
+                   ng-model="vm.FirstName"></my-text-field>
+     <!--<span class="glyphicon glyphicon glyphicon-question-sign"-->
+           <!--style="font-size: large;color: #blue;"-->
+           <!--uib-popover="I appeared on mouse enter!"-->
+           <!--popover-trigger="mouseenter"-->
+           <!--popover-placement="right"-->
+           <!--aria-hidden="true">-->
+
+
+    <!--<uib-datepicker ng-model="vm.date" class="well well-sm" ></uib-datepicker>-->
+    <!--<div class="well">-->
+    <!--<h4>Dates</h4>-->
+    <!--{{vm.date}}-->
+    <!--<my-date-field ng-model="vm.date" field-label="Date Test"></my-date-field>-->
+    <!--</div>-->
+
+</div>
+
+</body>
+
+</html>

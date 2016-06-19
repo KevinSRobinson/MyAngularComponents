@@ -1,0 +1,29 @@
+{
+  "name": "my-angular-components",
+  "authors": [
+    "Kevin Robinson <ormeau@volunteernow.co.uk>"
+  ],
+  "directory": "../bower_components",
+  "description": "#My Common Angular Components",
+  "main": "my-angular-components.js",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "web/**/.*",
+    "web/node_modules",
+    "web/bower_components"
+  ],
+  "_release": "19ea0472da",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "19ea0472dabbf68a4ab4f3851687f2d1b36c0126"
+  },
+  "_source": "https://volunteernow@bitbucket.org/volunteernow/mycomponents.git",
+  "_target": "*",
+  "_originalSource": "my-angular-components",
+  "_direct": true
+}
