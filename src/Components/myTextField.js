@@ -28,7 +28,7 @@ var myTextField = {
         }
     },
     template: ["<div class='form-group'>",
-        " <label class='control-label'  >{{vm.fieldLabel}}</label>",
+        " <label class='control-label'  style='min-width: 100px !important;' >{{vm.fieldLabel}}</label>",
         " <div class='input-group'>",
         " <input type='text'  class='form-control' id='{{vm.fieldName}}' ng-model='vm.ngModel' ng-required='{{ vm.required }}'>",
         "   <div class='input-group-addon' ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
