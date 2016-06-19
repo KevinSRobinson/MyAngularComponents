@@ -31,7 +31,7 @@ var myTextField = {
         " <label class='control-label'  style='min-width: 80px !important;' >{{vm.fieldLabel}}</label>",
         " <div class='input-group'  style='width: 80% !important;'>",
         " <input type='text'  class='form-control' id='{{vm.fieldName}}' ng-model='vm.ngModel' ng-required='{{ vm.required }}'>",
-        "   <div class='input-group-addon' ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
+        "   <div class='input-group-addon' style='line-height: 0 !important;'  ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
         " </div>",
         "</div>"].join("")
 };
