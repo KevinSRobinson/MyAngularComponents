@@ -2,16 +2,15 @@ var myFilterTextbox = {
 
   require: ["ngModel"],
   bindings: {
-    fieldLabel: "@",
-    fieldName: "@",
+    placeholder: "@",
     ngModel: "=",
-    required: "@",
   },
-  template: ["<div class='input-group'>",
-    "<input class='form-control' id='search' ng-model='vm.ngModel' name='q' placeholder='Search for' required>",
-    "<span class='input-group-btn'>",
-    "  <i class='fa fa-search'></i>",
-    "</span>",
+  template: ["<div class='input-group' style='display: flex'>",
+    "<input type='text' ng-model='vm.selectedPostcode' ", 
+    " id='postcodeLookup' class='form-control'/>",
+    " <button class='btn btn-default class='input-group-btn' ",  
+    " id='searchFilter'>", 
+    " <i class='glyphicon glyphicon-search'></i> </button>",
     "</div>"].join("")
 };
 

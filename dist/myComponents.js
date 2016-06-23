@@ -46,35 +46,35 @@
 
 	__webpack_require__(1);
 	//
-	__webpack_require__(21);
 	__webpack_require__(2);
 	__webpack_require__(3);
-
 	__webpack_require__(4);
+
 	__webpack_require__(5);
-
-
 	__webpack_require__(6);
 
 
 	__webpack_require__(7);
+
+
 	__webpack_require__(8);
-
-	__webpack_require__(6);
-
 	__webpack_require__(9);
+
+	__webpack_require__(7);
+
 	__webpack_require__(10);
 	__webpack_require__(11);
 	__webpack_require__(12);
 	__webpack_require__(13);
 	__webpack_require__(14);
 	__webpack_require__(15);
-
 	__webpack_require__(16);
+
 	__webpack_require__(17);
 	__webpack_require__(18);
 	__webpack_require__(19);
 	__webpack_require__(20);
+	__webpack_require__(21);
 
 
 
@@ -101,6 +101,38 @@
 /* 2 */
 /***/ function(module, exports) {
 
+	var myFilterTextbox = {
+
+	  require: ["ngModel"],
+	  bindings: {
+	    placeholder: "@",
+	    fieldName: "@",
+	    ngModel: "="
+	  },
+	  controllerAs: "vm",
+	  controller: function () {
+	    "use strict";
+
+	    var vm = this;
+
+	  },
+	  template: ["<div class='input-group' style='display: flex'>",
+	    "<input type='text' ng-model='vm.ngModel' ", 
+	    " id='postcodeLookup' class='form-control'/>",
+	    " <button class='btn btn-default class='input-group-btn' ",  
+	    " id='searchFilter'>", 
+	    " <i class='glyphicon glyphicon-search'></i> </button>",
+	    "</div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myFilterTextbox", myFilterTextbox);
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
 	var myPopover = {
 	    bindings: {
 	        ngModel: "<"
@@ -119,7 +151,7 @@
 
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports) {
 
 	var myTextField = {
@@ -165,7 +197,7 @@
 
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports) {
 
 	var myTextareaField = {
@@ -187,7 +219,7 @@
 
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports) {
 
 	var myDispalyTextareaField = {
@@ -205,7 +237,7 @@
 
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports) {
 
 	var myDateField = {
@@ -256,7 +288,7 @@
 
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	var myCheckboxField = {
@@ -280,7 +312,7 @@
 
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	var myDisplayCheckField = {
@@ -300,7 +332,7 @@
 	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	var myDisplayField = {
@@ -330,7 +362,7 @@
 	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	var modalButtons = {
@@ -362,7 +394,7 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	var okModalButtons = {
@@ -387,7 +419,7 @@
 
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports) {
 
 	var modalHeader = {
@@ -404,7 +436,7 @@
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 	var mySelectList = {
@@ -431,7 +463,7 @@
 
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports) {
 
 	var mySpinner= {
@@ -449,7 +481,7 @@
 
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports) {
 
 	var myErrorMessage = {
@@ -468,7 +500,7 @@
 
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports) {
 
 	var myPageTitle = {
@@ -487,7 +519,7 @@
 
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports) {
 
 	var myStatusMessage = {
@@ -547,7 +579,7 @@
 
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports) {
 
 	var myEditButton = {
@@ -572,7 +604,7 @@
 
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports) {
 
 	var myCreateButton = {
@@ -594,7 +626,7 @@
 
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports) {
 
 	var myDeleteButton = {
@@ -613,30 +645,6 @@
 
 
 
-
-
-/***/ },
-/* 21 */
-/***/ function(module, exports) {
-
-	var myFilterTextbox = {
-
-	  require: ["ngModel"],
-	  bindings: {
-	    placeholder: "@",
-	    ngModel: "=",
-	  },
-	  template: ["<div class='input-group' style='display: flex'>",
-	    "<input type='text' ng-model='vm.selectedPostcode' ", 
-	    " id='postcodeLookup' class='form-control'/>",
-	    " <button class='btn btn-default class='input-group-btn' ",  
-	    " id='searchFilter'>", 
-	    " <i class='glyphicon glyphicon-search'></i> </button>",
-	    "</div>"].join("")
-	};
-
-
-	angular.module("myComponents").component("myFilterTextbox", myFilterTextbox);
 
 
 /***/ },
