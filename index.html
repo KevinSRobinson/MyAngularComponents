@@ -34,6 +34,7 @@
 
         vm.FirstName = "kevin";
 
+        vm.filterText = "";
     });
 
 </script>
@@ -41,13 +42,17 @@
 
 
 
+    <my-panel title="Filter Textbox">
+        <my-filter-textbox ng-model="vm.filterText"></my-filter-textbox>
+    </my-panel>
 
 
+    <my-panel title="Text Field">
+        <my-text-field field-label="First Name"
+                       tool-tip="Some Help Text"
+                       ng-model="vm.FirstName"></my-text-field>
+    </my-panel>
 
-
-    <my-text-field field-label="First Name"
-
-                   ng-model="vm.FirstName"></my-text-field>
      <!--<span class="glyphicon glyphicon glyphicon-question-sign"-->
            <!--style="font-size: large;color: #blue;"-->
            <!--uib-popover="I appeared on mouse enter!"-->
