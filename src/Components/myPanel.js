@@ -8,7 +8,7 @@ var myPanel = {
         iconSize: "@"
     },
     controllerAs:"vm",
-    template: "<div class='panel panel-default {{vm.style}}'>" +
+    template: "<div class='panel panel-{{vm.style}}'>" +
     "<div class='panel-heading' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}} fa-{{vm.iconSize}}x'></i>{{vm.title}}</div>" +
     "<div class='panel-body' ng-transclude></div>" +
     "</div>",
