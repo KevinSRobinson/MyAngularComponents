@@ -7,6 +7,8 @@ var myPanel = {
         icon: "@",
         iconSize: "@",
         smallHeading: "@",
+        showAddButton: "@",
+        showEditButton: "@",
         add:"&",
         edit:"&"
     },
@@ -15,21 +17,19 @@ var myPanel = {
       "use strict";
 
         var vm = this;
-        vm.showEditButton = false;
-        vm.showAddButton = false;
-        
-      
+        //vm.headingStyle = "padding: 10px 15px !important; ";
+
         vm.init  = function () {
                 
         };
         
         vm.setDefaults = function () {
-            if(vm.add != undefined){
-                vm.showAddButton = true;
+            if(vm.showAddButton == undefined){
+                vm.showAddButton = false;
             }
 
-            if(vm.edit != undefined){
-                vm.showEditButton = true;
+            if(vm.showEditButton == undefined){
+                vm.showEditButton = false;
             }
         };
         
