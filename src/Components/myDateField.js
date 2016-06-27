@@ -10,7 +10,7 @@ var myDateField = {
     "<label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
     "<div class='input-group'>",
     "<input type='text' class='form-control'",
-    " uib-datepicker-popup='dd/MMMM/yyyy' ng-model='$ctrl.ngModel'  is-open='$ctrl.popup1.opened'/> ",
+    " uib-datepicker-popup='dd-MMMM-yyyy' ng-model='$ctrl.ngModel'  is-open='$ctrl.popup1.opened'/> ",
     "<span class='input-group-btn'>",
     "<button type='button' class='btn btn-default' ng-click='$ctrl.open()'>" +
     "<i class='fa fa-calendar'></i></button>",
