@@ -1,8 +1,11 @@
-var mySpinner= {
+var mySpinner = {
     bindings: {
         ngModel: "="
     },
-    template: "<i ng-show='$ctrl.ngModel'  class='fa fa-circle-o-notch fa-spin fa-5x'></i>"
+    template: ["<div class='row text-center'>",
+        "<img style='height: 100px'",
+        " ng-src='http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif'>",
+        "</div>"].join("")
 };
 
 

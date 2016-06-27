@@ -73,13 +73,16 @@
 
 	__webpack_require__(27);
 	__webpack_require__(28);
+
+
+	// Buttons
 	__webpack_require__(29);
 	__webpack_require__(30);
 	__webpack_require__(31);
-
-
-
+	__webpack_require__(16);
 	__webpack_require__(32);
+
+	__webpack_require__(33);
 
 
 
@@ -851,11 +854,14 @@
 /* 25 */
 /***/ function(module, exports) {
 
-	var mySpinner= {
+	var mySpinner = {
 	    bindings: {
 	        ngModel: "="
 	    },
-	    template: "<i ng-show='$ctrl.ngModel'  class='fa fa-circle-o-notch fa-spin fa-5x'></i>"
+	    template: ["<div class='row text-center'>",
+	        "<img style='height: 100px'",
+	        " ng-src='http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif'>",
+	        "</div>"].join("")
 	};
 
 
@@ -1034,6 +1040,47 @@
 
 /***/ },
 /* 32 */
+/***/ function(module, exports) {
+
+	var myMoreLessButton = {
+	    bindings: {
+	        isCollapsed: "="
+	    },
+	    controllerAs: "vm",
+	    controller: function () {
+	        "use strict";
+	        var vm = this;
+	        vm.buttonText = "";
+
+	        vm.getButtonText = function () {
+	            if (vm.isCollapsed) {
+	                return "More Search Options";
+	            }
+	            else {
+	                return "Less Search Options";
+	            }
+	        };
+
+	        vm.getButtonIcon = function () {
+
+	            if (vm.isCollapsed) {
+	                return "fa fa-arrow-down";
+	            }
+	            else {
+	                return "fa fa-arrow-up";
+	            }
+	        };
+	    },
+	    template: ["<button type='button' class='btn btn-default pul-right' ",
+	        " ng-click='vm.isCollapsed = !vm.isCollapsed'> ",
+	        " <i ng-class='vm.getButtonIcon()' aria-hidden='true'></i>{{ vm.getButtonText() }} ",
+	        "</button>"].join("")
+	};
+
+	angular.module("myComponents").component("myMoreLessButton", myMoreLessButton);
+
+/***/ },
+/* 33 */
 /***/ function(module, exports) {
 
 	var myPanel = {
