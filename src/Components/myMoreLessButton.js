@@ -13,7 +13,7 @@ var myMoreLessButton = {
                 return "More Search Options";
             }
             else {
-                return "Less Search Options";
+                return "Fewer Search Options";
             }
         };
 
