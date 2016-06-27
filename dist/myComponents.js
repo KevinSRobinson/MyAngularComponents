@@ -1155,14 +1155,15 @@
 	    bindings: {
 	        fieldLabel: '@',
 	        ngModel: '=',
-	        fieldName: '@',
+	        fieldName: '@'
 	    },
+	    controllerAs:"vm",
 	    template: ["<div class='row'>",
 	                    "<div class='col-sm-2'>",
-	                         "<span class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></span>",
+	                         "<span class='control-label'><strong>{{vm.fieldLabel}}</strong></span>",
 	                    "</div>",
 	                    "<div class='col-sm-8'>",
-	                         "{{ctrl.ngModel}}",
+	                         "{{vm.ngModel | date:'medium' }}",
 	                    "</div>",
 	                 "</div>"].join("")
 	};
