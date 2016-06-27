@@ -27,10 +27,11 @@
         var vm = this;
 
         vm.exampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol";
-
+vm.test = "Some TExt";
         vm.date = new Date();
 
         vm.FirstName = "kevin";
+
 
         vm.filterText = "";
 
@@ -46,6 +47,17 @@
 </script>
 <div ng-controller="examples as vm">
 
+
+
+
+    <h1> TextBoxs </h1>
+
+    <h2>Display Text Field</h2>
+    <my-display-field field-label="FirstName" ng-model="vm.test"></my-display-field>
+
+    <h2>Display Date Field</h2>
+    <my-display-date-field ng-model='vm.date' field-label='Date Closed'
+                           field-name='DateClosed'></my-display-date-field>
 
     <my-panel title="Filter Textbox">
         {{vm.filterText}}

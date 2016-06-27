@@ -61,7 +61,7 @@
 	__webpack_require__(18);
 	__webpack_require__(19);
 
-	__webpack_require__(17);
+	__webpack_require__(34);
 
 	__webpack_require__(20);
 	__webpack_require__(21);
@@ -1146,6 +1146,28 @@
 	};
 
 	angular.module("myComponents").component("myPanel", myPanel);
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	var myDisplayDateField = {
+	    bindings: {
+	        fieldLabel: '@',
+	        ngModel: '=',
+	        fieldName: '@',
+	    },
+	    template: ["<div class='row'>",
+	                    "<div class='col-sm-2'>",
+	                         "<span class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></span>",
+	                    "</div>",
+	                    "<div class='col-sm-8'>",
+	                         "{{ctrl.ngModel}}",
+	                    "</div>",
+	                 "</div>"].join("")
+	};
+
+	angular.module('myComponents').component("myDisplayDateField", myDisplayDateField);
 
 /***/ }
 /******/ ]);
