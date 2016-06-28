@@ -909,7 +909,7 @@
 	        
 	        
 	        // watch for changes
-	        $scope.$watch("vm.categories", function () {
+	        $scope.$watch("vm.items", function () {
 
 	            if (vm.items != undefined) {
 
