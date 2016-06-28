@@ -47,7 +47,7 @@ var myTagsFilterList = {
 
 
         // watch for changes
-        $scope.$watch("vm.tags", function () {
+        $scope.$watch("vm.items", function () {
 
 
             if (vm.items != undefined) {
