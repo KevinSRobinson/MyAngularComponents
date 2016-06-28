@@ -20,6 +20,12 @@
     body {
         padding: 100px;
     }
+    H1{
+        color: darkgreen;
+    }
+    H4{
+        color: purple;
+    }
 </style>
 <body ng-app="myComponents">
 <script>
@@ -32,8 +38,16 @@ vm.test = "Some TExt";
 
         vm.FirstName = "kevin";
 
+        vm.fakeItems = [
+            { id: 1, Title : "Test 1", Tags: "Tag1, Tag2", Category: "Category 1, Category 5"},
+            { id: 2, Title : "Test 1", Tags: "Tag3, Tag2", Category: "Category 3, Category 2"},
+            { id: 3, Title : "Test 1", Tags: "Tag4, Tag5", Category: "Category 4, Category 2"}
+        ];
+
+
 
         vm.filterText = "";
+        vm.selectedTag = {};
 
         vm.add= function () {
           alert('Add Clicked');
@@ -50,24 +64,54 @@ vm.test = "Some TExt";
 
 
 
-    <h1> TextBoxs </h1>
 
-    <h2>Display Text Field</h2>
-    <my-display-field field-label="FirstName" ng-model="vm.test"></my-display-field>
 
-    <h2>Display Date Field</h2>
-    <my-display-date-field ng-model='vm.date' field-label='Date Closed'
-                           field-name='DateClosed'></my-display-date-field>
+    <div class="well">
+        <h1> Date Fields </h1>
+        <hr>
+        <h4>Display Text Field</h4>
+        <my-display-field field-label="FirstName" ng-model="vm.test"></my-display-field>
 
-    <h2>Date Field</h2>
-    <my-date-field ng-model='vm.date' field-label='Date Closed'
-                           field-name='DateClosed'></my-date-field>
+        <h4>Display Date Field</h4>
+        <my-display-date-field ng-model='vm.date' field-label='Date Closed'
+                               field-name='DateClosed'></my-display-date-field>
 
+        <h4>Date Field</h4>
+        <my-date-field ng-model='vm.date' field-label='Date Closed'
+                       field-name='DateClosed'></my-date-field>
+
+    </div>
+
+
+
+
+    <h1> Tags </h1>
+    <hr>
+    <div class="well">
+        <h4> Tags Filter List </h4>
+        <strong>Selected Tag: {{ vm.selectedTag }}</strong>
+        <my-tags-filter-list items="vm.fakeItems" selected="vm.selectedTag"></my-tags-filter-list>
+
+
+    </div>
+
+
+    <h1> Combo Boxes </h1>
+    <hr>
+    <div class="well">
+       <h4> Category Select </h4>
+
+        <strong>Selected Category: {{ selectedCategory }}</strong>
+       <my-category-select items="vm.fakeItems" selected="selectedCategory"></my-category-select>
+
+
+    </div>
 
     <my-panel title="Filter Textbox">
         {{vm.filterText}}
         <my-filter-textbox ng-model="vm.filterText"></my-filter-textbox>
     </my-panel>
+
 
 
     <my-panel title="Text Field" icon="user"

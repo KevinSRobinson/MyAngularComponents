@@ -51,45 +51,54 @@
 	__webpack_require__(13);
 	__webpack_require__(14);
 
+
 	__webpack_require__(15);
+
+
 	__webpack_require__(16);
 
 
-	__webpack_require__(17);
 
 
-	__webpack_require__(18);
-	__webpack_require__(19);
+	__webpack_require__(21);
+	__webpack_require__(16);
+
+
+	__webpack_require__(25);
+	__webpack_require__(26);
+	__webpack_require__(27);
+
+	__webpack_require__(28);
+	__webpack_require__(29);
 
 	__webpack_require__(34);
 
-	__webpack_require__(20);
-	__webpack_require__(21);
-	__webpack_require__(22);
-	__webpack_require__(23);
-	__webpack_require__(24);
-	__webpack_require__(25);
-	__webpack_require__(26);
-
-	__webpack_require__(27);
-	__webpack_require__(28);
 
 
 	// Buttons
-	__webpack_require__(29);
-	__webpack_require__(30);
-	__webpack_require__(31);
-	__webpack_require__(16);
-	__webpack_require__(32);
+	__webpack_require__(37);
+	__webpack_require__(38);
+	__webpack_require__(39);
 
-	__webpack_require__(33);
+	__webpack_require__(40);
+
+	// Check Boxes
+	__webpack_require__(43);
+	__webpack_require__(44);
+
+	// Tags
+	__webpack_require__(41);
+	__webpack_require__(42);
+
+	// Combo Boxes
+	__webpack_require__(36);
 
 
-
-
-
-
-			
+	// Modals
+	__webpack_require__(45);
+	__webpack_require__(46);
+	__webpack_require__(47);
+		
 			
 
 /***/ },
@@ -625,102 +634,11 @@
 
 
 /***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	var myDateField = {
-	      
-	  bindings: {
-	    ngModel: "=",
-	    fieldName: "=",
-	    fieldLabel: "@"
-	  },
-	  template: [
-	    "<div class='form-group'>",
-	    "<label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
-	    "<div class='input-group'>",
-	    "<input type='text' class='form-control'",
-	    " uib-datepicker-popup='dd-MMMM-yyyy' ng-model='$ctrl.ngModel'  is-open='$ctrl.popup1.opened'/> ",
-	    "<span class='input-group-btn'>",
-	    "<button type='button' class='btn btn-default' ng-click='$ctrl.open()'>" +
-	    "<i class='fa fa-calendar'></i></button>",
-	    " </span>",
-	    "</div>"].join(""),
-	  controller: function () {
-	    // this.opened = false;
-	    //
-	    this.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-	    this.format = this.formats[0];
-
-	    this.dateOptions = {
-	      formatYear: 'yy',
-	      startingDay: 1,
-	      minDate: new Date()
-	    };
-
-	    this.popup1 = {
-	      opened: false
-	    };
-
-	    this.open = function () {
-	      this.popup1.opened = true;
-	    };
-
-	  }
-	};
-
-
-	var app = angular.module('myComponents')
-	  .component('myDateField', myDateField);
-
-
-
-/***/ },
-/* 18 */
-/***/ function(module, exports) {
-
-	var myCheckboxField = {
-	  bindings: {
-	    ngModel: "=",
-	    fieldLabel: "@",
-	    icon: "@"
-	  },
-	  template: ["<div class='row'>",
-	                "<div class='col-md-2' style='margin-top: 10px'>",
-	                    "<checkbox class='btn-success' type='checkbox' ng-model='$ctrl.ngModel'></checkbox>",
-	                  "</div>",
-	                  
-	                   "<div class='col-md-10' style='margin-top: 10px'>",
-	                    "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
-	                "</div>",
-	             "</div>"].join("")
-	};
-
-	angular.module("myComponents").component("myCheckboxField", myCheckboxField);
-
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	var myDisplayCheckField = {
-	    bindings: {
-	        fieldLabel: '@',
-	        ngModel: '='
-	    },
-	    template: ["<div class='row'>",
-	                    "<div class='col-sm-8'>",
-	                         "<label class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></label>",
-	                    "</div>",
-	                    "<div class='col-sm-2'>",
-	                         "<i ng-show='$ctrl.ngModel' class='fa fa-check fa-2x'></i>",
-	                    "</div>",
-	                 "</div>"].join("")
-	};
-	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
-
-/***/ },
-/* 20 */
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */
 /***/ function(module, exports) {
 
 	var myDisplayField = {
@@ -750,81 +668,10 @@
 	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
 
 /***/ },
-/* 21 */
-/***/ function(module, exports) {
-
-	var modalButtons = {
-
-	    bindings: {
-	        save: "&save",
-	        close: "&close",
-	        saveText: "@",
-	        hideSave: "@",
-	    },
-	    controllerAs: "vm",
-	      controller: function(){
-	        var vm = this;
-	        
-	        if(vm.savetext== undefined){
-	          vm.savetext= "Save";
-	        } 
-	      },
-	    template: ["<div class='modal-footer'>",
-	        "<span><button type='submit' id='save' class='btn btn-primary btn-large pull-left'",
-	        " ng-click='vm.save()'>{{vm.savetext}}</button>",
-	        "<button type='button'  class='btn btn-default pull-left' id='close'",
-	        "ng-click='vm.close()'>Close</button>",
-	        "</span>",
-	        "</div>"].join("")
-	};
-
-	var app = angular.module("myComponents").component("modalButtons", modalButtons);
-
-
-/***/ },
-/* 22 */
-/***/ function(module, exports) {
-
-	var okModalButtons = {
-
-	  bindings: {
-	    close: "&close",
-	  },
-	  controllerAs: "vm",
-	  controller: function () {
-	    var vm = this;
-
-	  },
-	  template: ["<div class='modal-footer'>",
-	    "<span>",
-	    "<button  class='btn btn-default pull-left' id='close' ",
-	    "ng-click='vm.close()'>OK</button>",
-	    "</span>",
-	    "</div>"].join("")
-	};
-
-	var app = angular.module("myComponents").component("okModalButtons", okModalButtons);
-
-
-/***/ },
-/* 23 */
-/***/ function(module, exports) {
-
-	var modalHeader = {
-	    bindings: {
-	        title: "@"
-	    },
-	    template: ["<div class='modal-header'>",
-	        "<h3 class='modal-title'>{{$ctrl.title}}</h3>",
-	        "</div>"].join("")
-	};
-
-
-	var app = angular.module("myComponents").component("modalHeader", modalHeader);
-
-
-/***/ },
-/* 24 */
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */
 /***/ function(module, exports) {
 
 	var mySelectList = {
@@ -851,7 +698,7 @@
 
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports) {
 
 	var mySpinner = {
@@ -872,7 +719,7 @@
 
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports) {
 
 	var myErrorMessage = {
@@ -891,7 +738,7 @@
 
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports) {
 
 	var myPageTitle = {
@@ -910,7 +757,7 @@
 
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports) {
 
 	var myStatusMessage = {
@@ -970,117 +817,11 @@
 
 
 /***/ },
-/* 29 */
-/***/ function(module, exports) {
-
-	var myEditButton = {
-	    bindings: {
-	        click: "&",
-	        id: "@",
-	        
-	    },
-	    controllerAs: "vm",
-	    controller: function () {
-	        var vm = this;
-	        
-	        if(vm.id==undefined){
-	            vm.id = "edit"
-	        }
-	    
-	    },
-	    template: "<button class='btn btn-success btn-sm' id='{{ vm.id }}' ng-click='vm.click(user)'>Edit<i class='fa fa-bars' ></i></button>"
-	};
-
-	angular.module("myComponents").component("myEditButton", myEditButton);
-
-
-/***/ },
-/* 30 */
-/***/ function(module, exports) {
-
-	var myCreateButton = {
-	    bindings: {
-	        click: "&"
-	    },
-	    template: ["<div class='btn btn-success' id='create'",
-	                " ng-click='$ctrl.click()' >" ,
-	                " Create <i class='fa fa-plus'></i>",
-	                " </div>"].join(",")
-
-	};
-
-
-	angular.module("myComponents").component("myCreateButton", myCreateButton);
-
-
-
-
-
-/***/ },
-/* 31 */
-/***/ function(module, exports) {
-
-	var myDeleteButton = {
-	    bindings: {
-	        click: "&"
-	    },
-	    template: ["<div class='btn btn-danger' id='delete'",
-	                " ng-click='$ctrl.click()' >" ,
-	                " Delete<i class='fa fa fa-times' ></i> ",
-	                " </div>"].join(",")
-
-	};
-
-
-	angular.module("myComponents").component("myDeleteButton", myDeleteButton);
-
-
-
-
-
-/***/ },
-/* 32 */
-/***/ function(module, exports) {
-
-	var myMoreLessButton = {
-	    bindings: {
-	        isCollapsed: "="
-	    },
-	    controllerAs: "vm",
-	    controller: function () {
-	        "use strict";
-	        var vm = this;
-	        vm.buttonText = "";
-
-	        vm.getButtonText = function () {
-	            if (vm.isCollapsed) {
-	                return "More Search Options";
-	            }
-	            else {
-	                return "Fewer Search Options";
-	            }
-	        };
-
-	        vm.getButtonIcon = function () {
-
-	            if (vm.isCollapsed) {
-	                return "fa fa-arrow-down";
-	            }
-	            else {
-	                return "fa fa-arrow-up";
-	            }
-	        };
-	    },
-	    template: ["<button type='button' class='btn btn-default pul-right' ",
-	        " ng-click='vm.isCollapsed = !vm.isCollapsed'> ",
-	        " <i ng-class='vm.getButtonIcon()' aria-hidden='true'></i>{{ vm.getButtonText() }} ",
-	        "</button>"].join("")
-	};
-
-	angular.module("myComponents").component("myMoreLessButton", myMoreLessButton);
-
-/***/ },
-/* 33 */
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */
 /***/ function(module, exports) {
 
 	var myPanel = {
@@ -1148,27 +889,443 @@
 	angular.module("myComponents").component("myPanel", myPanel);
 
 /***/ },
-/* 34 */
+/* 35 */,
+/* 36 */
 /***/ function(module, exports) {
 
-	var myDisplayDateField = {
+	var myCategorySelect = {
+	    bindings: {
+	        selected: "=",
+	        items: "="
+	    },
+	    controllerAs: "vm",
+	    controller: function ($scope) {
+	        "use strict";
+	        var vm = this;
+	        vm.cats = [];
+
+
+	       
+	        
+	        
+	        // watch for changes
+	        $scope.$watch("vm.categories", function () {
+
+	            if (vm.items != undefined) {
+
+	                
+	                // loop through all the tags in the list
+	                angular.forEach(vm.items, function (key, value) {
+
+
+	                    // separate out tags
+	                    var tags = getCats(key.Category);
+	                    angular.forEach(tags, function (key, value) {
+	                        if (vm.cats.indexOf(key) == -1) {
+
+	                            vm.cats.push(key);
+	                        }
+	                    
+	                    });
+	                    
+	                    
+	                  
+	                });
+	            }
+	        });
+
+
+
+	        var isJson = function isJson(str) {
+	            try {
+	                JSON.parse(str);
+	            } catch (e) {
+	                return false;
+	            }
+	            return true;
+	        };
+
+	        var getCats = function (tags) {
+
+	            if (isJson(tags)) {
+	                return angular.fromJson(tags);
+	            }
+	            else {
+	                return tags.split(",");
+	            }
+
+	        };
+	        
+	    },
+	    template: ["<div class='form-group'>", 
+	        "<label class='control-label' style='min-width: 110px; text-align: left' >Category</label>",
+	        "<select ng-model='vm.selected' ng-change='vm.categoprySelected(catgeory)' class='form-control'>",
+	        "<option ng-repeat='catgeory in vm.cats' value='{{catgeory}}'>{{catgeory}}</option>",
+	        "</select>",
+	        "</div>"].join("")
+	};
+
+	myCategorySelect.$inject = ["$scope"];
+
+	angular.module("myComponents").component("myCategorySelect", myCategorySelect);
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	var myEditButton = {
+	    bindings: {
+	        click: "&",
+	        id: "@",
+	        
+	    },
+	    controllerAs: "vm",
+	    controller: function () {
+	        var vm = this;
+	        
+	        if(vm.id==undefined){
+	            vm.id = "edit"
+	        }
+	    
+	    },
+	    template: "<button class='btn btn-success btn-sm' id='{{ vm.id }}' ng-click='vm.click(user)'>Edit<i class='fa fa-bars' ></i></button>"
+	};
+
+	angular.module("myComponents").component("myEditButton", myEditButton);
+
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	var myCreateButton = {
+	    bindings: {
+	        click: "&"
+	    },
+	    template: ["<div class='btn btn-success' id='create'",
+	                " ng-click='$ctrl.click()' >" ,
+	                " Create <i class='fa fa-plus'></i>",
+	                " </div>"].join(",")
+
+	};
+
+
+	angular.module("myComponents").component("myCreateButton", myCreateButton);
+
+
+
+
+
+/***/ },
+/* 39 */
+/***/ function(module, exports) {
+
+	var myDeleteButton = {
+	    bindings: {
+	        click: "&"
+	    },
+	    template: ["<div class='btn btn-danger' id='delete'",
+	                " ng-click='$ctrl.click()' >" ,
+	                " Delete<i class='fa fa fa-times' ></i> ",
+	                " </div>"].join(",")
+
+	};
+
+
+	angular.module("myComponents").component("myDeleteButton", myDeleteButton);
+
+
+
+
+
+/***/ },
+/* 40 */
+/***/ function(module, exports) {
+
+	var myMoreLessButton = {
+	    bindings: {
+	        isCollapsed: "="
+	    },
+	    controllerAs: "vm",
+	    controller: function () {
+	        "use strict";
+	        var vm = this;
+	        vm.buttonText = "";
+
+	        vm.getButtonText = function () {
+	            if (vm.isCollapsed) {
+	                return "More Search Options";
+	            }
+	            else {
+	                return "Fewer Search Options";
+	            }
+	        };
+
+	        vm.getButtonIcon = function () {
+
+	            if (vm.isCollapsed) {
+	                return "fa fa-arrow-down";
+	            }
+	            else {
+	                return "fa fa-arrow-up";
+	            }
+	        };
+	    },
+	    template: ["<button type='button' class='btn btn-default pul-right' ",
+	        " ng-click='vm.isCollapsed = !vm.isCollapsed'> ",
+	        " <i ng-class='vm.getButtonIcon()' aria-hidden='true'></i>{{ vm.getButtonText() }} ",
+	        "</button>"].join("")
+	};
+
+	angular.module("myComponents").component("myMoreLessButton", myMoreLessButton);
+
+/***/ },
+/* 41 */
+/***/ function(module, exports) {
+
+	/**
+	 * This component displays a list of clickable tags.
+	 * It extracts out unique Tag values from the supplied list *
+	 * @type {{bindings: {ngModel: string}, controllerAs: string, controller: myTagsFilterList.controller, templateUrl: string}}
+	 */
+	var myTagsFilterList = {
+	    bindings: {
+	        items: "=",
+	        tagsFieldName: "@",
+	        selected: "="
+	    },
+	    controllerAs: "vm",
+	    controller: function ($scope) {
+	        "use strict";
+
+	        var vm = this;
+	        vm.selected = {};
+	        
+
+	        //use the default field for tags if none is specified
+	        if (vm.tagsFieldName == undefined) {
+	            vm.tagsFieldName = "Tags";
+	        }
+
+
+	        vm.tagList = [];
+
+	        var isJson = function isJson(str) {
+	            try {
+	                JSON.parse(str);
+	            } catch (e) {
+	                return false;
+	            }
+	            return true;
+	        };
+
+	        var getTags = function (tags) {
+
+	            if (isJson(tags)) {
+	                return angular.fromJson(tags);
+	            }
+	            else {
+	                return tags.split(",");
+	            }
+
+	        };
+
+
+	        // watch for changes
+	        $scope.$watch("vm.tags", function () {
+
+
+	            if (vm.items != undefined) {
+
+	                // loop through all the tags in the list
+	                angular.forEach(vm.items, function (key, value) {
+
+	                    if (key[vm.tagsFieldName] != undefined) {
+
+	                        // separate out tags
+	                        var tags = getTags(key.Tags);
+
+	                        // add the tags to the tagList if not already
+	                        angular.forEach(tags, function (key, value) {
+	                            if (vm.tagList.indexOf(key) == -1) {
+	                                vm.tagList.push(key.replace(" ", ""));
+	                            }
+	                        });
+	                    }
+	                });
+	            }
+	        });
+
+	        vm.tagClicked = function (tag) {
+	            console.log('tagClicked');
+	            console.log(tag);
+	            vm.selected = tag;
+	        };
+
+
+	    },
+	    template: ["<div class='form-group'>",
+	        "<label class='control-label' style='min-width: 110px; text-align: left'>Tags</label>",
+	        "<div class='form-control'>",
+	        "<span ng-repeat='tag in vm.tagList'>",
+	        "<span class='badge' ng-click='vm.tagClicked(tag)' >{{tag}}</span>",
+	        "</span>",
+	        "</div>",
+	        "</div>"].join("")
+	};
+
+
+	myTagsFilterList.$inject = ["$scope"];
+
+
+	angular.module("myComponents").component("myTagsFilterList", myTagsFilterList);
+
+/***/ },
+/* 42 */
+/***/ function(module, exports) {
+
+	var myTagsMultiSelect = {
+	    bindings: {
+	        fieldLabel: "@",
+	        fieldName: "@",
+	        selected: "=",
+	        tags: "="
+	    },
+	    controllerAs: "vm",
+	    controller: function () {
+	           
+	    },
+	    template: ["<div class='form-group'>",
+	        "<span for='tags'>{{vm.fieldLabel}}</span>",
+	        "<ui-select multiple ng-model='vm.selected' id='tags' >",
+	        "<ui-select-match placeholder='Select Tag...'>{{$item.Name}}</ui-select-match>",
+	        "<ui-select-choices repeat='tag in vm.tags'>",
+	        "<div ng-bind-html='tag.Name'></div>",
+	        "</ui-select-choices>",
+	        "</ui-select>",
+	        "</div>"].join("")
+	};
+
+	angular.module("myComponents").component("myTagsMultiSelect", myTagsMultiSelect);
+
+
+/***/ },
+/* 43 */
+/***/ function(module, exports) {
+
+	var myCheckboxField = {
+	  bindings: {
+	    ngModel: "=",
+	    fieldLabel: "@",
+	    icon: "@"
+	  },
+	  template: ["<div class='row'>",
+	                "<div class='col-md-2' style='margin-top: 10px'>",
+	                    "<checkbox class='btn-success' type='checkbox' ng-model='$ctrl.ngModel'></checkbox>",
+	                  "</div>",
+	                  
+	                   "<div class='col-md-10' style='margin-top: 10px'>",
+	                    "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
+	                "</div>",
+	             "</div>"].join("")
+	};
+
+	angular.module("myComponents").component("myCheckboxField", myCheckboxField);
+
+
+/***/ },
+/* 44 */
+/***/ function(module, exports) {
+
+	var myDisplayCheckField = {
 	    bindings: {
 	        fieldLabel: '@',
-	        ngModel: '=',
-	        fieldName: '@'
+	        ngModel: '='
 	    },
-	    controllerAs:"vm",
 	    template: ["<div class='row'>",
-	                    "<div class='col-sm-2'>",
-	                         "<span class='control-label'><strong>{{vm.fieldLabel}}</strong></span>",
-	                    "</div>",
 	                    "<div class='col-sm-8'>",
-	                         "{{vm.ngModel | date:'medium' }}",
+	                         "<label class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></label>",
+	                    "</div>",
+	                    "<div class='col-sm-2'>",
+	                         "<i ng-show='$ctrl.ngModel' class='fa fa-check fa-2x'></i>",
 	                    "</div>",
 	                 "</div>"].join("")
 	};
+	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
 
-	angular.module('myComponents').component("myDisplayDateField", myDisplayDateField);
+/***/ },
+/* 45 */
+/***/ function(module, exports) {
+
+	var modalButtons = {
+
+	    bindings: {
+	        save: "&save",
+	        close: "&close",
+	        saveText: "@",
+	        hideSave: "@",
+	    },
+	    controllerAs: "vm",
+	      controller: function(){
+	        var vm = this;
+	        
+	        if(vm.savetext== undefined){
+	          vm.savetext= "Save";
+	        } 
+	      },
+	    template: ["<div class='modal-footer'>",
+	        "<span><button type='submit' id='save' class='btn btn-primary btn-large pull-left'",
+	        " ng-click='vm.save()'>{{vm.savetext}}</button>",
+	        "<button type='button'  class='btn btn-default pull-left' id='close'",
+	        "ng-click='vm.close()'>Close</button>",
+	        "</span>",
+	        "</div>"].join("")
+	};
+
+	var app = angular.module("myComponents").component("modalButtons", modalButtons);
+
+
+/***/ },
+/* 46 */
+/***/ function(module, exports) {
+
+	var okModalButtons = {
+
+	  bindings: {
+	    close: "&close",
+	  },
+	  controllerAs: "vm",
+	  controller: function () {
+	    var vm = this;
+
+	  },
+	  template: ["<div class='modal-footer'>",
+	    "<span>",
+	    "<button  class='btn btn-default pull-left' id='close' ",
+	    "ng-click='vm.close()'>OK</button>",
+	    "</span>",
+	    "</div>"].join("")
+	};
+
+	var app = angular.module("myComponents").component("okModalButtons", okModalButtons);
+
+
+/***/ },
+/* 47 */
+/***/ function(module, exports) {
+
+	var modalHeader = {
+	    bindings: {
+	        title: "@"
+	    },
+	    template: ["<div class='modal-header'>",
+	        "<h3 class='modal-title'>{{$ctrl.title}}</h3>",
+	        "</div>"].join("")
+	};
+
+
+	var app = angular.module("myComponents").component("modalHeader", modalHeader);
+
 
 /***/ }
 /******/ ]);

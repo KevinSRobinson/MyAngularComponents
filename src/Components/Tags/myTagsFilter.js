@@ -5,8 +5,8 @@
  */
 var myTagsFilterList = {
     bindings: {
-        tags: "=",
-        tagsFieldName : "@",
+        items: "=",
+        tagsFieldName: "@",
         selected: "="
     },
     controllerAs: "vm",
@@ -14,9 +14,11 @@ var myTagsFilterList = {
         "use strict";
 
         var vm = this;
+        vm.selected = {};
+        
 
         //use the default field for tags if none is specified
-        if(vm.tagsFieldName == undefined){
+        if (vm.tagsFieldName == undefined) {
             vm.tagsFieldName = "Tags";
         }
 
@@ -34,33 +36,34 @@ var myTagsFilterList = {
 
         var getTags = function (tags) {
 
-            if(isJson(tags))
-            {
-                return  angular.fromJson(tags);
+            if (isJson(tags)) {
+                return angular.fromJson(tags);
             }
             else {
                 return tags.split(",");
             }
 
         };
+
+
         // watch for changes
         $scope.$watch("vm.tags", function () {
 
 
-            if(vm.tags != undefined){
+            if (vm.items != undefined) {
 
                 // loop through all the tags in the list
-                angular.forEach(vm.tags, function (key, value) {
+                angular.forEach(vm.items, function (key, value) {
 
-                    if(key[vm.tagsFieldName] != undefined){
+                    if (key[vm.tagsFieldName] != undefined) {
 
                         // separate out tags
-                        var tags =getTags(key.Tags);
+                        var tags = getTags(key.Tags);
 
                         // add the tags to the tagList if not already
                         angular.forEach(tags, function (key, value) {
                             if (vm.tagList.indexOf(key) == -1) {
-                                vm.tagList.push(key);
+                                vm.tagList.push(key.replace(" ", ""));
                             }
                         });
                     }
@@ -69,16 +72,25 @@ var myTagsFilterList = {
         });
 
         vm.tagClicked = function (tag) {
+            console.log('tagClicked');
+            console.log(tag);
             vm.selected = tag;
         };
 
 
     },
-    templateUrl: "/app/Core/Components/MyFilterTagsList/myTagsListTemplate.html"
+    template: ["<div class='form-group'>",
+        "<label class='control-label' style='min-width: 110px; text-align: left'>Tags</label>",
+        "<div class='form-control'>",
+        "<span ng-repeat='tag in vm.tagList'>",
+        "<span class='badge' ng-click='vm.tagClicked(tag)' >{{tag}}</span>",
+        "</span>",
+        "</div>",
+        "</div>"].join("")
 };
 
 
-myTagsFilterList.$inject =  ["$scope"];
+myTagsFilterList.$inject = ["$scope"];
 
 
 angular.module("myComponents").component("myTagsFilterList", myTagsFilterList);

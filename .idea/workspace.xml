@@ -24,8 +24,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="189">
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#my-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#my-panel#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -37,63 +37,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myDateField.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Components/myDateField.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-              <folding>
-                <marker date="1467054254629" expanded="true" signature="191:225" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="myTagsFilter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/myTagsFilter.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsFilter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="399">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
-                <element signature="e#697#854#0" expanded="false" />
-                <element signature="e#895#1086#0" expanded="false" />
-                <element signature="e#1162#1870#0" expanded="false" />
-                <element signature="e#1913#1955#0" expanded="false" />
+                <element signature="e#734#891#0" expanded="false" />
+                <marker date="1467113744278" expanded="true" signature="2174:2208" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myStatusMessage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/myStatusMessage.js">
+      <file leaf-file-name="myTagsField.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsField.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="48" column="28" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="28" />
-              <folding>
-                <marker date="1463142130892" expanded="true" signature="918:935" placeholder="..." />
-                <marker date="1463142130892" expanded="true" signature="994:1041" placeholder="..." />
-                <marker date="1463142130892" expanded="true" signature="1338:1355" placeholder="..." />
-                <marker date="1463142130892" expanded="true" signature="1416:1465" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="entry.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entry.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myDisplayDateField.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/myDisplayDateField.js">
+      <file leaf-file-name="entry.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/entry.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+            <state relative-caret-position="106">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -116,16 +87,19 @@
         <option value="$PROJECT_DIR$/dist/myComponents.js" />
         <option value="$PROJECT_DIR$/src/Components/myTextField.js" />
         <option value="$PROJECT_DIR$/src/Components/myFilterTextbox.js" />
-        <option value="$PROJECT_DIR$/src/Components/myTagsFilter.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/Components/myPanel.js" />
         <option value="$PROJECT_DIR$/src/Components/mySpinner.js" />
         <option value="$PROJECT_DIR$/src/Components/moreLessButton.js" />
         <option value="$PROJECT_DIR$/src/Components/myMoreLessButton.js" />
-        <option value="$PROJECT_DIR$/entry.js" />
         <option value="$PROJECT_DIR$/src/Components/myDisplayDateField.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/Components/myDateField.js" />
+        <option value="$PROJECT_DIR$/src/Components/myTagsFilter.js" />
+        <option value="$PROJECT_DIR$/src/Components/ComboBoxes/myCategorySelect.js" />
+        <option value="$PROJECT_DIR$/src/Components/myTagsField.js" />
+        <option value="$PROJECT_DIR$/src/Components/Tags/myTagsFilter.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/entry.js" />
       </list>
     </option>
   </component>
@@ -140,10 +114,10 @@
     </gulpfiles>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1288" />
-    <option name="y" value="73" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -229,10 +203,17 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/VolnowUmb/VolunteerNowUmb/VolunteerNowUmb/app" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Repos\MyComponents\src\Components\Modals" />
+      <recent name="D:\Repos\MyComponents\src\Components\Buttons" />
+      <recent name="D:\Repos\MyComponents\src\Components\CheckBoxes" />
+      <recent name="D:\Repos\MyComponents\src\Components\Dates" />
+      <recent name="D:\Repos\MyComponents\src\Components\Tags" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Repos\MyComponents" />
       <recent name="D:\Repos\MyComponents\node_modules" />
@@ -304,17 +285,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="73" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2082671" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1777151" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3087886" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36262202" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -342,131 +323,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#my-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <marker date="1466870581415" expanded="true" signature="1300:2024" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1344:1366" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1368:1389" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1389:1750" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1389:1955" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1488:1524" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1636:1659" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1703:1716" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1825:1848" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1893:1906" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTagsField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTagsFilter.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsFilter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="e#697#854#0" expanded="false" />
-            <element signature="e#895#1086#0" expanded="false" />
-            <element signature="e#1162#1870#0" expanded="false" />
-            <element signature="e#1913#1955#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myStatusMessage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="28" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="28" />
-          <folding>
-            <marker date="1463142130892" expanded="true" signature="918:935" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="994:1041" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="1338:1355" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="1416:1465" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#my-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <marker date="1466870581415" expanded="true" signature="1300:2024" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1344:1366" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1368:1389" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1389:1750" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1389:1955" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1488:1524" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1636:1659" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1703:1716" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1825:1848" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1893:1906" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTagsField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTagsFilter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#697#854#0" expanded="false" />
-            <element signature="e#895#1086#0" expanded="false" />
-            <element signature="e#1162#1870#0" expanded="false" />
-            <element signature="e#1913#1955#0" expanded="false" />
+            <element signature="e#734#891#0" expanded="false" />
+            <marker date="1467113744278" expanded="true" signature="2174:2208" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -520,7 +383,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTagsField.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsField.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
@@ -557,7 +420,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTagsField.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsField.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
@@ -658,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/my-angular-components.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -707,59 +563,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myFilterTextbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myStatusMessage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="28" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="28" />
-          <folding>
-            <marker date="1463142130892" expanded="true" signature="918:935" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="994:1041" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="1338:1355" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="1416:1465" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTagsFilter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#697#854#0" expanded="false" />
-            <element signature="e#895#1086#0" expanded="false" />
-            <element signature="e#1162#1870#0" expanded="false" />
-            <element signature="e#1913#1955#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTagsField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,14 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myMoreLessButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/mySpinner.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -801,10 +600,161 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/myStatusMessage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="48" column="28" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="28" />
+          <folding>
+            <marker date="1463142130892" expanded="true" signature="918:935" placeholder="..." />
+            <marker date="1463142130892" expanded="true" signature="994:1041" placeholder="..." />
+            <marker date="1463142130892" expanded="true" signature="1338:1355" placeholder="..." />
+            <marker date="1463142130892" expanded="true" signature="1416:1465" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-angular-components.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/myFilterTextbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <marker date="1466693421438" expanded="true" signature="267:280" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/ComboBoxes/myCategorySelect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="e#1002#1159#0" expanded="false" />
+            <marker date="1467113225559" expanded="true" signature="1486:1520" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Dates/myDateField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding>
+            <marker date="1467054254629" expanded="true" signature="191:225" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Dates/myDisplayDateField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/CheckBoxes/myCheckboxField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/CheckBoxes/myDisplayCheckField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Buttons/myEditButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Buttons/myDeleteButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Buttons/myCreateButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Buttons/myMoreLessButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Modals/myModalButtons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Modals/myModalHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Modals/myOkModalButtons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsFilter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="e#734#891#0" expanded="false" />
+            <marker date="1467113744278" expanded="true" signature="2174:2208" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="189">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#my-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -815,21 +765,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myDisplayDateField.js">
+    <entry file="file://$PROJECT_DIR$/entry.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+        <state relative-caret-position="106">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myDateField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <marker date="1467054254629" expanded="true" signature="191:225" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
