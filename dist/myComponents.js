@@ -60,44 +60,44 @@
 
 
 
-	__webpack_require__(21);
+	__webpack_require__(17);
 	__webpack_require__(16);
 
 
-	__webpack_require__(25);
-	__webpack_require__(26);
-	__webpack_require__(27);
+	__webpack_require__(18);
+	__webpack_require__(19);
+	__webpack_require__(20);
 
-	__webpack_require__(28);
-	__webpack_require__(29);
+	__webpack_require__(21);
+	__webpack_require__(22);
 
-	__webpack_require__(34);
+	__webpack_require__(23);
 
 
 
 	// Buttons
-	__webpack_require__(37);
-	__webpack_require__(38);
-	__webpack_require__(39);
+	__webpack_require__(24);
+	__webpack_require__(25);
+	__webpack_require__(26);
 
-	__webpack_require__(40);
+	__webpack_require__(27);
 
 	// Check Boxes
-	__webpack_require__(43);
-	__webpack_require__(44);
+	__webpack_require__(28);
+	__webpack_require__(29);
 
 	// Tags
-	__webpack_require__(41);
-	__webpack_require__(42);
+	__webpack_require__(30);
+	__webpack_require__(31);
 
 	// Combo Boxes
-	__webpack_require__(36);
+	__webpack_require__(32);
 
 
 	// Modals
-	__webpack_require__(45);
-	__webpack_require__(46);
-	__webpack_require__(47);
+	__webpack_require__(33);
+	__webpack_require__(34);
+	__webpack_require__(35);
 		
 			
 
@@ -634,11 +634,7 @@
 
 
 /***/ },
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */
+/* 17 */
 /***/ function(module, exports) {
 
 	var myDisplayField = {
@@ -668,10 +664,7 @@
 	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
 
 /***/ },
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */
+/* 18 */
 /***/ function(module, exports) {
 
 	var mySelectList = {
@@ -698,7 +691,7 @@
 
 
 /***/ },
-/* 26 */
+/* 19 */
 /***/ function(module, exports) {
 
 	var mySpinner = {
@@ -719,7 +712,7 @@
 
 
 /***/ },
-/* 27 */
+/* 20 */
 /***/ function(module, exports) {
 
 	var myErrorMessage = {
@@ -738,7 +731,7 @@
 
 
 /***/ },
-/* 28 */
+/* 21 */
 /***/ function(module, exports) {
 
 	var myPageTitle = {
@@ -757,7 +750,7 @@
 
 
 /***/ },
-/* 29 */
+/* 22 */
 /***/ function(module, exports) {
 
 	var myStatusMessage = {
@@ -817,11 +810,7 @@
 
 
 /***/ },
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */
+/* 23 */
 /***/ function(module, exports) {
 
 	var myPanel = {
@@ -889,88 +878,7 @@
 	angular.module("myComponents").component("myPanel", myPanel);
 
 /***/ },
-/* 35 */,
-/* 36 */
-/***/ function(module, exports) {
-
-	var myCategorySelect = {
-	    bindings: {
-	        selected: "=",
-	        items: "="
-	    },
-	    controllerAs: "vm",
-	    controller: function ($scope) {
-	        "use strict";
-	        var vm = this;
-	        vm.cats = [];
-
-
-	       
-	        
-	        
-	        // watch for changes
-	        $scope.$watch("vm.items", function () {
-
-	            if (vm.items != undefined) {
-
-	                
-	                // loop through all the tags in the list
-	                angular.forEach(vm.items, function (key, value) {
-
-
-	                    // separate out tags
-	                    var tags = getCats(key.Category);
-	                    angular.forEach(tags, function (key, value) {
-	                        if (vm.cats.indexOf(key) == -1) {
-
-	                            vm.cats.push(key);
-	                        }
-	                    
-	                    });
-	                    
-	                    
-	                  
-	                });
-	            }
-	        });
-
-
-
-	        var isJson = function isJson(str) {
-	            try {
-	                JSON.parse(str);
-	            } catch (e) {
-	                return false;
-	            }
-	            return true;
-	        };
-
-	        var getCats = function (tags) {
-
-	            if (isJson(tags)) {
-	                return angular.fromJson(tags);
-	            }
-	            else {
-	                return tags.split(",");
-	            }
-
-	        };
-	        
-	    },
-	    template: ["<div class='form-group'>", 
-	        "<label class='control-label' style='min-width: 110px; text-align: left' >Category</label>",
-	        "<select ng-model='vm.selected' ng-change='vm.categoprySelected(catgeory)' class='form-control'>",
-	        "<option ng-repeat='catgeory in vm.cats' value='{{catgeory}}'>{{catgeory}}</option>",
-	        "</select>",
-	        "</div>"].join("")
-	};
-
-	myCategorySelect.$inject = ["$scope"];
-
-	angular.module("myComponents").component("myCategorySelect", myCategorySelect);
-
-/***/ },
-/* 37 */
+/* 24 */
 /***/ function(module, exports) {
 
 	var myEditButton = {
@@ -995,7 +903,7 @@
 
 
 /***/ },
-/* 38 */
+/* 25 */
 /***/ function(module, exports) {
 
 	var myCreateButton = {
@@ -1017,7 +925,7 @@
 
 
 /***/ },
-/* 39 */
+/* 26 */
 /***/ function(module, exports) {
 
 	var myDeleteButton = {
@@ -1039,7 +947,7 @@
 
 
 /***/ },
-/* 40 */
+/* 27 */
 /***/ function(module, exports) {
 
 	var myMoreLessButton = {
@@ -1080,7 +988,51 @@
 	angular.module("myComponents").component("myMoreLessButton", myMoreLessButton);
 
 /***/ },
-/* 41 */
+/* 28 */
+/***/ function(module, exports) {
+
+	var myCheckboxField = {
+	  bindings: {
+	    ngModel: "=",
+	    fieldLabel: "@",
+	    icon: "@"
+	  },
+	  template: ["<div class='row'>",
+	                "<div class='col-md-2' style='margin-top: 10px'>",
+	                    "<checkbox class='btn-success' type='checkbox' ng-model='$ctrl.ngModel'></checkbox>",
+	                  "</div>",
+	                  
+	                   "<div class='col-md-10' style='margin-top: 10px'>",
+	                    "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
+	                "</div>",
+	             "</div>"].join("")
+	};
+
+	angular.module("myComponents").component("myCheckboxField", myCheckboxField);
+
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	var myDisplayCheckField = {
+	    bindings: {
+	        fieldLabel: '@',
+	        ngModel: '='
+	    },
+	    template: ["<div class='row'>",
+	                    "<div class='col-sm-8'>",
+	                         "<label class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></label>",
+	                    "</div>",
+	                    "<div class='col-sm-2'>",
+	                         "<i ng-show='$ctrl.ngModel' class='fa fa-check fa-2x'></i>",
+	                    "</div>",
+	                 "</div>"].join("")
+	};
+	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
+
+/***/ },
+/* 30 */
 /***/ function(module, exports) {
 
 	/**
@@ -1181,7 +1133,7 @@
 	angular.module("myComponents").component("myTagsFilterList", myTagsFilterList);
 
 /***/ },
-/* 42 */
+/* 31 */
 /***/ function(module, exports) {
 
 	var myTagsMultiSelect = {
@@ -1210,51 +1162,87 @@
 
 
 /***/ },
-/* 43 */
+/* 32 */
 /***/ function(module, exports) {
 
-	var myCheckboxField = {
-	  bindings: {
-	    ngModel: "=",
-	    fieldLabel: "@",
-	    icon: "@"
-	  },
-	  template: ["<div class='row'>",
-	                "<div class='col-md-2' style='margin-top: 10px'>",
-	                    "<checkbox class='btn-success' type='checkbox' ng-model='$ctrl.ngModel'></checkbox>",
-	                  "</div>",
-	                  
-	                   "<div class='col-md-10' style='margin-top: 10px'>",
-	                    "<i class='fa {{$ctrl.icon}}'></i>{{$ctrl.fieldLabel}}",
-	                "</div>",
-	             "</div>"].join("")
-	};
-
-	angular.module("myComponents").component("myCheckboxField", myCheckboxField);
-
-
-/***/ },
-/* 44 */
-/***/ function(module, exports) {
-
-	var myDisplayCheckField = {
+	var myCategorySelect = {
 	    bindings: {
-	        fieldLabel: '@',
-	        ngModel: '='
+	        selected: "=",
+	        items: "="
 	    },
-	    template: ["<div class='row'>",
-	                    "<div class='col-sm-8'>",
-	                         "<label class='control-label'><strong>{{$ctrl.fieldLabel}}</strong></label>",
-	                    "</div>",
-	                    "<div class='col-sm-2'>",
-	                         "<i ng-show='$ctrl.ngModel' class='fa fa-check fa-2x'></i>",
-	                    "</div>",
-	                 "</div>"].join("")
+	    controllerAs: "vm",
+	    controller: function ($scope) {
+	        "use strict";
+	        var vm = this;
+	        vm.cats = [];
+
+
+	       
+	        
+	        
+	        // watch for changes
+	        $scope.$watch("vm.items", function () {
+
+	            if (vm.items != undefined) {
+
+	                
+	                // loop through all the tags in the list
+	                angular.forEach(vm.items, function (key, value) {
+
+
+	                    // separate out tags
+	                    var tags = getCats(key.Category);
+	                    angular.forEach(tags, function (key, value) {
+	                        if (vm.cats.indexOf(key) == -1) {
+
+	                            vm.cats.push(key);
+	                        }
+	                    
+	                    });
+	                    
+	                    
+	                  
+	                });
+	            }
+	        });
+
+
+
+	        var isJson = function isJson(str) {
+	            try {
+	                JSON.parse(str);
+	            } catch (e) {
+	                return false;
+	            }
+	            return true;
+	        };
+
+	        var getCats = function (tags) {
+
+	            if (isJson(tags)) {
+	                return angular.fromJson(tags);
+	            }
+	            else {
+	                return tags.split(",");
+	            }
+
+	        };
+	        
+	    },
+	    template: ["<div class='form-group'>", 
+	        "<label class='control-label' style='min-width: 110px; text-align: left' >Category</label>",
+	        "<select ng-model='vm.selected' ng-change='vm.categoprySelected(catgeory)' class='form-control'>",
+	        "<option ng-repeat='catgeory in vm.cats' value='{{catgeory}}'>{{catgeory}}</option>",
+	        "</select>",
+	        "</div>"].join("")
 	};
-	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
+
+	myCategorySelect.$inject = ["$scope"];
+
+	angular.module("myComponents").component("myCategorySelect", myCategorySelect);
 
 /***/ },
-/* 45 */
+/* 33 */
 /***/ function(module, exports) {
 
 	var modalButtons = {
@@ -1286,7 +1274,7 @@
 
 
 /***/ },
-/* 46 */
+/* 34 */
 /***/ function(module, exports) {
 
 	var okModalButtons = {
@@ -1311,7 +1299,7 @@
 
 
 /***/ },
-/* 47 */
+/* 35 */
 /***/ function(module, exports) {
 
 	var modalHeader = {

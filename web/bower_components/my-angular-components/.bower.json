@@ -16,11 +16,11 @@
     "web/node_modules",
     "web/bower_components"
   ],
-  "_release": "fd8799ece9",
+  "_release": "f83aa6474a",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "fd8799ece9dd849e436dbd738e0adfc31bb7100c"
+    "commit": "f83aa6474a214554cd3c312bb6f90c2c4d61cf15"
   },
   "_source": "https://volunteernow@bitbucket.org/volunteernow/mycomponents.git",
   "_target": "*",
