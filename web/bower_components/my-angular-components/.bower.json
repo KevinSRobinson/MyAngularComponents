@@ -16,11 +16,14 @@
     "web/node_modules",
     "web/bower_components"
   ],
-  "_release": "f83aa6474a",
+  "dependencies": {
+    "my-angular-components": "*"
+  },
+  "_release": "2428a8036b",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "f83aa6474a214554cd3c312bb6f90c2c4d61cf15"
+    "commit": "2428a8036b4b2339a47c8b41dae8373786839b0b"
   },
   "_source": "https://volunteernow@bitbucket.org/volunteernow/mycomponents.git",
   "_target": "*",

@@ -82,7 +82,7 @@ var myTagsFilterList = {
     template: ["<div class='form-group'>",
         "<label class='control-label' style='min-width: 110px; text-align: left'>Tags</label>",
         "<div class='form-control'>",
-        "<span ng-repeat='tag in vm.tagList'>",
+        "<span ng-repeat='tag in vm.tagList track by $index'>",
         "<span class='badge' ng-click='vm.tagClicked(tag)' >{{tag}}</span>",
         "</span>",
         "</div>",

@@ -3,7 +3,7 @@
   "authors": [
     "Kevin Robinson <ormeau@volunteernow.co.uk>"
   ],
-  "directory" : "../bower_components",
+  "directory": "../bower_components",
   "version": "0.0.4",
   "description": "#My Common Angular Components",
   "main": "my-angular-components.js",
@@ -11,10 +11,13 @@
     "globals"
   ],
   "license": "MIT",
-  "homepage": "" ,
+  "homepage": "",
   "ignore": [
     "web/**/.*",
     "web/node_modules",
     "web/bower_components"
-  ]
+  ],
+  "dependencies": {
+    "my-angular-components": "*"
+  }
 }
