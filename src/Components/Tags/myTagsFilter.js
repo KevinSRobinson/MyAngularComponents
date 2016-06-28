@@ -58,7 +58,7 @@ var myTagsFilterList = {
                     if (key[vm.tagsFieldName] != undefined) {
 
                         // separate out tags
-                        var tags = getTags(key.Tags);
+                        var tags = getTags(key[vm.tagsFieldName]);
 
                         // add the tags to the tagList if not already
                         angular.forEach(tags, function (key, value) {
