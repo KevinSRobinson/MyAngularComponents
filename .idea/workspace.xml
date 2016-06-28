@@ -40,11 +40,11 @@
       <file leaf-file-name="myTagsFilter.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsFilter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+            <state relative-caret-position="273">
+              <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
               <folding>
                 <element signature="e#734#891#0" expanded="false" />
-                <marker date="1467120155364" expanded="true" signature="2188:2222" placeholder="..." />
+                <marker date="1467120456835" expanded="true" signature="2171:2205" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -341,7 +341,7 @@
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#734#891#0" expanded="false" />
-            <marker date="1467120155364" expanded="true" signature="2188:2222" placeholder="..." />
+            <marker date="1467120456835" expanded="true" signature="2171:2205" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -776,11 +776,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsFilter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+        <state relative-caret-position="273">
+          <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
           <folding>
             <element signature="e#734#891#0" expanded="false" />
-            <marker date="1467120155364" expanded="true" signature="2188:2222" placeholder="..." />
+            <marker date="1467120456835" expanded="true" signature="2171:2205" placeholder="..." />
           </folding>
         </state>
       </provider>

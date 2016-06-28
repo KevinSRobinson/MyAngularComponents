@@ -1100,7 +1100,7 @@
 	                        // add the tags to the tagList if not already
 	                        angular.forEach(tags, function (key, value) {
 	                            if (vm.tagList.indexOf(key) == -1) {
-	                                vm.tagList.push(key.replace(" ", ""));
+	                                vm.tagList.push(key);
 	                            }
 	                        });
 	                    }
