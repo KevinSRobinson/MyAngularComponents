@@ -20,10 +20,12 @@
     body {
         padding: 100px;
     }
-    H1{
+
+    H1 {
         color: darkgreen;
     }
-    H4{
+
+    H4 {
         color: purple;
     }
 </style>
@@ -33,37 +35,32 @@
         var vm = this;
 
         vm.exampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol";
-vm.test = "Some TExt";
+        vm.test = "Some TExt";
         vm.date = new Date();
 
         vm.FirstName = "kevin";
 
         vm.fakeItems = [
-            { id: 1, Title : "Test 1", Tags: "Tag1, Tag2", Category: "Category 1, Category 5"},
-            { id: 2, Title : "Test 1", Tags: "Tag3, Tag2", Category: "Category 3, Category 2"},
-            { id: 3, Title : "Test 1", Tags: "Tag4, Tag5", Category: "Category 4, Category 2"}
+            {id: 1, Title: "Test 1", Tags: "Tag1, Tag2", Category: "Category 1, Category 5"},
+            {id: 2, Title: "Test 1", Tags: "Tag3, Tag2", Category: "Category 3, Category 2"},
+            {id: 3, Title: "Test 1", Tags: "Tag4, Tag5", Category: "Category 4, Category 2"}
         ];
-
 
 
         vm.filterText = "";
         vm.selectedTag = {};
 
-        vm.add= function () {
-          alert('Add Clicked');
+        vm.add = function () {
+            alert('Add Clicked');
         };
 
-        vm.edit= function () {
+        vm.edit = function () {
             alert('Edit Clicked');
         };
     });
 
 </script>
 <div ng-controller="examples as vm">
-
-
-
-
 
 
     <div class="well">
@@ -83,8 +80,6 @@ vm.test = "Some TExt";
     </div>
 
 
-
-
     <h1> Tags </h1>
     <hr>
     <div class="well">
@@ -99,10 +94,10 @@ vm.test = "Some TExt";
     <h1> Combo Boxes </h1>
     <hr>
     <div class="well">
-       <h4> Category Select </h4>
-
-        <strong>Selected Category: {{ selectedCategory }}</strong>
-       <my-category-select items="vm.fakeItems" selected="selectedCategory"></my-category-select>
+        <h4> Category Select </h4>
+        <strong>Items : </strong> {{vm.fakeItems}}
+        <strong>Selected Category: </strong>{{ selectedCategory }}
+        <my-category-select items="vm.fakeItems" selected="selectedCategory"></my-category-select>
 
 
     </div>
@@ -111,7 +106,6 @@ vm.test = "Some TExt";
         {{vm.filterText}}
         <my-filter-textbox ng-model="vm.filterText"></my-filter-textbox>
     </my-panel>
-
 
 
     <my-panel title="Text Field" icon="user"

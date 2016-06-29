@@ -19,11 +19,11 @@
   "dependencies": {
     "my-angular-components": "*"
   },
-  "_release": "2428a8036b",
+  "_release": "c05a452b85",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "2428a8036b4b2339a47c8b41dae8373786839b0b"
+    "commit": "c05a452b85ff99ce7d67e8ac123c3e2e14c13998"
   },
   "_source": "https://volunteernow@bitbucket.org/volunteernow/mycomponents.git",
   "_target": "*",

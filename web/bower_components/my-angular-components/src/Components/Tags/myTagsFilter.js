@@ -63,7 +63,7 @@ var myTagsFilterList = {
                         // add the tags to the tagList if not already
                         angular.forEach(tags, function (key, value) {
                             if (vm.tagList.indexOf(key) == -1) {
-                                vm.tagList.push(key.replace(" ", ""));
+                                vm.tagList.push(key);
                             }
                         });
                     }
@@ -82,7 +82,7 @@ var myTagsFilterList = {
     template: ["<div class='form-group'>",
         "<label class='control-label' style='min-width: 110px; text-align: left'>Tags</label>",
         "<div class='form-control'>",
-        "<span ng-repeat='tag in vm.tagList'>",
+        "<span ng-repeat='tag in vm.tagList track by $index'>",
         "<span class='badge' ng-click='vm.tagClicked(tag)' >{{tag}}</span>",
         "</span>",
         "</div>",
