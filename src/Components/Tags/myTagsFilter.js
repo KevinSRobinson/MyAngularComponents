@@ -56,7 +56,6 @@ var myTagsFilterList = {
                 
                 // loop through all the tags in the list
                 angular.forEach(vm.items, function (key, value) {
-
                     if (key[vm.tagsFieldName] != undefined) {
 
                         // separate out tags
@@ -71,12 +70,12 @@ var myTagsFilterList = {
                         });
                     }
                 });
+
+                vm.selected = "All"
             }
         });
 
         vm.tagClicked = function (tag) {
-            console.log('tagClicked');
-            console.log(tag);
             vm.selected = tag;
         };
 

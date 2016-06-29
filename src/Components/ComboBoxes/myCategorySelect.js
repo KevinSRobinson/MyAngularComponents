@@ -22,27 +22,33 @@ var myCategorySelect = {
 
         var buildList = function () {
 
-            //add an All option
-           // vm.cats.push("All");
-
+           //create a temporary list for building the list
+            var catsList = [];
+            
+            
             // loop through all the tags in the list
             angular.forEach(vm.items, function (key, value) {
 
                 // separate out tags
                 var tags = getCats(key.Category);
 
-                //add the tags to the list
+                //add unique values to the temporary list
                 angular.forEach(tags, function (key, value) {
-                    if (vm.cats.indexOf(key) == -1) {
-                        vm.cats.push(key);
+                    if (catsList.indexOf(key.trim()) == -1) {
+                        catsList.push(key.trim())
                     }
                 });
 
             });
+    
+            // copy sorted list to the main category list
+            vm.cats = catsList.sort();
 
+            //add an All option to the first item in the list
+            vm.cats.unshift("All");
 
-            vm.cats = vm.cats.sort();
-
+            // set the default option to All
+            vm.selected = "All";
         };
 
 
@@ -70,7 +76,7 @@ var myCategorySelect = {
     template: ["<div class='form-group'>", 
         "<label class='control-label' style='min-width: 110px; text-align: left' >Category</label>",
         "<select ng-model='vm.selected' ng-change='vm.categoprySelected(catgeory)' class='form-control'>",
-        "<option ng-repeat='catgeory in vm.cats track by $index' value='{{catgeory}}'>{{catgeory}}</option>",
+        "<option ng-repeat='catgeory in vm.cats'   value='{{catgeory}}' >{{catgeory}}</option>",
         "</select>",
         "</div>"].join("")
 };
