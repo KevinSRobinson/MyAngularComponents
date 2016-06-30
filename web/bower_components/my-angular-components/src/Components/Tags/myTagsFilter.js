@@ -15,7 +15,7 @@ var myTagsFilterList = {
 
         var vm = this;
         vm.selected = {};
-        
+
 
         //use the default field for tags if none is specified
         if (vm.tagsFieldName == undefined) {
@@ -52,13 +52,15 @@ var myTagsFilterList = {
 
             if (vm.items != undefined) {
 
+                vm.tagList.push("All");
+                
                 // loop through all the tags in the list
                 angular.forEach(vm.items, function (key, value) {
-
                     if (key[vm.tagsFieldName] != undefined) {
 
                         // separate out tags
                         var tags = getTags(key[vm.tagsFieldName]);
+
 
                         // add the tags to the tagList if not already
                         angular.forEach(tags, function (key, value) {
@@ -68,12 +70,12 @@ var myTagsFilterList = {
                         });
                     }
                 });
+
+                vm.selected = "All"
             }
         });
 
         vm.tagClicked = function (tag) {
-            console.log('tagClicked');
-            console.log(tag);
             vm.selected = tag;
         };
 
@@ -83,7 +85,7 @@ var myTagsFilterList = {
         "<label class='control-label' style='min-width: 110px; text-align: left'>Tags</label>",
         "<div class='form-control'>",
         "<span ng-repeat='tag in vm.tagList track by $index'>",
-        "<span class='badge' ng-click='vm.tagClicked(tag)' >{{tag}}</span>",
+        "<span class='badge' ng-click='vm.tagClicked(tag)' style='cursor: pointer' >{{tag}}</span>",
         "</span>",
         "</div>",
         "</div>"].join("")

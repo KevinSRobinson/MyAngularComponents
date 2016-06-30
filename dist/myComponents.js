@@ -99,7 +99,11 @@
 	__webpack_require__(34);
 	__webpack_require__(35);
 		
-			
+	// Dates
+	__webpack_require__(36);
+	__webpack_require__(37);
+
+
 
 /***/ },
 /* 1 */
@@ -1326,6 +1330,80 @@
 
 
 	var app = angular.module("myComponents").component("modalHeader", modalHeader);
+
+
+/***/ },
+/* 36 */
+/***/ function(module, exports) {
+
+	var myDisplayDateField = {
+	    bindings: {
+	        fieldLabel: '@',
+	        ngModel: '=',
+	        fieldName: '@'
+	    },
+	    controllerAs:"vm",
+	    template: ["<div class='row'>",
+	                    "<div class='col-sm-2'>",
+	                         "<span class='control-label'><strong>{{vm.fieldLabel}}</strong></span>",
+	                    "</div>",
+	                    "<div class='col-sm-8'>",
+	                         "{{vm.ngModel | date:'medium' }}",
+	                    "</div>",
+	                 "</div>"].join("")
+	};
+
+	angular.module('myComponents').component("myDisplayDateField", myDisplayDateField);
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	var myDateField = {
+	      
+	  bindings: {
+	    ngModel: "=",
+	    fieldName: "=",
+	    fieldLabel: "@"
+	  },
+	  template: [
+	    "<div class='form-group'>",
+	    "<label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
+	    "<div class='input-group'>",
+	    "<input type='text' class='form-control'",
+	    " uib-datepicker-popup='dd-MMMM-yyyy' ng-model='$ctrl.ngModel'  is-open='$ctrl.popup1.opened'/> ",
+	    "<span class='input-group-btn'>",
+	    "<button type='button' class='btn btn-default' ng-click='$ctrl.open()'>" +
+	    "<i class='fa fa-calendar'></i></button>",
+	    " </span>",
+	    "</div>"].join(""),
+	  controller: function () {
+	    // this.opened = false;
+	    //
+	    this.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+	    this.format = this.formats[0];
+
+	    this.dateOptions = {
+	      formatYear: 'yy',
+	      startingDay: 1,
+	      minDate: new Date()
+	    };
+
+	    this.popup1 = {
+	      opened: false
+	    };
+
+	    this.open = function () {
+	      this.popup1.opened = true;
+	    };
+
+	  }
+	};
+
+
+	var app = angular.module('myComponents')
+	  .component('myDateField', myDateField);
+
 
 
 /***/ }
