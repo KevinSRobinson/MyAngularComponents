@@ -47,61 +47,62 @@
 	__webpack_require__(1);
 	__webpack_require__(11);
 	//
-	__webpack_require__(12);
+
 	__webpack_require__(13);
+
+
+
+
+	//Fields
+	__webpack_require__(33);
+	__webpack_require__(34);
+	__webpack_require__(36);
+	__webpack_require__(37);
+
+
+	__webpack_require__(12);
+
+
+	//Select
+	__webpack_require__(35);
+	__webpack_require__(27);
+
 	__webpack_require__(14);
-
-
 	__webpack_require__(15);
 
-
 	__webpack_require__(16);
-
-
-
-
 	__webpack_require__(17);
-	__webpack_require__(16);
-
 
 	__webpack_require__(18);
-	__webpack_require__(19);
-	__webpack_require__(20);
-
-	__webpack_require__(21);
-	__webpack_require__(22);
-
-	__webpack_require__(23);
 
 
 
 	// Buttons
+	__webpack_require__(19);
+	__webpack_require__(20);
+	__webpack_require__(21);
+
+	__webpack_require__(22);
+
+	// Check Boxes
+	__webpack_require__(23);
 	__webpack_require__(24);
+
+	// Tags
 	__webpack_require__(25);
 	__webpack_require__(26);
 
-	__webpack_require__(27);
 
-	// Check Boxes
-	__webpack_require__(28);
-	__webpack_require__(29);
-
-	// Tags
-	__webpack_require__(30);
-	__webpack_require__(31);
-
-	// Combo Boxes
-	__webpack_require__(32);
 
 
 	// Modals
-	__webpack_require__(33);
-	__webpack_require__(34);
-	__webpack_require__(35);
+	__webpack_require__(28);
+	__webpack_require__(29);
+	__webpack_require__(30);
 		
 	// Dates
-	__webpack_require__(36);
-	__webpack_require__(37);
+	__webpack_require__(31);
+	__webpack_require__(32);
 
 
 
@@ -555,149 +556,6 @@
 /* 14 */
 /***/ function(module, exports) {
 
-	var myTextField = {
-	    bindings: {
-	        fieldLabel: "@",
-	        fieldName: "@",
-	        ngModel: "=",
-	        required: "@",
-	        toolTip:"@"
-	    },
-	    controllerAs:"vm",
-	    controller: function () {
-	        var vm = this;
-	        
-	        
-	        if(vm.toolTip)
-	        {
-	            vm.showToolTip = true;
-	        }
-	                
-	        
-	        
-	        if (vm.fieldName == null) {
-	            vm.fieldName = vm.fieldLabel.replace(" ", "");
-	            console.log(vm.fieldName);
-	        }
-
-	        if (vm.required == null ) {
-	            vm.required = false;
-	        }
-	    },
-	    template: ["<div class='form-group'>",
-	        " <label class='control-label'  style='min-width: 80px !important;' >{{vm.fieldLabel}}</label>",
-	        " <div class='input-group'  style='width: 80% !important;'>",
-	        " <input type='text'  class='form-control' id='{{vm.fieldName}}' ng-model='vm.ngModel' ng-required='{{ vm.required }}'>",
-	        "   <div class='input-group-addon' style='line-height: 0 !important;'  ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
-	        " </div>",
-	        "</div>"].join("")
-	};
-
-
-	angular.module("myComponents").component("myTextField", myTextField);
-
-
-/***/ },
-/* 15 */
-/***/ function(module, exports) {
-
-	var myTextareaField = {
-	      require: ["^form", "ngModel"],
-	  bindings: {
-	    fieldLabel: "@",
-	    fieldName: "@",
-	    ngModel: "=",
-	    required: "@",
-	  },
-	  template: ["<div class='form-group'>",
-	              " <span class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</span>",
-	              " <textarea type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel' ng-required='{{ $ctrl.required }}'>",
-	            "</div>"].join("")
-	};
-
-
-	angular.module("myComponents").component("myTextareaField", myTextareaField);
-
-
-/***/ },
-/* 16 */
-/***/ function(module, exports) {
-
-	var myDispalyTextareaField = {
-	   bindings: {
-	        fieldLabel: '@',
-	        ngModel: '='
-	    },
-	    template: [
-	        "<div class='well'><strong>{{$ctrl.fieldLabel}}</strong>",
-	        "<p>{{$ctrl.ngModel}}</p></div>"].join("")
-	};
-
-
-	angular.module("myComponents").component("myDisplayTextareaField", myDispalyTextareaField);
-
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	var myDisplayField = {
-		    bindings: {
-		        fieldLabel: '@',
-		        ngModel: '=',
-				fieldLabelWitdh: "@"
-		    },
-			controllerAs: "vm",
-			controller: function () {
-				var vm = this;
-				
-				if(vm.fieldLabelWitdh == undefined) {
-					vm.fieldLabelWitdh = "col-md-4"
-				};
-			},
-		    template: ["<div class='row'>",
-		                    "<div class='{{vm.fieldLabelWitdh}}'>",
-		                         "<label class='control-label'><strong>{{vm.fieldLabel}}</strong></label>",
-		                    "</div>",
-		                    "<div class='col-sm-6'>",
-		                         "{{vm.ngModel}}",
-		                    "</div>",
-		                 "</div>"].join("")
-	};
-
-	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
-
-/***/ },
-/* 18 */
-/***/ function(module, exports) {
-
-	var mySelectList = {
-	  bindings: {
-	    ngModel: "=",
-	    items: "=",
-	    fieldLabel: "@"
-	  },
-	  controller: function(){
-
-	  },
-	  template: ["<div class='form-group'>",
-	                " <label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
-	                  "<select ng-model='$ctrl.ngModel' class='form-control' convert-to-number>",
-	                " <option ng-repeat='option in $ctrl.items' value='{{option.Id}}'>{{option.Name}}</option>",
-	                  "</select>",
-	            "</div>"].join("")
-
-	};
-
-	angular.module("myComponents").component("mySelectList", mySelectList);
-
-
-
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
 	var mySpinner = {
 	    bindings: {
 	        ngModel: "="
@@ -716,7 +574,7 @@
 
 
 /***/ },
-/* 20 */
+/* 15 */
 /***/ function(module, exports) {
 
 	var myErrorMessage = {
@@ -735,7 +593,7 @@
 
 
 /***/ },
-/* 21 */
+/* 16 */
 /***/ function(module, exports) {
 
 	var myPageTitle = {
@@ -754,7 +612,7 @@
 
 
 /***/ },
-/* 22 */
+/* 17 */
 /***/ function(module, exports) {
 
 	var myStatusMessage = {
@@ -814,7 +672,7 @@
 
 
 /***/ },
-/* 23 */
+/* 18 */
 /***/ function(module, exports) {
 
 	var myPanel = {
@@ -898,7 +756,7 @@
 	angular.module("myComponents").component("myPanel", myPanel);
 
 /***/ },
-/* 24 */
+/* 19 */
 /***/ function(module, exports) {
 
 	var myEditButton = {
@@ -923,7 +781,7 @@
 
 
 /***/ },
-/* 25 */
+/* 20 */
 /***/ function(module, exports) {
 
 	var myCreateButton = {
@@ -945,7 +803,7 @@
 
 
 /***/ },
-/* 26 */
+/* 21 */
 /***/ function(module, exports) {
 
 	var myDeleteButton = {
@@ -967,7 +825,7 @@
 
 
 /***/ },
-/* 27 */
+/* 22 */
 /***/ function(module, exports) {
 
 	var myMoreLessButton = {
@@ -1008,7 +866,7 @@
 	angular.module("myComponents").component("myMoreLessButton", myMoreLessButton);
 
 /***/ },
-/* 28 */
+/* 23 */
 /***/ function(module, exports) {
 
 	var myCheckboxField = {
@@ -1032,7 +890,7 @@
 
 
 /***/ },
-/* 29 */
+/* 24 */
 /***/ function(module, exports) {
 
 	var myDisplayCheckField = {
@@ -1052,7 +910,7 @@
 	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
 
 /***/ },
-/* 30 */
+/* 25 */
 /***/ function(module, exports) {
 
 	/**
@@ -1155,7 +1013,7 @@
 	angular.module("myComponents").component("myTagsFilterList", myTagsFilterList);
 
 /***/ },
-/* 31 */
+/* 26 */
 /***/ function(module, exports) {
 
 	var myTagsMultiSelect = {
@@ -1184,7 +1042,7 @@
 
 
 /***/ },
-/* 32 */
+/* 27 */
 /***/ function(module, exports) {
 
 	var myCategorySelect = {
@@ -1275,7 +1133,7 @@
 	angular.module("myComponents").component("myCategorySelect", myCategorySelect);
 
 /***/ },
-/* 33 */
+/* 28 */
 /***/ function(module, exports) {
 
 	var modalButtons = {
@@ -1307,7 +1165,7 @@
 
 
 /***/ },
-/* 34 */
+/* 29 */
 /***/ function(module, exports) {
 
 	var okModalButtons = {
@@ -1332,7 +1190,7 @@
 
 
 /***/ },
-/* 35 */
+/* 30 */
 /***/ function(module, exports) {
 
 	var modalHeader = {
@@ -1349,7 +1207,7 @@
 
 
 /***/ },
-/* 36 */
+/* 31 */
 /***/ function(module, exports) {
 
 	var myDisplayDateField = {
@@ -1372,7 +1230,7 @@
 	angular.module('myComponents').component("myDisplayDateField", myDisplayDateField);
 
 /***/ },
-/* 37 */
+/* 32 */
 /***/ function(module, exports) {
 
 	var myDateField = {
@@ -1419,6 +1277,152 @@
 	var app = angular.module('myComponents')
 	    .component('myDateField', myDateField);
 
+
+
+/***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	var myDisplayField = {
+		    bindings: {
+		        fieldLabel: '@',
+		        ngModel: '=',
+				fieldLabelWitdh: "@"
+		    },
+			controllerAs: "vm",
+			controller: function () {
+				var vm = this;
+				
+				if(vm.fieldLabelWitdh == undefined) {
+					vm.fieldLabelWitdh = "col-md-4"
+				};
+			},
+		    template: ["<div class='row'>",
+		                    "<div class='{{vm.fieldLabelWitdh}}'>",
+		                         "<label class='control-label'><strong>{{vm.fieldLabel}}</strong></label>",
+		                    "</div>",
+		                    "<div class='col-sm-6'>",
+		                         "{{vm.ngModel}}",
+		                    "</div>",
+		                 "</div>"].join("")
+	};
+
+	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	var myDispalyTextareaField = {
+	   bindings: {
+	        fieldLabel: '@',
+	        ngModel: '='
+	    },
+	    template: [
+	        "<div class='well'><strong>{{$ctrl.fieldLabel}}</strong>",
+	        "<p>{{$ctrl.ngModel}}</p></div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myDisplayTextareaField", myDispalyTextareaField);
+
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+	var mySelectList = {
+	  bindings: {
+	    ngModel: "=",
+	    items: "=",
+	    fieldLabel: "@"
+	  },
+	  controller: function(){
+
+	  },
+	  template: ["<div class='form-group'>",
+	                " <label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
+	                  "<select ng-model='$ctrl.ngModel' class='form-control'>",
+	                " <option ng-repeat='option in $ctrl.items' value='{{option.Id}}'>{{option.Name}}</option>",
+	                  "</select>",
+	            "</div>"].join("")
+
+	};
+	// convert-to-number
+
+
+
+	angular.module("myComponents").component("mySelectList", mySelectList);
+
+
+
+
+/***/ },
+/* 36 */
+/***/ function(module, exports) {
+
+	var myTextField = {
+	    bindings: {
+	        fieldLabel: "@",
+	        fieldName: "@",
+	        ngModel: "=",
+	        required: "@",
+	        toolTip:"@"
+	    },
+	    controllerAs:"vm",
+	    controller: function () {
+	        var vm = this;
+	        
+	        
+	        if(vm.toolTip)
+	        {
+	            vm.showToolTip = true;
+	        }
+	                
+	        
+	        
+	        if (vm.fieldName == null) {
+	            vm.fieldName = vm.fieldLabel.replace(" ", "");
+	            console.log(vm.fieldName);
+	        }
+
+	        if (vm.required == null ) {
+	            vm.required = false;
+	        }
+	    },
+	    template: ["<div class='form-group'>",
+	        " <label class='control-label'  style='min-width: 80px !important;' >{{vm.fieldLabel}}</label>",
+	        " <div class='input-group'  style='width: 80% !important;'>",
+	        " <input type='text'  class='form-control' id='{{vm.fieldName}}' ng-model='vm.ngModel' ng-required='{{ vm.required }}'>",
+	        "   <div class='input-group-addon' style='line-height: 0 !important;'  ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
+	        " </div>",
+	        "</div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myTextField", myTextField);
+
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	var myTextareaField = {
+	      require: ["^form", "ngModel"],
+	  bindings: {
+	    fieldLabel: "@",
+	    fieldName: "@",
+	    ngModel: "=",
+	    required: "@",
+	  },
+	  template: ["<div class='form-group'>",
+	              " <span class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</span>",
+	              " <textarea type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel' ng-required='{{ $ctrl.required }}'>",
+	            "</div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myTextareaField", myTextareaField);
 
 
 /***/ }
