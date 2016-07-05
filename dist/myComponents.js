@@ -504,12 +504,10 @@
 /***/ function(module, exports) {
 
 	var myFilterTextbox = {
-
-	  require: ["ngModel"],
 	  bindings: {
 	    placeholder: "@",
-	    fieldName: "@",
-	    ngModel: "="
+	    ngModel: "=",
+	    fieldName: "@"
 	  },
 	  controllerAs: "vm",
 	  controller: function () {
@@ -517,10 +515,17 @@
 
 	    var vm = this;
 
+	    if (vm.fieldName == null) {
+	      vm.fieldName = vm.fieldLabel.replace(" ", "");
+	    }
+
+	    if (vm.placeholder == null) {
+	      vm.placeholder = "Filter ";
+	    }
 	  },
 	  template: ["<div class='input-group' style='display: flex'>",
-	    "<input type='text' ng-model='vm.ngModel' ", 
-	    " id='postcodeLookup' class='form-control'/>",
+	    "<input type='text' ng-model='vm.ngModel' placeholder='{{vm.placeholder}}'",
+	    " id='{{vm.fieldName}}' class='form-control'/>",
 	    " <button class='btn btn-default class='input-group-btn' ",  
 	    " id='searchFilter'>", 
 	    " <i class='glyphicon glyphicon-search'></i> </button>",
