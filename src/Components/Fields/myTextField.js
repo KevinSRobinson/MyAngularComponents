@@ -10,13 +10,10 @@ var myTextField = {
     controller: function () {
         var vm = this;
         
-        
         if(vm.toolTip)
         {
             vm.showToolTip = true;
         }
-               
-        
         
         if (vm.fieldName == null) {
             vm.fieldName = vm.fieldLabel.replace(" ", "");

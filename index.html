@@ -103,21 +103,19 @@
 
     </div>
 
-    <my-panel title="Filter Textbox">
-        {{vm.filterText}}
-        <my-filter-textbox ng-model="vm.filterText"></my-filter-textbox>
-    </my-panel>
+
+    <my-filter-textbox ng-model="vm.filterText"></my-filter-textbox>
 
 
-    <my-panel title="Text Field" icon="user"
-              icon-size="2"
-              style="success"
-              small-heading="true">
+    <my-text-field field-label="First Name"
+                   tool-tip="Some Help Text"
+                   ng-model="vm.FirstName"></my-text-field>
 
-        <my-text-field field-label="First Name"
-                       tool-tip="Some Help Text"
-                       ng-model="vm.FirstName"></my-text-field>
-    </my-panel>
+    <my-textarea-field field-label="Details"
+                   tool-tip="Some Help Text"
+                   ng-model="vm.exampleText"></my-textarea-field>
+
+
 
 
     <h1> Panels </h1>
