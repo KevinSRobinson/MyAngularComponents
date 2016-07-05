@@ -516,7 +516,7 @@
 	    var vm = this;
 
 	    if (vm.fieldName == null) {
-	      vm.fieldName = vm.fieldLabel.replace(" ", "");
+	       vm.fieldName = "filterTextBox";
 	    }
 
 	    if (vm.placeholder == null) {

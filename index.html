@@ -103,19 +103,23 @@
 
     </div>
 
+    <h1> Inputs </h1>
+    <hr>
+    <div class="well">
 
-    <my-filter-textbox ng-model="vm.filterText"></my-filter-textbox>
-
-
-    <my-text-field field-label="First Name"
-                   tool-tip="Some Help Text"
-                   ng-model="vm.FirstName"></my-text-field>
-
-    <my-textarea-field field-label="Details"
-                   tool-tip="Some Help Text"
-                   ng-model="vm.exampleText"></my-textarea-field>
+        <my-filter-textbox ng-model="vm.filterText" placeholder="You can change the placeholder text"></my-filter-textbox>
 
 
+
+        <my-text-field field-label="First Name"
+                       tool-tip="Some Help Text"
+                       ng-model="vm.FirstName"></my-text-field>
+
+        <my-textarea-field field-label="Details"
+                           tool-tip="Some Help Text"
+                           ng-model="vm.exampleText"></my-textarea-field>
+
+    </div>
 
 
     <h1> Panels </h1>
