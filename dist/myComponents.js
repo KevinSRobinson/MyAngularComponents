@@ -1289,7 +1289,7 @@
 	        "<i class='fa fa-calendar'></i></button>",
 	        " </span>",
 	        "   <div class='input-group-addon' style='line-height: 0 !important;'  ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
-	        "</div>"].join(""),
+	        "</div>"].join("")
 	};
 
 
@@ -1360,7 +1360,12 @@
 	    },
 	    controllerAs: "vm",
 	    controller: function () {
-
+	        var vm = this;
+	                
+	        if (vm.fieldName == null) {
+	            vm.fieldName = vm.fieldLabel.replace(" ", "");           
+	        }
+	        
 	    },
 	    template: ["<div class='form-group'>",
 	        " <label class='control-label' style='min-width: 110px; text-align: left'>{{vm.fieldLabel}}</label>",
@@ -1399,7 +1404,7 @@
 	        {
 	            vm.showToolTip = true;
 	        }
-	                
+	               
 	        
 	        
 	        if (vm.fieldName == null) {

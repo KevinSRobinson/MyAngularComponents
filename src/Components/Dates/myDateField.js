@@ -54,7 +54,7 @@ var myDateField = {
         "<i class='fa fa-calendar'></i></button>",
         " </span>",
         "   <div class='input-group-addon' style='line-height: 0 !important;'  ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
-        "</div>"].join(""),
+        "</div>"].join("")
 };
 
 

@@ -15,7 +15,7 @@ var myTextField = {
         {
             vm.showToolTip = true;
         }
-                
+               
         
         
         if (vm.fieldName == null) {

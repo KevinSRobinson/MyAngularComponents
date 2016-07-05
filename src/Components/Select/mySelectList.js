@@ -7,7 +7,12 @@ var mySelectList = {
     },
     controllerAs: "vm",
     controller: function () {
-
+        var vm = this;
+                
+        if (vm.fieldName == null) {
+            vm.fieldName = vm.fieldLabel.replace(" ", "");           
+        }
+        
     },
     template: ["<div class='form-group'>",
         " <label class='control-label' style='min-width: 110px; text-align: left'>{{vm.fieldLabel}}</label>",
