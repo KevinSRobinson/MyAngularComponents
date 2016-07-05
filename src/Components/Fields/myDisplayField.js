@@ -10,7 +10,8 @@ var myDisplayField = {
 			
 			if(vm.fieldLabelWitdh == undefined) {
 				vm.fieldLabelWitdh = "col-md-4"
-			};
+			}
+			
 		},
 	    template: ["<div class='row'>",
 	                    "<div class='{{vm.fieldLabelWitdh}}'>",

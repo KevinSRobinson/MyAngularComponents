@@ -10,7 +10,6 @@
     <script type="text/javascript" src="node_modules/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
     <script type="text/javascript" src="node_modules/font-awesome/css/font-awesome.css"></script>
-
     <script type="text/javascript" src="dist/myComponents.js"></script>
 
 
@@ -75,6 +74,8 @@
 
         <h4>Date Field</h4>
         <my-date-field ng-model='vm.date' field-label='Date Closed'
+                       tool-tip="This is a date field"
+                       required="true"
                        field-name='DateClosed'></my-date-field>
 
     </div>
