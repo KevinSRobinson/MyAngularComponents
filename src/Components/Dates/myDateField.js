@@ -17,7 +17,12 @@ var myDateField = {
 
         
         vm.init = function () {
-            
+
+            //if the date is not a date object - convert
+            if(typeof vm.ngModel != 'date'){
+                vm.ngModel = new Date(vm.ngModel);
+            }
+
             // if the field name is not specified set the field name to the label text 
             if (vm.fieldName == null) {
                 vm.fieldName = vm.fieldLabel.replace(" ", "");

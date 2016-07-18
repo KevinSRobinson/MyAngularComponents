@@ -24,41 +24,115 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="98" column="70" selection-start-line="98" selection-start-column="70" selection-end-line="98" selection-end-column="70" />
+            <state relative-caret-position="147">
+              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding>
+                <element signature="n#style#0;n#my-panel#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#my-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#my-panel#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#my-panel#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#my-panel#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#my-panel#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myTagsFilter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsFilter.js">
+      <file leaf-file-name="myPanel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/myPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
+            <state relative-caret-position="168">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <element signature="e#726#883#0" expanded="false" />
-                <element signature="e#924#1103#0" expanded="false" />
-                <element signature="e#1468#1923#0" expanded="false" />
-                <marker date="1467208321898" expanded="true" signature="2188:2222" placeholder="..." />
-                <marker date="1467208321898" expanded="true" signature="2407:2422" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="1920:2725" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="1920:2796" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="1920:2797" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="1920:2863" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="1920:3115" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="1920:3130" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="1964:1986" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="1988:2009" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="2009:2416" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="2009:2642" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="2120:2156" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="2302:2325" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="2369:2382" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="2512:2535" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="2580:2593" placeholder="..." />
+                <marker date="1467731672207" expanded="true" signature="2826:2848" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entry.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entry.js">
+      <file leaf-file-name="myFilterTextbox.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/myFilterTextbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="47" column="44" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="44" />
+            <state relative-caret-position="210">
+              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+              <folding>
+                <marker date="1467732352642" expanded="true" signature="394:407" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mySelectList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Select/mySelectList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="18" column="78" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="78" />
+              <folding>
+                <marker date="1467719364091" expanded="true" signature="449:483" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mySelectListByName.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Select/mySelectListByName.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1463142130892" expanded="true" signature="247:281" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myDisplayTextArea.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Fields/myDisplayTextArea.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myTextField.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Fields/myTextField.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="20" column="9" selection-start-line="17" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
+              <folding>
+                <marker date="1467724873514" expanded="true" signature="650:677" placeholder="..." />
+                <marker date="1467724873514" expanded="true" signature="751:773" placeholder="..." />
+                <marker date="1467724873514" expanded="true" signature="958:984" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myTextAreaField.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Fields/myTextAreaField.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+              <folding>
+                <marker date="1467725208353" expanded="true" signature="619:646" placeholder="..." />
+                <marker date="1467725208353" expanded="true" signature="720:742" placeholder="..." />
+                <marker date="1467725208353" expanded="true" signature="931:957" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,9 +153,7 @@
         <option value="$PROJECT_DIR$/src/Components/myPopover.js" />
         <option value="$PROJECT_DIR$/dist/myComponents.js" />
         <option value="$PROJECT_DIR$/src/Components/myTextField.js" />
-        <option value="$PROJECT_DIR$/src/Components/myFilterTextbox.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/Components/myPanel.js" />
         <option value="$PROJECT_DIR$/src/Components/mySpinner.js" />
         <option value="$PROJECT_DIR$/src/Components/moreLessButton.js" />
         <option value="$PROJECT_DIR$/src/Components/myMoreLessButton.js" />
@@ -89,9 +161,17 @@
         <option value="$PROJECT_DIR$/src/Components/myDateField.js" />
         <option value="$PROJECT_DIR$/src/Components/myTagsFilter.js" />
         <option value="$PROJECT_DIR$/src/Components/myTagsField.js" />
-        <option value="$PROJECT_DIR$/entry.js" />
         <option value="$PROJECT_DIR$/src/Components/ComboBoxes/myCategorySelect.js" />
         <option value="$PROJECT_DIR$/src/Components/Tags/myTagsFilter.js" />
+        <option value="$PROJECT_DIR$/src/Components/myTextAreaField.js" />
+        <option value="$PROJECT_DIR$/entry.js" />
+        <option value="$PROJECT_DIR$/src/Components/Fields/myDisplayField.js" />
+        <option value="$PROJECT_DIR$/src/Components/Dates/myDateField.js" />
+        <option value="$PROJECT_DIR$/src/Components/Select/mySelectList.js" />
+        <option value="$PROJECT_DIR$/src/Components/Fields/myTextField.js" />
+        <option value="$PROJECT_DIR$/src/Components/Fields/myTextAreaField.js" />
+        <option value="$PROJECT_DIR$/src/Components/myPanel.js" />
+        <option value="$PROJECT_DIR$/src/Components/myFilterTextbox.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -137,6 +217,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -188,50 +269,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyComponents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyComponents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComboBoxes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="D:/VolnowUmb/VolunteerNowUmb/VolunteerNowUmb/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Repos\MyComponents\src\Components\Modals" />
-      <recent name="D:\Repos\MyComponents\src\Components\Buttons" />
-      <recent name="D:\Repos\MyComponents\src\Components\CheckBoxes" />
-      <recent name="D:\Repos\MyComponents\src\Components\Dates" />
-      <recent name="D:\Repos\MyComponents\src\Components\Tags" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Repos\MyComponents" />
       <recent name="D:\Repos\MyComponents\node_modules" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Repos\MyComponents\src\Components\Fields" />
+      <recent name="D:\Repos\MyComponents\src\Components\Select" />
+      <recent name="D:\Repos\MyComponents\src\Components\Modals" />
+      <recent name="D:\Repos\MyComponents\src\Components\Buttons" />
+      <recent name="D:\Repos\MyComponents\src\Components\CheckBoxes" />
     </key>
   </component>
   <component name="RunManager">
@@ -310,7 +368,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36820084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39051604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -338,33 +396,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsFilter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#726#883#0" expanded="false" />
-            <element signature="e#924#1103#0" expanded="false" />
-            <element signature="e#1468#1923#0" expanded="false" />
-            <marker date="1467208321898" expanded="true" signature="2188:2222" placeholder="..." />
-            <marker date="1467208321898" expanded="true" signature="2407:2422" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myStatusMessage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="28" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="28" />
-          <folding>
-            <marker date="1463142130892" expanded="true" signature="918:935" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="994:1041" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="1338:1355" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="1416:1465" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entry.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -378,23 +409,22 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#my-panel#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/mySelectList.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Select/mySelectList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/mySelectListByName.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Select/mySelectListByName.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -429,11 +459,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#my-panel#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -466,11 +495,10 @@
         <state relative-caret-position="1008">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#my-panel#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -511,7 +539,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTextField.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Fields/myTextField.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -525,31 +553,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTextAreaField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/font-awesome/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/myComponents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="222" column="28" selection-start-line="222" selection-start-column="25" selection-end-line="222" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -560,27 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myTextField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/mySelectListByName.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/mySelectList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -588,33 +574,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="28" />
-          <folding>
-            <marker date="1466870581415" expanded="true" signature="1300:2024" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1344:1366" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1368:1389" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1389:1750" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1389:1955" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1488:1524" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1636:1659" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1703:1716" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1825:1848" placeholder="..." />
-            <marker date="1466870581415" expanded="true" signature="1893:1906" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/mySpinner.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <marker date="1467030711340" expanded="true" signature="131:144" placeholder="..." />
-            <marker date="1467030711340" expanded="true" signature="156:247" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -622,48 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
           <caret line="48" column="28" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="28" />
-          <folding>
-            <marker date="1463142130892" expanded="true" signature="918:935" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="994:1041" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="1338:1355" placeholder="..." />
-            <marker date="1463142130892" expanded="true" signature="1416:1465" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/my-angular-components.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/myFilterTextbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <marker date="1466693421438" expanded="true" signature="267:280" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Dates/myDateField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding>
-            <marker date="1467054254629" expanded="true" signature="191:225" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Dates/myDisplayDateField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -687,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -695,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -711,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -719,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,7 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,14 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="47" column="44" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -768,8 +672,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Tags/myTagsFilter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
+        <state relative-caret-position="102">
+          <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
           <folding>
             <element signature="e#726#883#0" expanded="false" />
             <element signature="e#924#1103#0" expanded="false" />
@@ -780,16 +684,190 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-angular-components.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/myComponents.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2944">
+          <caret line="712" column="45" selection-start-line="712" selection-start-column="45" selection-end-line="712" selection-end-column="45" />
+          <folding>
+            <marker date="1467725208608" expanded="false" signature="0:8" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="50:58" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="201:858" placeholder="{...}" />
+            <marker date="1467725208608" expanded="true" signature="204:212" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="288:296" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="459:550" placeholder="{&quot;loaded&quot;: false...}" />
+            <marker date="1467725208608" expanded="true" signature="486:494" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="512:520" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="538:546" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="595:603" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="732:740" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="766:774" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="813:821" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="847:855" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="861:869" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="966:974" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="1003:1011" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="1093:1101" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="1142:1150" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="1192:1200" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="1233:1241" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="1245:1319" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="1320:1328" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="1332:1339" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="1340:1345" placeholder="/*...*/" />
+            <marker date="1467725208608" expanded="true" signature="1393:1451" placeholder="{...}" />
+            <marker date="1467725208608" expanded="true" signature="78461:78471" placeholder="{...}" />
+            <marker date="1467725208608" expanded="true" signature="78464:78469" placeholder="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Dates/myDisplayDateField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Fields/myDisplayTextArea.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Dates/myDateField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="50" column="44" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="44" />
+          <folding>
+            <marker date="1467715559647" expanded="true" signature="1320:1354" placeholder="..." />
+            <marker date="1467715559647" expanded="true" signature="1838:1864" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Fields/myDisplayField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Select/mySelectListByName.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1463142130892" expanded="true" signature="247:281" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Select/mySelectList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="18" column="78" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="78" />
+          <folding>
+            <marker date="1467719364091" expanded="true" signature="449:483" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Fields/myTextAreaField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <marker date="1467725208353" expanded="true" signature="619:646" placeholder="..." />
+            <marker date="1467725208353" expanded="true" signature="720:742" placeholder="..." />
+            <marker date="1467725208353" expanded="true" signature="931:957" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/myPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1467731672207" expanded="true" signature="1920:2725" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="1920:2796" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="1920:2797" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="1920:2863" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="1920:3115" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="1920:3130" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="1964:1986" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="1988:2009" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="2009:2416" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="2009:2642" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="2120:2156" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="2302:2325" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="2369:2382" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="2512:2535" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="2580:2593" placeholder="..." />
+            <marker date="1467731672207" expanded="true" signature="2826:2848" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Fields/myTextField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="20" column="9" selection-start-line="17" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <marker date="1467724873514" expanded="true" signature="650:677" placeholder="..." />
+            <marker date="1467724873514" expanded="true" signature="751:773" placeholder="..." />
+            <marker date="1467724873514" expanded="true" signature="958:984" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/myFilterTextbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <marker date="1467732352642" expanded="true" signature="394:407" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="98" column="70" selection-start-line="98" selection-start-column="70" selection-end-line="98" selection-end-column="70" />
+        <state relative-caret-position="147">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#my-panel#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#my-panel#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#my-panel#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

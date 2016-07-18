@@ -47,59 +47,64 @@
 	__webpack_require__(1);
 	__webpack_require__(11);
 	//
-	__webpack_require__(12);
+
 	__webpack_require__(13);
+
+
+
+
+	//Fields
+	__webpack_require__(33);
+	__webpack_require__(34);
+	__webpack_require__(36);
+	__webpack_require__(37);
+
+
+	__webpack_require__(12);
+
+
+	//Select
+	__webpack_require__(35);
+	__webpack_require__(27);
+
 	__webpack_require__(14);
-
-
 	__webpack_require__(15);
 
-
 	__webpack_require__(16);
-
-
-
-
 	__webpack_require__(17);
-	__webpack_require__(16);
-
 
 	__webpack_require__(18);
-	__webpack_require__(19);
-	__webpack_require__(20);
-
-	__webpack_require__(21);
-	__webpack_require__(22);
-
-	__webpack_require__(23);
 
 
 
 	// Buttons
+	__webpack_require__(19);
+	__webpack_require__(20);
+	__webpack_require__(21);
+
+	__webpack_require__(22);
+
+	// Check Boxes
+	__webpack_require__(23);
 	__webpack_require__(24);
+
+	// Tags
 	__webpack_require__(25);
 	__webpack_require__(26);
 
-	__webpack_require__(27);
 
-	// Check Boxes
-	__webpack_require__(28);
-	__webpack_require__(29);
-
-	// Tags
-	__webpack_require__(30);
-	__webpack_require__(31);
-
-	// Combo Boxes
-	__webpack_require__(32);
 
 
 	// Modals
-	__webpack_require__(33);
-	__webpack_require__(34);
-	__webpack_require__(35);
+	__webpack_require__(28);
+	__webpack_require__(29);
+	__webpack_require__(30);
 		
-			
+	// Dates
+	__webpack_require__(31);
+	__webpack_require__(32);
+
+
 
 /***/ },
 /* 1 */
@@ -499,12 +504,10 @@
 /***/ function(module, exports) {
 
 	var myFilterTextbox = {
-
-	  require: ["ngModel"],
 	  bindings: {
 	    placeholder: "@",
-	    fieldName: "@",
-	    ngModel: "="
+	    ngModel: "=",
+	    fieldName: "@"
 	  },
 	  controllerAs: "vm",
 	  controller: function () {
@@ -512,10 +515,17 @@
 
 	    var vm = this;
 
+	    if (vm.fieldName == null) {
+	       vm.fieldName = "filterTextBox";
+	    }
+
+	    if (vm.placeholder == null) {
+	      vm.placeholder = "Filter ";
+	    }
 	  },
 	  template: ["<div class='input-group' style='display: flex'>",
-	    "<input type='text' ng-model='vm.ngModel' ", 
-	    " id='postcodeLookup' class='form-control'/>",
+	    "<input type='text' ng-model='vm.ngModel' placeholder='{{vm.placeholder}}'",
+	    " id='{{vm.fieldName}}' class='form-control'/>",
 	    " <button class='btn btn-default class='input-group-btn' ",  
 	    " id='searchFilter'>", 
 	    " <i class='glyphicon glyphicon-search'></i> </button>",
@@ -551,149 +561,6 @@
 /* 14 */
 /***/ function(module, exports) {
 
-	var myTextField = {
-	    bindings: {
-	        fieldLabel: "@",
-	        fieldName: "@",
-	        ngModel: "=",
-	        required: "@",
-	        toolTip:"@"
-	    },
-	    controllerAs:"vm",
-	    controller: function () {
-	        var vm = this;
-	        
-	        
-	        if(vm.toolTip)
-	        {
-	            vm.showToolTip = true;
-	        }
-	                
-	        
-	        
-	        if (vm.fieldName == null) {
-	            vm.fieldName = vm.fieldLabel.replace(" ", "");
-	            console.log(vm.fieldName);
-	        }
-
-	        if (vm.required == null ) {
-	            vm.required = false;
-	        }
-	    },
-	    template: ["<div class='form-group'>",
-	        " <label class='control-label'  style='min-width: 80px !important;' >{{vm.fieldLabel}}</label>",
-	        " <div class='input-group'  style='width: 80% !important;'>",
-	        " <input type='text'  class='form-control' id='{{vm.fieldName}}' ng-model='vm.ngModel' ng-required='{{ vm.required }}'>",
-	        "   <div class='input-group-addon' style='line-height: 0 !important;'  ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
-	        " </div>",
-	        "</div>"].join("")
-	};
-
-
-	angular.module("myComponents").component("myTextField", myTextField);
-
-
-/***/ },
-/* 15 */
-/***/ function(module, exports) {
-
-	var myTextareaField = {
-	      require: ["^form", "ngModel"],
-	  bindings: {
-	    fieldLabel: "@",
-	    fieldName: "@",
-	    ngModel: "=",
-	    required: "@",
-	  },
-	  template: ["<div class='form-group'>",
-	              " <span class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</span>",
-	              " <textarea type='text'  class='form-control'  id='{{$ctrl.fieldName}}' ng-model='$ctrl.ngModel' ng-required='{{ $ctrl.required }}'>",
-	            "</div>"].join("")
-	};
-
-
-	angular.module("myComponents").component("myTextareaField", myTextareaField);
-
-
-/***/ },
-/* 16 */
-/***/ function(module, exports) {
-
-	var myDispalyTextareaField = {
-	   bindings: {
-	        fieldLabel: '@',
-	        ngModel: '='
-	    },
-	    template: [
-	        "<div class='well'><strong>{{$ctrl.fieldLabel}}</strong>",
-	        "<p>{{$ctrl.ngModel}}</p></div>"].join("")
-	};
-
-
-	angular.module("myComponents").component("myDisplayTextareaField", myDispalyTextareaField);
-
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	var myDisplayField = {
-		    bindings: {
-		        fieldLabel: '@',
-		        ngModel: '=',
-				fieldLabelWitdh: "@"
-		    },
-			controllerAs: "vm",
-			controller: function () {
-				var vm = this;
-				
-				if(vm.fieldLabelWitdh == undefined) {
-					vm.fieldLabelWitdh = "col-md-4"
-				};
-			},
-		    template: ["<div class='row'>",
-		                    "<div class='{{vm.fieldLabelWitdh}}'>",
-		                         "<label class='control-label'><strong>{{vm.fieldLabel}}</strong></label>",
-		                    "</div>",
-		                    "<div class='col-sm-6'>",
-		                         "{{vm.ngModel}}",
-		                    "</div>",
-		                 "</div>"].join("")
-	};
-
-	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
-
-/***/ },
-/* 18 */
-/***/ function(module, exports) {
-
-	var mySelectList = {
-	  bindings: {
-	    ngModel: "=",
-	    items: "=",
-	    fieldLabel: "@"
-	  },
-	  controller: function(){
-
-	  },
-	  template: ["<div class='form-group'>",
-	                " <label class='control-label' style='min-width: 110px; text-align: left'>{{$ctrl.fieldLabel}}</label>",
-	                  "<select ng-model='$ctrl.ngModel' class='form-control' convert-to-number>",
-	                " <option ng-repeat='option in $ctrl.items' value='{{option.Id}}'>{{option.Name}}</option>",
-	                  "</select>",
-	            "</div>"].join("")
-
-	};
-
-	angular.module("myComponents").component("mySelectList", mySelectList);
-
-
-
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
 	var mySpinner = {
 	    bindings: {
 	        ngModel: "="
@@ -712,7 +579,7 @@
 
 
 /***/ },
-/* 20 */
+/* 15 */
 /***/ function(module, exports) {
 
 	var myErrorMessage = {
@@ -731,7 +598,7 @@
 
 
 /***/ },
-/* 21 */
+/* 16 */
 /***/ function(module, exports) {
 
 	var myPageTitle = {
@@ -750,7 +617,7 @@
 
 
 /***/ },
-/* 22 */
+/* 17 */
 /***/ function(module, exports) {
 
 	var myStatusMessage = {
@@ -810,7 +677,7 @@
 
 
 /***/ },
-/* 23 */
+/* 18 */
 /***/ function(module, exports) {
 
 	var myPanel = {
@@ -824,61 +691,99 @@
 	        smallHeading: "@",
 	        showAddButton: "@",
 	        showEditButton: "@",
-	        add:"&",
-	        edit:"&"
+	        addButtonId: "@",
+	        editButtonId: "@",
+	        add: "&",
+	        edit: "&",
+	        showFooter: "@",
+	        footerLeftLabel: "@",
+	        footerRightLabel: "@"
 	    },
-	    controllerAs:"vm",
+	    controllerAs: "vm",
 	    controller: function () {
-	      "use strict";
+	        "use strict";
 
 	        var vm = this;
-	        //vm.headingStyle = "padding: 10px 15px !important; ";
 
-	        vm.init  = function () {
-	                
+
+	        vm.init = function () {
+	            vm.setDefaults();
 	        };
-	        
+
 	        vm.setDefaults = function () {
-	            if(vm.showAddButton == undefined){
+	            if (vm.showAddButton == undefined) {
 	                vm.showAddButton = false;
 	            }
-
-	            if(vm.showEditButton == undefined){
+	            if (vm.showEditButton == undefined) {
 	                vm.showEditButton = false;
 	            }
+	            if (vm.editButtonId == undefined) {
+	                vm.editButtonId = "panelEditButton"
+	            }
+	            if (vm.addButtonId == undefined) {
+	                vm.addButtonId = "panelAddButton"
+	            }
+	            if (vm.showFooter = undefined) {
+	                vm.showFooter = false;
+	            }
+	            if (vm.footerLeftLabel = undefined) {
+	                vm.footerLeftLabel = "";
+	            }
+	            if (vm.footerRightLabel = undefined) {
+	                vm.footerRightLabel = "";
+	            }
 	        };
-	        
+
 	        vm.getPanelStyle = function () {
-	            if(vm.smallHeading != undefined){
-	                return  "padding: 3px 5px !important; ";
+	            if (vm.smallHeading != undefined) {
+	                return "padding: 3px 5px !important; ";
 	            }
-	            return  "padding: 10px 15px";
+	            return "padding: 10px 15px";
 	        };
-	        
+
 	        vm.getButtonStyle = function () {
-	            if(vm.smallHeading != undefined){
-	                return  "margin-left: 5px; padding: 3px;";
+	            if (vm.smallHeading != undefined) {
+	                return "margin-left: 5px; padding: 3px;";
 	            }
-	            return  "margin-left: 5px; padding: 10px;";
+	            return "margin-left: 5px; padding: 10px;";
 	        };
-	        
+
+	        vm.init();
+
 	    },
 	    template: "<div class='panel panel-{{vm.style}}'>" +
-	    "<div class='panel-heading' style='{{vm.getPanelStyle()}}' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}} fa-{{vm.iconSize}}x'></i>" +  
-	        // title
-	        "<span style='padding-left: 10px; font-weight: 700'>{{vm.title}}</span>" +
-	        //buttons/
-	        "<div ng-show='vm.showAddButton' ng-click='vm.add()' style='{{vm.getButtonStyle()}}' class='btn btn-default pull-right' style='padding: 3px;'><i class='fa fa-plus'></i> </div>" +
-	        "<div ng-show='vm.showEditButton' ng-click='vm.edit()' style='{{vm.getButtonStyle()}}'  class='btn btn-default pull-right' style='padding: 3px;'><i class='fa fa-bars'></i> </div>" +
-	    "</div>" + 
-	    "<div class='panel-body' ng-transclude></div>" +
+	    "<div class='panel-heading' style='{{vm.getPanelStyle()}}' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}} fa-{{vm.iconSize}}x'></i>" +
+	    ////////////
+	    /// title    
+	    "<span style='padding-left: 10px; font-weight: 700'>{{vm.title}}</span>" +
+	    ////////////
+	    /// buttons
+	    "<div ng-show='vm.showAddButton' id='{{vm.addButtonId}}' ng-click='vm.add()' style='{{vm.getButtonStyle()}}' class='btn btn-default pull-right' style='padding: 3px;'><i class='fa fa-plus'></i> </div>" +
+	    "<div ng-show='vm.showEditButton' id='{{vm.editButtonId}}' ng-click='vm.edit()' style='{{vm.getButtonStyle()}}'  class='btn btn-default pull-right' style='padding: 3px;'><i class='fa fa-bars'></i> </div>" +
+	    "</div>" +
+	    ////////////
+	    /// body
+	    "<div class='panel-body' ng-transclude></div>" + 
+	    /////////////
+	    // footer   
+	    "<div class='panel-footer' ng-if='vm.showFooter' style='{{vm.getPanelStyle()}}' >" +
+	        " <div class='row'>" +
+	            " <div class='col-md-6'><span class='pull-left'>{{vm.footerLeftLabel}}</span></div>" +
+	            " <div class='col-md-6'><span class='pull-right'>{{vm.footerRightLabel}}</span></div>" +
+	        "</div>" +
+	    "</div>" +
 	    "</div>"
 	};
 
+
+	// " <div class='row'>" +
+	// " <div class='col-md-6'>{{vm.footerLeftLabel}}</div>"+
+	// " <div class='col-md-6'>{{vm.footerRightLabel}}</div>"+
+	// "</div>" +
 	angular.module("myComponents").component("myPanel", myPanel);
 
 /***/ },
-/* 24 */
+/* 19 */
 /***/ function(module, exports) {
 
 	var myEditButton = {
@@ -903,7 +808,7 @@
 
 
 /***/ },
-/* 25 */
+/* 20 */
 /***/ function(module, exports) {
 
 	var myCreateButton = {
@@ -925,7 +830,7 @@
 
 
 /***/ },
-/* 26 */
+/* 21 */
 /***/ function(module, exports) {
 
 	var myDeleteButton = {
@@ -947,7 +852,7 @@
 
 
 /***/ },
-/* 27 */
+/* 22 */
 /***/ function(module, exports) {
 
 	var myMoreLessButton = {
@@ -988,7 +893,7 @@
 	angular.module("myComponents").component("myMoreLessButton", myMoreLessButton);
 
 /***/ },
-/* 28 */
+/* 23 */
 /***/ function(module, exports) {
 
 	var myCheckboxField = {
@@ -1012,7 +917,7 @@
 
 
 /***/ },
-/* 29 */
+/* 24 */
 /***/ function(module, exports) {
 
 	var myDisplayCheckField = {
@@ -1032,7 +937,7 @@
 	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
 
 /***/ },
-/* 30 */
+/* 25 */
 /***/ function(module, exports) {
 
 	/**
@@ -1135,7 +1040,7 @@
 	angular.module("myComponents").component("myTagsFilterList", myTagsFilterList);
 
 /***/ },
-/* 31 */
+/* 26 */
 /***/ function(module, exports) {
 
 	var myTagsMultiSelect = {
@@ -1164,7 +1069,7 @@
 
 
 /***/ },
-/* 32 */
+/* 27 */
 /***/ function(module, exports) {
 
 	var myCategorySelect = {
@@ -1255,7 +1160,7 @@
 	angular.module("myComponents").component("myCategorySelect", myCategorySelect);
 
 /***/ },
-/* 33 */
+/* 28 */
 /***/ function(module, exports) {
 
 	var modalButtons = {
@@ -1287,7 +1192,7 @@
 
 
 /***/ },
-/* 34 */
+/* 29 */
 /***/ function(module, exports) {
 
 	var okModalButtons = {
@@ -1312,7 +1217,7 @@
 
 
 /***/ },
-/* 35 */
+/* 30 */
 /***/ function(module, exports) {
 
 	var modalHeader = {
@@ -1326,6 +1231,268 @@
 
 
 	var app = angular.module("myComponents").component("modalHeader", modalHeader);
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports) {
+
+	var myDisplayDateField = {
+	    bindings: {
+	        fieldLabel: '@',
+	        ngModel: '=',
+	        fieldName: '@'
+	    },
+	    controllerAs:"vm",
+	    template: ["<div class='row'>",
+	                    "<div class='col-sm-2'>",
+	                         "<span class='control-label'><strong>{{vm.fieldLabel}}</strong></span>",
+	                    "</div>",
+	                    "<div class='col-sm-8'>",
+	                         "{{vm.ngModel | date:'medium' }}",
+	                    "</div>",
+	                 "</div>"].join("")
+	};
+
+	angular.module('myComponents').component("myDisplayDateField", myDisplayDateField);
+
+/***/ },
+/* 32 */
+/***/ function(module, exports) {
+
+	/**
+	 * Date field component with Field Label, Date Popup, Help Popup
+	 * @type {{bindings: {ngModel: string, fieldName: string, fieldLabel: string, toolTip: string, showToolTip: string}, controllerAs: string, controller: myDateField.controller, template: string}}
+	 */
+	var myDateField = {
+	    bindings: {
+	        ngModel: "=",
+	        fieldName: "@",
+	        fieldLabel: "@",
+	        toolTip: "@",
+	        showToolTip: "@"
+	    },
+	    controllerAs: "vm",
+	    controller: function () {
+	        "use strict";
+	        var vm = this;
+
+	        
+	        vm.init = function () {
+	            
+	            // if the field name is not specified set the field name to the label text 
+	            if (vm.fieldName == null) {
+	                vm.fieldName = vm.fieldLabel.replace(" ", "");
+	            }
+
+	            // if the tooltip text is specified show the tooltip
+	            if(vm.toolTip)
+	            {
+	                vm.showToolTip = true;
+	            }
+
+	            // start with the date popup closed
+	            vm.popup1 = { opened: false };
+	        };
+	        
+	       
+	        // open the date popup
+	        vm.open = function () {
+	            vm.popup1.opened = true;
+	        };
+
+	        
+	        vm.init();
+	        
+	    },
+	    template: [
+	        "<div class='form-group'>",
+	        "<label class='control-label' style='min-width: 110px; text-align: left'>{{vm.fieldLabel}}</label>",
+	        "<div class='input-group'>",
+	        "<input type='text' class='form-control' id='{{vm.fieldName}}'",
+	        " uib-datepicker-popup='dd-MMMM-yyyy' ng-model='vm.ngModel'  is-open='vm.popup1.opened'/> ",
+	        "<span class='input-group-btn'>",
+	        "<button type='button' class='btn btn-default' ng-click='vm.open()'>" +
+	        "<i class='fa fa-calendar'></i></button>",
+	        " </span>",
+	        "   <div class='input-group-addon' style='line-height: 0 !important;'  ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
+	        "</div>"].join("")
+	};
+
+
+	var app = angular.module('myComponents')
+	    .component('myDateField', myDateField);
+
+
+
+/***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	var myDisplayField = {
+		    bindings: {
+		        fieldLabel: '@',
+		        ngModel: '=',
+				fieldLabelWitdh: "@"
+		    },
+			controllerAs: "vm",
+			controller: function () {
+				var vm = this;
+				
+				if(vm.fieldLabelWitdh == undefined) {
+					vm.fieldLabelWitdh = "col-md-4"
+				}
+				
+			},
+		    template: ["<div class='row'>",
+		                    "<div class='{{vm.fieldLabelWitdh}}'>",
+		                         "<label class='control-label'><strong>{{vm.fieldLabel}}</strong></label>",
+		                    "</div>",
+		                    "<div class='col-sm-6'>",
+		                         "{{vm.ngModel}}",
+		                    "</div>",
+		                 "</div>"].join("")
+	};
+
+	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	var myDispalyTextareaField = {
+	   bindings: {
+	        fieldLabel: '@',
+	        ngModel: '='
+	    },
+	    template: [
+	        "<div class='well'><strong>{{$ctrl.fieldLabel}}</strong>",
+	        "<p>{{$ctrl.ngModel}}</p></div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myDisplayTextareaField", myDispalyTextareaField);
+
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+	var mySelectList = {
+	    bindings: {
+	        ngModel: "=",
+	        items: "=",
+	        fieldLabel: "@",
+	        fieldName: "@"
+	    },
+	    controllerAs: "vm",
+	    controller: function () {
+	        var vm = this;
+	                
+	        if (vm.fieldName == null) {
+	            vm.fieldName = vm.fieldLabel.replace(" ", "");           
+	        }
+	        
+	    },
+	    template: ["<div class='form-group'>",
+	        " <label class='control-label' style='min-width: 110px; text-align: left'>{{vm.fieldLabel}}</label>",
+	        "<select ng-model='vm.ngModel' class='form-control' id='{{vm.fieldName}}'>",
+	        " <option ng-repeat='option in vm.items' value='{{option.Id}}'>{{option.Name}}</option>",
+	        "</select>",
+	        "</div>"].join("")
+
+	};
+	// convert-to-number
+
+
+	angular.module("myComponents").component("mySelectList", mySelectList);
+
+
+
+
+/***/ },
+/* 36 */
+/***/ function(module, exports) {
+
+	var myTextField = {
+	    bindings: {
+	        fieldLabel: "@",
+	        fieldName: "@",
+	        ngModel: "=",
+	        required: "@",
+	        toolTip:"@"
+	    },
+	    controllerAs:"vm",
+	    controller: function () {
+	        var vm = this;
+	        
+	        if(vm.toolTip)
+	        {
+	            vm.showToolTip = true;
+	        }
+	        
+	        if (vm.fieldName == null) {
+	            vm.fieldName = vm.fieldLabel.replace(" ", "");
+	            console.log(vm.fieldName);
+	        }
+
+	        if (vm.required == null ) {
+	            vm.required = false;
+	        }
+	    },
+	    template: ["<div class='form-group'>",
+	        " <label class='control-label'  style='min-width: 80px !important;' >{{vm.fieldLabel}}</label>",
+	        " <div class='input-group'  style='width: 80% !important;'>",
+	        " <input type='text'  class='form-control' id='{{vm.fieldName}}' ng-model='vm.ngModel' ng-required='{{ vm.required }}'>",
+	        "   <div class='input-group-addon' style='line-height: 0 !important;'  ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
+	        " </div>",
+	        "</div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myTextField", myTextField);
+
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	var myTextareaField = {
+	    bindings: {
+	        fieldLabel: "@",
+	        fieldName: "@",
+	        ngModel: "=",
+	        required: "@",
+	        toolTip: "@",
+	        showToolTip: "@"
+	    },
+	    controllerAs: "vm",
+	    controller: function () {
+	        var vm = this;
+
+	        if (vm.toolTip) {
+	            vm.showToolTip = true;
+	        }
+
+	        if (vm.fieldName == null) {
+	            vm.fieldName = vm.fieldLabel.replace(" ", "");
+	        }
+
+	        if (vm.required == null) {
+	            vm.required = false;
+	        }
+	    },
+	    template: ["<div class='form-group'>",
+	        " <label class='control-label'  style='min-width: 80px !important;' >{{vm.fieldLabel}}</label>",
+	        " <div class='input-group'  style='width: 80% !important;'>",
+	        " <textarea type='text'  class='form-control'  id='{{vm.fieldName}}' ng-model='vm.ngModel' ng-required='{{ vm.required }}'>",
+	        "   <div class='input-group-addon' style='line-height: 0 !important;'  ng-show='vm.showToolTip'><my-popover ng-model='vm.toolTip'></my-popover></div>",
+	        "</div>",
+	        "</div>"].join("")
+	};
+
+
+	angular.module("myComponents").component("myTextareaField", myTextareaField);
 
 
 /***/ }
