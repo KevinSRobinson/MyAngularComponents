@@ -46,7 +46,12 @@
         ];
 
 
+
+
         vm.filterText = "";
+
+        vm.tags = [{id: 3, Name: "Test 1"}];
+
         vm.selectedTag = {};
 
         vm.add = function () {
@@ -87,6 +92,12 @@
         <h4> Tags Filter List </h4>
         <strong>Selected Tag: {{ vm.selectedTag }}</strong>
         <my-tags-filter-list items="vm.fakeItems" selected="vm.selectedTag"></my-tags-filter-list>
+
+        <h4> Tags Field </h4>
+        <strong>Tag: {{ vm.tags }}</strong>
+        <my-tags-multi-select field-label="Tags Field"
+                              field-name="Tags Field"
+                              tags="vm.tags" selected="vm.selectedTag"></my-tags-multi-select>
 
 
     </div>

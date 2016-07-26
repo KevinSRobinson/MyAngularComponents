@@ -1313,14 +1313,19 @@
 	    },
 	    controllerAs: "vm",
 	    controller: function () {
-	           
+	        "use strict";
+	        
+	        var vm = this;
+	        
+	           console.log(vm.tags);
+	        
 	    },
 	    template: ["<div class='form-group'>",
 	        "<span for='tags'>{{vm.fieldLabel}}</span>",
 	        "<ui-select multiple ng-model='vm.selected' id='tags' >",
-	        "<ui-select-match placeholder='Select Tag...'>{{$item.Name}}</ui-select-match>",
+	        "<ui-select-match placeholder='Select Tag...'>{{vm.Name}}</ui-select-match>",
 	        "<ui-select-choices repeat='tag in vm.tags'>",
-	        "<div ng-bind-html='tag.Name'></div>",
+	        "<div ng-bind-html='tag'></div>",
 	        "</ui-select-choices>",
 	        "</ui-select>",
 	        "</div>"].join("")
@@ -1414,11 +1419,22 @@
 	        fieldName: '@'
 	    },
 	    controllerAs:"vm",
+	    controller: function () {
+	        "use strict";
+	        
+	        var vm = this;
+	        
+	        //if the date is not a date object - convert
+	        if(typeof vm.ngModel != 'date'){
+	            vm.ngModel = new Date(vm.ngModel);
+	        }
+	        
+	    },
 	    template: ["<div class='row'>",
-	                    "<div class='col-sm-2'>",
+	                    "<div class='col-md-4'>",
 	                         "<span class='control-label'><strong>{{vm.fieldLabel}}</strong></span>",
 	                    "</div>",
-	                    "<div class='col-sm-8'>",
+	                    "<div class='col-md-8'>",
 	                         "{{vm.ngModel | date:'medium' }}",
 	                    "</div>",
 	                 "</div>"].join("")
