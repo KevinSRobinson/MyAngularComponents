@@ -65,7 +65,7 @@ var myPanel = {
         };
 
         vm.getPanelContentStyle = function () {
-            return "overflow-x: auto; overflow-y: auto; max-height: " + vm.height;
+            return "overflow-x: auto; overflow-y: auto; max-height: " + vm.height + "px";
             
         };
         
