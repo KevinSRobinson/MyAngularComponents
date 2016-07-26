@@ -15,7 +15,8 @@ var myPanel = {
         edit: "&",
         showFooter: "@",
         footerLeftLabel: "@",
-        footerRightLabel: "@"
+        footerRightLabel: "@",
+        height: "@"
     },
     controllerAs: "vm",
     controller: function () {
@@ -29,6 +30,10 @@ var myPanel = {
         };
 
         vm.setDefaults = function () {
+            if (vm.height == undefined) {
+                vm.height = 200;
+            }
+            
             if (vm.showAddButton == undefined) {
                 vm.showAddButton = false;
             }
@@ -59,6 +64,11 @@ var myPanel = {
             return "padding: 10px 15px";
         };
 
+        vm.getPanelContentStyle = function () {
+            return "overflow-x: hidden; overflow-y: scroll; max-height: " + vm.height;
+            
+        };
+        
         vm.getButtonStyle = function () {
             if (vm.smallHeading != undefined) {
                 return "margin-left: 5px; padding: 3px;";
@@ -81,7 +91,7 @@ var myPanel = {
     "</div>" +
     ////////////
     /// body
-    "<div class='panel-body' ng-transclude></div>" + 
+    "<div class='panel-body' ng-transclude style='{{vm.getPanelContentStyle()}}'></div>" + 
     /////////////
     // footer   
     "<div class='panel-footer' ng-if='vm.showFooter' style='{{vm.getPanelStyle()}}' >" +

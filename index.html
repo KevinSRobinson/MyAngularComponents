@@ -26,6 +26,7 @@
 
     H4 {
         color: purple;
+
     }
 </style>
 <body ng-app="myComponents">
@@ -141,9 +142,29 @@
               show-edit-button="true"
               edit="vm.edit()"
               add="vm.add()"
+              height="200"
               show-add-button="true"
               style="success">
-        Normal Panel with Icon
+        <my-text-field field-label="First Name"
+                       tool-tip="Some Help Text"
+                       ng-model="vm.FirstName"></my-text-field>
+
+        <my-text-field field-label="First Name"
+                       tool-tip="Some Help Text"
+                       ng-model="vm.FirstName"></my-text-field>
+
+        <my-text-field field-label="First Name"
+                       tool-tip="Some Help Text"
+                       ng-model="vm.FirstName"></my-text-field>
+
+        <my-text-field field-label="First Name"
+                       tool-tip="Some Help Text"
+                       ng-model="vm.FirstName"></my-text-field>
+        <my-text-field field-label="First Name"
+                       tool-tip="Some Help Text"
+                       ng-model="vm.FirstName"></my-text-field>
+
+
     </my-panel>
 
     <my-panel title="Text Field" icon="user"

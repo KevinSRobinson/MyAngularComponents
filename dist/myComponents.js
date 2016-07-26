@@ -73,36 +73,40 @@
 	__webpack_require__(22);
 	__webpack_require__(23);
 
-	__webpack_require__(24);
+
+
+
+	//Panels
+	__webpack_require__(37);
 
 
 
 	// Buttons
+	__webpack_require__(24);
 	__webpack_require__(25);
 	__webpack_require__(26);
+
 	__webpack_require__(27);
 
-	__webpack_require__(28);
-
 	// Check Boxes
+	__webpack_require__(28);
 	__webpack_require__(29);
-	__webpack_require__(30);
 
 	// Tags
+	__webpack_require__(30);
 	__webpack_require__(31);
-	__webpack_require__(32);
 
 
 
 
 	// Modals
+	__webpack_require__(32);
 	__webpack_require__(33);
 	__webpack_require__(34);
-	__webpack_require__(35);
 		
 	// Dates
+	__webpack_require__(35);
 	__webpack_require__(36);
-	__webpack_require__(37);
 
 
 
@@ -941,112 +945,6 @@
 /* 24 */
 /***/ function(module, exports) {
 
-	var myPanel = {
-	    transclude: true,
-	    bindings: {
-	        title: "@",
-	        fieldName: "@",
-	        style: "@",
-	        icon: "@",
-	        iconSize: "@",
-	        smallHeading: "@",
-	        showAddButton: "@",
-	        showEditButton: "@",
-	        addButtonId: "@",
-	        editButtonId: "@",
-	        add: "&",
-	        edit: "&",
-	        showFooter: "@",
-	        footerLeftLabel: "@",
-	        footerRightLabel: "@"
-	    },
-	    controllerAs: "vm",
-	    controller: function () {
-	        "use strict";
-
-	        var vm = this;
-
-
-	        vm.init = function () {
-	            vm.setDefaults();
-	        };
-
-	        vm.setDefaults = function () {
-	            if (vm.showAddButton == undefined) {
-	                vm.showAddButton = false;
-	            }
-	            if (vm.showEditButton == undefined) {
-	                vm.showEditButton = false;
-	            }
-	            if (vm.editButtonId == undefined) {
-	                vm.editButtonId = "panelEditButton"
-	            }
-	            if (vm.addButtonId == undefined) {
-	                vm.addButtonId = "panelAddButton"
-	            }
-	            if (vm.showFooter = undefined) {
-	                vm.showFooter = false;
-	            }
-	            if (vm.footerLeftLabel = undefined) {
-	                vm.footerLeftLabel = "";
-	            }
-	            if (vm.footerRightLabel = undefined) {
-	                vm.footerRightLabel = "";
-	            }
-	        };
-
-	        vm.getPanelStyle = function () {
-	            if (vm.smallHeading != undefined) {
-	                return "padding: 3px 5px !important; ";
-	            }
-	            return "padding: 10px 15px";
-	        };
-
-	        vm.getButtonStyle = function () {
-	            if (vm.smallHeading != undefined) {
-	                return "margin-left: 5px; padding: 3px;";
-	            }
-	            return "margin-left: 5px; padding: 10px;";
-	        };
-
-	        vm.init();
-
-	    },
-	    template: "<div class='panel panel-{{vm.style}}'>" +
-	    "<div class='panel-heading' style='{{vm.getPanelStyle()}}' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}} fa-{{vm.iconSize}}x'></i>" +
-	    ////////////
-	    /// title    
-	    "<span style='padding-left: 10px; font-weight: 700'>{{vm.title}}</span>" +
-	    ////////////
-	    /// buttons
-	    "<div ng-show='vm.showAddButton' id='{{vm.addButtonId}}' ng-click='vm.add()' style='{{vm.getButtonStyle()}}' class='btn btn-default pull-right' style='padding: 3px;'><i class='fa fa-plus'></i> </div>" +
-	    "<div ng-show='vm.showEditButton' id='{{vm.editButtonId}}' ng-click='vm.edit()' style='{{vm.getButtonStyle()}}'  class='btn btn-default pull-right' style='padding: 3px;'><i class='fa fa-bars'></i> </div>" +
-	    "</div>" +
-	    ////////////
-	    /// body
-	    "<div class='panel-body' ng-transclude></div>" + 
-	    /////////////
-	    // footer   
-	    "<div class='panel-footer' ng-if='vm.showFooter' style='{{vm.getPanelStyle()}}' >" +
-	        " <div class='row'>" +
-	            " <div class='col-md-6'><span class='pull-left'>{{vm.footerLeftLabel}}</span></div>" +
-	            " <div class='col-md-6'><span class='pull-right'>{{vm.footerRightLabel}}</span></div>" +
-	        "</div>" +
-	    "</div>" +
-	    "</div>"
-	};
-
-
-	// " <div class='row'>" +
-	// " <div class='col-md-6'>{{vm.footerLeftLabel}}</div>"+
-	// " <div class='col-md-6'>{{vm.footerRightLabel}}</div>"+
-	// "</div>" +
-	angular.module("myComponents").component("myPanel", myPanel);
-
-/***/ },
-/* 25 */
-/***/ function(module, exports) {
-
 	var myEditButton = {
 	    bindings: {
 	        click: "&",
@@ -1069,7 +967,7 @@
 
 
 /***/ },
-/* 26 */
+/* 25 */
 /***/ function(module, exports) {
 
 	var myCreateButton = {
@@ -1091,7 +989,7 @@
 
 
 /***/ },
-/* 27 */
+/* 26 */
 /***/ function(module, exports) {
 
 	var myDeleteButton = {
@@ -1113,7 +1011,7 @@
 
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports) {
 
 	var myMoreLessButton = {
@@ -1154,7 +1052,7 @@
 	angular.module("myComponents").component("myMoreLessButton", myMoreLessButton);
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports) {
 
 	var myCheckboxField = {
@@ -1178,7 +1076,7 @@
 
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports) {
 
 	var myDisplayCheckField = {
@@ -1198,7 +1096,7 @@
 	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports) {
 
 	/**
@@ -1301,7 +1199,7 @@
 	angular.module("myComponents").component("myTagsFilterList", myTagsFilterList);
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports) {
 
 	var myTagsMultiSelect = {
@@ -1335,7 +1233,7 @@
 
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports) {
 
 	var modalButtons = {
@@ -1367,7 +1265,7 @@
 
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports) {
 
 	var okModalButtons = {
@@ -1392,7 +1290,7 @@
 
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports) {
 
 	var modalHeader = {
@@ -1409,7 +1307,7 @@
 
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports) {
 
 	var myDisplayDateField = {
@@ -1443,7 +1341,7 @@
 	angular.module('myComponents').component("myDisplayDateField", myDisplayDateField);
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports) {
 
 	/**
@@ -1515,6 +1413,122 @@
 	    .component('myDateField', myDateField);
 
 
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	var myPanel = {
+	    transclude: true,
+	    bindings: {
+	        title: "@",
+	        fieldName: "@",
+	        style: "@",
+	        icon: "@",
+	        iconSize: "@",
+	        smallHeading: "@",
+	        showAddButton: "@",
+	        showEditButton: "@",
+	        addButtonId: "@",
+	        editButtonId: "@",
+	        add: "&",
+	        edit: "&",
+	        showFooter: "@",
+	        footerLeftLabel: "@",
+	        footerRightLabel: "@",
+	        height: "@"
+	    },
+	    controllerAs: "vm",
+	    controller: function () {
+	        "use strict";
+
+	        var vm = this;
+
+
+	        vm.init = function () {
+	            vm.setDefaults();
+	        };
+
+	        vm.setDefaults = function () {
+	            if (vm.height == undefined) {
+	                vm.height = 200;
+	            }
+	            
+	            if (vm.showAddButton == undefined) {
+	                vm.showAddButton = false;
+	            }
+	            if (vm.showEditButton == undefined) {
+	                vm.showEditButton = false;
+	            }
+	            if (vm.editButtonId == undefined) {
+	                vm.editButtonId = "panelEditButton"
+	            }
+	            if (vm.addButtonId == undefined) {
+	                vm.addButtonId = "panelAddButton"
+	            }
+	            if (vm.showFooter = undefined) {
+	                vm.showFooter = false;
+	            }
+	            if (vm.footerLeftLabel = undefined) {
+	                vm.footerLeftLabel = "";
+	            }
+	            if (vm.footerRightLabel = undefined) {
+	                vm.footerRightLabel = "";
+	            }
+	        };
+
+	        vm.getPanelStyle = function () {
+	            if (vm.smallHeading != undefined) {
+	                return "padding: 3px 5px !important; ";
+	            }
+	            return "padding: 10px 15px";
+	        };
+
+	        vm.getPanelContentStyle = function () {
+	            return "overflow-x: hidden; overflow-y: scroll; max-height: " + vm.height;
+	            
+	        };
+	        
+	        vm.getButtonStyle = function () {
+	            if (vm.smallHeading != undefined) {
+	                return "margin-left: 5px; padding: 3px;";
+	            }
+	            return "margin-left: 5px; padding: 10px;";
+	        };
+
+	        vm.init();
+
+	    },
+	    template: "<div class='panel panel-{{vm.style}}'>" +
+	    "<div class='panel-heading' style='{{vm.getPanelStyle()}}' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}} fa-{{vm.iconSize}}x'></i>" +
+	    ////////////
+	    /// title    
+	    "<span style='padding-left: 10px; font-weight: 700'>{{vm.title}}</span>" +
+	    ////////////
+	    /// buttons
+	    "<div ng-show='vm.showAddButton' id='{{vm.addButtonId}}' ng-click='vm.add()' style='{{vm.getButtonStyle()}}' class='btn btn-default pull-right' style='padding: 3px;'><i class='fa fa-plus'></i> </div>" +
+	    "<div ng-show='vm.showEditButton' id='{{vm.editButtonId}}' ng-click='vm.edit()' style='{{vm.getButtonStyle()}}'  class='btn btn-default pull-right' style='padding: 3px;'><i class='fa fa-bars'></i> </div>" +
+	    "</div>" +
+	    ////////////
+	    /// body
+	    "<div class='panel-body' ng-transclude style='{{vm.getPanelContentStyle()}}'></div>" + 
+	    /////////////
+	    // footer   
+	    "<div class='panel-footer' ng-if='vm.showFooter' style='{{vm.getPanelStyle()}}' >" +
+	        " <div class='row'>" +
+	            " <div class='col-md-6'><span class='pull-left'>{{vm.footerLeftLabel}}</span></div>" +
+	            " <div class='col-md-6'><span class='pull-right'>{{vm.footerRightLabel}}</span></div>" +
+	        "</div>" +
+	    "</div>" +
+	    "</div>"
+	};
+
+
+	// " <div class='row'>" +
+	// " <div class='col-md-6'>{{vm.footerLeftLabel}}</div>"+
+	// " <div class='col-md-6'>{{vm.footerRightLabel}}</div>"+
+	// "</div>" +
+	angular.module("myComponents").component("myPanel", myPanel);
 
 /***/ }
 /******/ ]);
