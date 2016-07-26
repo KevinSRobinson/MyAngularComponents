@@ -1383,8 +1383,25 @@
 	            // start with the date popup closed
 	            vm.popup1 = { opened: false };
 	        };
-	        
-	       
+
+
+
+
+	        vm.inlineOptions = {
+	            minDate: new Date(),
+	            showWeeks: true
+	        };
+	        vm.dateOptions = {
+	            maxDate: new Date(2020, 5, 22),
+	            minDate: new Date(),
+	            startingDay: 1
+	        };
+	        vm.toggleMin = function() {
+	            vm.inlineOptions.minDate = vm.inlineOptions.minDate ? null : new Date();
+	            vm.dateOptions.minDate = vm.inlineOptions.minDate;
+	        };
+
+
 	        // open the date popup
 	        vm.open = function () {
 	            vm.popup1.opened = true;
@@ -1399,7 +1416,7 @@
 	        "<label class='control-label' style='min-width: 110px; text-align: left'>{{vm.fieldLabel}}</label>",
 	        "<div class='input-group'>",
 	        "<input type='text' class='form-control' id='{{vm.fieldName}}'",
-	        " uib-datepicker-popup='dd-MMMM-yyyy' ng-model='vm.ngModel'  is-open='vm.popup1.opened'/> ",
+	        " uib-datepicker-popup='dd-MMMM-yyyy' ng-model='vm.ngModel'  datepicker-options='vm.dateOptions' is-open='vm.popup1.opened'/> ",
 	        "<span class='input-group-btn'>",
 	        "<button type='button' class='btn btn-default' ng-click='vm.open()'>" +
 	        "<i class='fa fa-calendar'></i></button>",
@@ -1436,7 +1453,8 @@
 	        showFooter: "@",
 	        footerLeftLabel: "@",
 	        footerRightLabel: "@",
-	        height: "@"
+	        height: "@",
+	        showVerticalScrollBar: "@"
 	    },
 	    controllerAs: "vm",
 	    controller: function () {
@@ -1451,7 +1469,11 @@
 
 	        vm.setDefaults = function () {
 	            if (vm.height == undefined) {
-	                vm.height = 200;
+	                vm.height = 150;
+	            }
+
+	            if (vm.showVerticalScrollBar == undefined) {
+	                vm.showVerticalScrollBar = false;
 	            }
 	            
 	            if (vm.showAddButton == undefined) {
@@ -1477,18 +1499,37 @@
 	            }
 	        };
 
-	        vm.getPanelStyle = function () {
-	            if (vm.smallHeading != undefined) {
-	                return "padding: 3px 5px !important; ";
-	            }
-	            return "padding: 10px 15px";
-	        };
 
-	        vm.getPanelContentStyle = function () {
-	            return "overflow-x: auto; overflow-y: auto; max-height: " + vm.height + "px";
+	        vm.getPanelStyle = function () {
+
+	            var s = "overflow-y: " + vm.getScrollBarVisibility(vm.showVerticalScrollBar) ;
+	            console.log(s);
+	            
+	            return "overflow-y: " + vm.getScrollBarVisibility(vm.showVerticalScrollBar) ;
 	            
 	        };
 	        
+	        vm.getPanelHeadingStyle = function () {
+	           if (vm.smallHeading != undefined) {
+	                return   "padding: 3px 5px !important; ";
+	            }
+	            return   "padding: 10px 15px";
+	        };
+
+	        vm.getPanelContentStyle = function () {
+	            return "overflow-y: auto;"
+	        };
+
+	        
+	        vm.getScrollBarVisibility = function (showVerticalScrollBar) {
+	            if(showVerticalScrollBar){
+	                return "scroll";
+	            }
+	            else {
+	                return "hidden";
+	            }
+	        };
+
 	        vm.getButtonStyle = function () {
 	            if (vm.smallHeading != undefined) {
 	                return "margin-left: 5px; padding: 3px;";
@@ -1499,8 +1540,8 @@
 	        vm.init();
 
 	    },
-	    template: "<div class='panel panel-{{vm.style}}'>" +
-	    "<div class='panel-heading' style='{{vm.getPanelStyle()}}' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}} fa-{{vm.iconSize}}x'></i>" +
+	    template: "<div class='panel panel-{{vm.style}}' style='{{vm.getPanelStyle()}}'> " +
+	    "<div class='panel-heading' style='{{vm.getPanelHeadingStyle()}}' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}} fa-{{vm.iconSize}}x'></i>" +
 	    ////////////
 	    /// title    
 	    "<span style='padding-left: 10px; font-weight: 700'>{{vm.title}}</span>" +

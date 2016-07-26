@@ -16,7 +16,8 @@ var myPanel = {
         showFooter: "@",
         footerLeftLabel: "@",
         footerRightLabel: "@",
-        height: "@"
+        height: "@",
+        showVerticalScrollBar: "@"
     },
     controllerAs: "vm",
     controller: function () {
@@ -31,7 +32,11 @@ var myPanel = {
 
         vm.setDefaults = function () {
             if (vm.height == undefined) {
-                vm.height = 200;
+                vm.height = 150;
+            }
+
+            if (vm.showVerticalScrollBar == undefined) {
+                vm.showVerticalScrollBar = false;
             }
             
             if (vm.showAddButton == undefined) {
@@ -57,18 +62,37 @@ var myPanel = {
             }
         };
 
-        vm.getPanelStyle = function () {
-            if (vm.smallHeading != undefined) {
-                return "padding: 3px 5px !important; ";
-            }
-            return "padding: 10px 15px";
-        };
 
-        vm.getPanelContentStyle = function () {
-            return "overflow-x: auto; overflow-y: auto; max-height: " + vm.height + "px";
+        vm.getPanelStyle = function () {
+
+            var s = "overflow-y: " + vm.getScrollBarVisibility(vm.showVerticalScrollBar) ;
+            console.log(s);
+            
+            return "overflow-y: " + vm.getScrollBarVisibility(vm.showVerticalScrollBar) ;
             
         };
         
+        vm.getPanelHeadingStyle = function () {
+           if (vm.smallHeading != undefined) {
+                return   "padding: 3px 5px !important; ";
+            }
+            return   "padding: 10px 15px";
+        };
+
+        vm.getPanelContentStyle = function () {
+            return "overflow-y: auto;"
+        };
+
+        
+        vm.getScrollBarVisibility = function (showVerticalScrollBar) {
+            if(showVerticalScrollBar){
+                return "scroll";
+            }
+            else {
+                return "hidden";
+            }
+        };
+
         vm.getButtonStyle = function () {
             if (vm.smallHeading != undefined) {
                 return "margin-left: 5px; padding: 3px;";
@@ -79,8 +103,8 @@ var myPanel = {
         vm.init();
 
     },
-    template: "<div class='panel panel-{{vm.style}}'>" +
-    "<div class='panel-heading' style='{{vm.getPanelStyle()}}' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}} fa-{{vm.iconSize}}x'></i>" +
+    template: "<div class='panel panel-{{vm.style}}' style='{{vm.getPanelStyle()}}'> " +
+    "<div class='panel-heading' style='{{vm.getPanelHeadingStyle()}}' id='{{vm.fieldName}}'><i class='fa fa-{{vm.icon}} fa-{{vm.iconSize}}x'></i>" +
     ////////////
     /// title    
     "<span style='padding-left: 10px; font-weight: 700'>{{vm.title}}</span>" +
