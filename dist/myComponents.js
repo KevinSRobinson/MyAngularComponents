@@ -1485,7 +1485,7 @@
 	        };
 
 	        vm.getPanelContentStyle = function () {
-	            return "overflow-x: hidden; overflow-y: scroll; max-height: " + vm.height;
+	            return "overflow-x: auto; overflow-y: auto; max-height: " + vm.height;
 	            
 	        };
 	        
