@@ -50,10 +50,7 @@ var myDateField = {
             minDate: new Date(),
             startingDay: 1
         };
-        vm.toggleMin = function() {
-            vm.inlineOptions.minDate = vm.inlineOptions.minDate ? null : new Date();
-            vm.dateOptions.minDate = vm.inlineOptions.minDate;
-        };
+
 
 
         // open the date popup
@@ -70,7 +67,10 @@ var myDateField = {
         "<label class='control-label' style='min-width: 110px; text-align: left'>{{vm.fieldLabel}}</label>",
         "<div class='input-group'>",
         "<input type='text' class='form-control' id='{{vm.fieldName}}'",
-        " uib-datepicker-popup='dd-MMMM-yyyy' ng-model='vm.ngModel'  datepicker-options='vm.dateOptions' is-open='vm.popup1.opened'/> ",
+        " uib-datepicker-popup='dd-MMMM-yyyy' ",
+        " ng-model='vm.ngModel' ",
+        " datepicker-options='vm.dateOptions' ",
+        " is-open='vm.popup1.opened'/> ",
         "<span class='input-group-btn'>",
         "<button type='button' class='btn btn-default' ng-click='vm.open()'>" +
         "<i class='fa fa-calendar'></i></button>",

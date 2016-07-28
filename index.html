@@ -37,16 +37,37 @@
         vm.exampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol";
         vm.test = "Some TExt";
         vm.date = new Date();
+        vm.defaultDate = new Date(1, 1, 0000);
+
 
         vm.FirstName = "kevin";
 
         vm.fakeItems = [
-            {id: 1, Title: "Test 1", Tags: "Tag1, Tag2", Category: "Category 1, Category 5"},
-            {id: 2, Title: "Test 1", Tags: "Tag3, Tag2", Category: "Category 3, Category 2"},
-            {id: 3, Title: "Test 1", Tags: "Tag4, Tag5", Category: "Category 4, Category 2"}
+            {
+                id: 1,
+                Title: "Test 1",
+                Tags: "Tag1, Tag2",
+                Category: "Category 1, Category 5",
+                Types: "Type 1, Type 5",
+                Town: "Town 1, Town 5"
+            },
+            {
+                id: 2,
+                Title: "Test 1",
+                Tags: "Tag3, Tag2",
+                Category: "Category 3, Category 2",
+                Types: "Type 2, Type4",
+                Town: "Town 1, Town 5"
+            },
+            {
+                id: 3,
+                Title: "Test 1",
+                Tags: "Tag4, Tag5",
+                Category: "Category 4, Category 2",
+                Types: "Type 11, Type 13",
+                Town: "Town 1, Town 5"
+            }
         ];
-
-
 
 
         vm.filterText = "";
@@ -84,6 +105,13 @@
                        required="true"
                        field-name='DateClosed'></my-date-field>
 
+
+        <h4>Date Field</h4>
+        <my-date-field ng-model='vm.defaultDate' field-label='Date Closed'
+                       tool-tip="This is a date field"
+                       required="true"
+                       field-name='Default Date'></my-date-field>
+
     </div>
 
 
@@ -109,9 +137,27 @@
     <div class="well">
         <h4> Category Select </h4>
         <strong>Items : </strong> {{vm.fakeItems}} <br>
+
+
+        <h4>Using Default</h4>
         <strong>Selected Category: </strong>{{ selectedCategory }}<br>
         <my-category-select items="vm.fakeItems" selected="selectedCategory"></my-category-select>
+        <hr>
 
+        <h4>Specify "Types" Field</h4>
+        <strong>Selected Type: </strong>{{ selectedType }}<br>
+        <my-category-select items="vm.fakeItems"
+                            selected="selectedType"
+                            category-field="Types"
+                            field-label="Type"></my-category-select>
+
+        <hr>
+        <h4>Specify "Town" Field</h4>
+        <strong>Selected Town: </strong>{{ selectedTown }}<br>
+        <my-category-select items="vm.fakeItems"
+                            selected="selectedTown"
+                            category-field="Town"
+                            field-label="Town"></my-category-select>
 
     </div>
 
@@ -119,8 +165,23 @@
     <hr>
     <div class="well">
 
-        <my-filter-textbox ng-model="vm.filterText" placeholder="You can change the placeholder text"></my-filter-textbox>
+        <my-filter-textbox ng-model="vm.filterText"
+                           placeholder="You can change the placeholder text"></my-filter-textbox>
 
+
+        <my-text-field field-label="First Name"
+                       tool-tip="Some Help Text"
+                       ng-model="vm.FirstName"></my-text-field>
+
+        <my-textarea-field field-label="Details"
+                           tool-tip="Some Help Text"
+                           ng-model="vm.exampleText"></my-textarea-field>
+
+    </div>
+    <div class="well">
+
+        <my-filter-textbox ng-model="vm.filterText"
+                           placeholder="You can change the placeholder text"></my-filter-textbox>
 
 
         <my-text-field field-label="First Name"
