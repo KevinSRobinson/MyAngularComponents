@@ -7,7 +7,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <!-- AngularJS -->
     <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-momentjs/angular-momentjs.js"></script>
+    <script type="text/javascript" src="node_modules/moment-range/dist/moment-range.js"></script>
     <script type="text/javascript" src="node_modules/angular-animate/angular-animate.js"></script>
+
     <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
     <script type="text/javascript" src="node_modules/font-awesome/css/font-awesome.css"></script>
     <script type="text/javascript" src="dist/myComponents.js"></script>
@@ -49,7 +54,8 @@
                 Tags: "Tag1, Tag2",
                 Category: "Category 1, Category 5",
                 Types: "Type 1, Type 5",
-                Town: "Town 1, Town 5"
+                Town: "Town 1, Town 5",
+                Dates: '28/7/2016'
             },
             {
                 id: 2,
@@ -57,7 +63,8 @@
                 Tags: "Tag3, Tag2",
                 Category: "Category 3, Category 2",
                 Types: "Type 2, Type4",
-                Town: "Town 1, Town 5"
+                Town: "Town 1, Town 5",
+                Dates: '28/7/2016'
             },
             {
                 id: 3,
@@ -65,7 +72,8 @@
                 Tags: "Tag4, Tag5",
                 Category: "Category 4, Category 2",
                 Types: "Type 11, Type 13",
-                Town: "Town 1, Town 5"
+                Town: "Town 1, Town 5",
+                Dates: '28/7/2016'
             }
         ];
 
@@ -111,6 +119,14 @@
                        tool-tip="This is a date field"
                        required="true"
                        field-name='Default Date'></my-date-field>
+
+
+        <h4>Date Filter</h4>
+        <strong>Selected Type: </strong>{{ vm.selectedDateRange }}<br>
+        <my-relative-date-filter selected="vm.selectedDateRange"
+                                 field-label='Date Filter'
+                                 items="vm.fakeItems"
+                       field-name='Dates'></my-relative-date-filter>
 
     </div>
 

@@ -8,6 +8,7 @@ var myDisplayDateField = {
     controller: function () {
         "use strict";
         
+        
         var vm = this;
         
         //if the date is not a date object - convert
