@@ -18,6 +18,7 @@
     "web/bower_components"
   ],
   "dependencies": {
-    "my-angular-components": "*"
+    "my-angular-components": "*",
+    "angular-momentjs": "*"
   }
 }
