@@ -1,4 +1,4 @@
-var app = angular.module("myComponents", ['ngAnimate', 'ui.bootstrap',  'moment' ]);
+var app = angular.module("myComponents", ['ngAnimate', 'ui.bootstrap']);
 
 
 // app.config(function($momentProvider){
@@ -6,13 +6,13 @@ var app = angular.module("myComponents", ['ngAnimate', 'ui.bootstrap',  'moment'
 //         .asyncLoading(true)
 //         .scriptUrl('//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js');
 // });
+// //
+// app.config([ '$momentProvider',
+//     function($momentProvider) {
 //
-app.config([ '$momentProvider',
-    function($momentProvider) {
-
-        $momentProvider
-            .defaultViewFormat('LL')
-            .defaultModelFormat('MM/DD/YYYY')
-            .strictView(false);
-
-    } ]);
+//         $momentProvider
+//             .defaultViewFormat('LL')
+//             .defaultModelFormat('MM/DD/YYYY')
+//             .strictView(false);
+//
+//     } ]);
