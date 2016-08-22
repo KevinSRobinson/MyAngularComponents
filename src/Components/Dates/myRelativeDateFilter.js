@@ -61,15 +61,19 @@ var myRelativeDateFilter = {
 
 
 
-                addDateRangeToList("All");
-                
-
                 //add unique values to the temporary list
                 angular.forEach(dates, function (key, value) {
 
                     // convert the date to moment Format 
                     var momentDate = $moment(key[vm.dateField]);
-                                   
+                                        
+
+                    console.log("=============================");
+                    console.log(thisWeekRange.contains(momentDate));
+                    console.log("=============================");
+                    
+                    console.log('M = ' + momentDate);
+                    
                     
                     if (momentDate.format('LL') == today) {
                         addDateRangeToList("Today");
@@ -80,7 +84,7 @@ var myRelativeDateFilter = {
                     }
 
                     if (thisMonthRange.contains(momentDate)) {
-                        addDateRangeToList("This Month");
+                        addDateRangeToList("This Week");
                     }
 
                     
