@@ -33,7 +33,7 @@ var myReportViewer = {
 
         vm.init();
     },
-    template: ["<div ej-reportviewer id='container'",
+    template: ["dfdfdf<div ej-reportviewer id='container'",
         "e-reportServiceUrl='{{vm.reportUrl}}'",
         "e-processingmode='{{vm.processingMode}}'",
         "e-reportpath='{{vm.report}}' style='height:680px'></div>"].join("")
