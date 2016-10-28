@@ -1,5 +1,4 @@
-node_modules/
-gulpfile.js
+node_modules
 webpack.config.js
 entry.js
 .idea/
