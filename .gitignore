@@ -2,3 +2,4 @@ node_modules/
 gulpfile.js
 webpack.config.js
 entry.js
+.idea/
