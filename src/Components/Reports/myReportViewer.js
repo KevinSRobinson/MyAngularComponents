@@ -10,7 +10,7 @@ var myReportViewer = {
         "use strict";
 
         var vm = this;
-        vm.processingMode = "ej.ReportViewer.ProcessingMode.Local";
+        vm.processingMode = "ej.ReportViewer.ProcessingMode.Remote";
 
         vm.init = function () {
 
@@ -23,9 +23,13 @@ var myReportViewer = {
             // }
 
             if (vm.reportUrl == undefined) {
-                vm.reportUrl = "/umbraco/api/ReportApi";
+                vm.reportUrl = "https://volnowreportserver.azurewebsites.net/en-us/reports/view/";
             }
 
+                           
+                        //   reportServiceUrl: '/api/ReportApi',
+                        //   processingMode: ej.ReportViewer.ProcessingMode.Remote,
+                        //   reportPath: '~/Report/GroupingAgg.rdl'
 
 
         };
@@ -33,7 +37,7 @@ var myReportViewer = {
 
         vm.init();
     },
-    template: ["dfdfdf<div ej-reportviewer id='container'",
+    template: ["<div ej-reportviewer id='container'",
         "e-reportServiceUrl='{{vm.reportUrl}}'",
         "e-processingmode='{{vm.processingMode}}'",
         "e-reportpath='{{vm.report}}' style='height:680px'></div>"].join("")
