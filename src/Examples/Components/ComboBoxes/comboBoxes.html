@@ -1,0 +1,23 @@
+<h1>Combo Boxes</h1>
+
+<hr>
+<div class="well">
+    <h4> Category Select </h4>
+    <strong>Items : </strong> {{vm.fakeItems}} <br>
+
+
+    <h4>Using Default</h4>
+    <strong>Selected Category: </strong>{{ selectedCategory }}<br>
+    <my-category-select items="vm.fakeItems" selected="selectedCategory"></my-category-select>
+    <hr>
+
+    <h4>Specify "Types" Field</h4>
+    <strong>Selected Type: </strong>{{ selectedType }}<br>
+    <my-category-select items="vm.fakeItems" selected="selectedType" category-field="Types" field-label="Type"></my-category-select>
+
+    <hr>
+    <h4>Specify "Town" Field</h4>
+    <strong>Selected Town: </strong>{{ selectedTown }}<br>
+    <my-category-select items="vm.fakeItems" selected="selectedTown" category-field="Town" field-label="Town"></my-category-select>
+
+</div>

@@ -1,0 +1,44 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entry.js",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-bootstrap": "^0.12.2",
+    "angular-material": "^1.1.1",
+    "angular-moment": "^1.0.0",
+    "angular-ui-bootstrap": "^2.2.0",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "font-awesome": "^4.7.0",
+    "font-awesome-webpack": "0.0.4",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-webpack": "^1.5.0",
+    "jquery": "^2.2.4",
+    "jquery-easing": "0.0.1",
+    "jsrender": "^0.9.81",
+    "moment": "^2.15.2",
+    "moment-range": "^2.2.0",
+    "path": "^0.12.7",
+    "style-loader": "^0.13.1",
+    "syncfusion-javascript": "^14.3.49",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://volunteernow@bitbucket.org/volunteernow/mycomponents.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/volunteernow/mycomponents#readme"
+}
