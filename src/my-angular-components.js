@@ -1,5 +1,5 @@
 var app = angular.module("myComponents",
-['ngAnimate', 'ui.bootstrap', "ejangular"]);
+['ngAnimate', 'ui.bootstrap']);
 
 
 // app.config(function($momentProvider){
