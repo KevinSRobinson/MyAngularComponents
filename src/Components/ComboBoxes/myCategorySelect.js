@@ -59,7 +59,7 @@ var myCategorySelect = {
 
             });
 
-            // copy sorted list to the main category list
+            // copy sorted list to the main category list*/
             vm.cats = catsList.sort();
 
             //add an All option to the first item in the list

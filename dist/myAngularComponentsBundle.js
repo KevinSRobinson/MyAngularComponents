@@ -105,41 +105,41 @@
 	//Select
 	// require("./src/Components/SelectLists/MySelectList/mySelectList.js");
 	// require("./src/Components/SelectLists/MySelectListByName/mySelectListByName.js");
-	__webpack_require__(131);
+	__webpack_require__(129);
 
 
 
 	// Buttons
+	__webpack_require__(130);
+	__webpack_require__(131);
 	__webpack_require__(132);
 	__webpack_require__(133);
+
+	// Check Boxes
 	__webpack_require__(134);
 	__webpack_require__(135);
 
-	// Check Boxes
+	// Tags
 	__webpack_require__(136);
 	__webpack_require__(137);
 
-	// Tags
-	__webpack_require__(138);
-	__webpack_require__(139);
-
 	//Reports
-	__webpack_require__(140);
+	__webpack_require__(138);
 
 
 	// Modals
+	__webpack_require__(139);
+	__webpack_require__(140);
 	__webpack_require__(141);
-	__webpack_require__(142);
-	__webpack_require__(143);
 		
 	// Dates
-	__webpack_require__(144);
-	__webpack_require__(145);
+	__webpack_require__(142);
+	__webpack_require__(143);
 
-	__webpack_require__(146);
+	__webpack_require__(144);
 
 	// Other
-	__webpack_require__(147);
+	__webpack_require__(145);
 
 
 
@@ -68973,9 +68973,7 @@
 
 
 /***/ },
-/* 129 */,
-/* 130 */,
-/* 131 */
+/* 129 */
 /***/ function(module, exports) {
 
 	/**
@@ -69039,7 +69037,7 @@
 
 	            });
 
-	            // copy sorted list to the main category list
+	            // copy sorted list to the main category list*/
 	            vm.cats = catsList.sort();
 
 	            //add an All option to the first item in the list
@@ -69088,7 +69086,7 @@
 	angular.module("myComponents").component("myCategorySelect", myCategorySelect);
 
 /***/ },
-/* 132 */
+/* 130 */
 /***/ function(module, exports) {
 
 	var myEditButton = {
@@ -69113,7 +69111,7 @@
 
 
 /***/ },
-/* 133 */
+/* 131 */
 /***/ function(module, exports) {
 
 	var myCreateButton = {
@@ -69135,7 +69133,7 @@
 
 
 /***/ },
-/* 134 */
+/* 132 */
 /***/ function(module, exports) {
 
 	var myDeleteButton = {
@@ -69157,7 +69155,7 @@
 
 
 /***/ },
-/* 135 */
+/* 133 */
 /***/ function(module, exports) {
 
 	var myMoreLessButton = {
@@ -69198,7 +69196,7 @@
 	angular.module("myComponents").component("myMoreLessButton", myMoreLessButton);
 
 /***/ },
-/* 136 */
+/* 134 */
 /***/ function(module, exports) {
 
 	var myCheckboxField = {
@@ -69220,7 +69218,7 @@
 	  
 
 /***/ },
-/* 137 */
+/* 135 */
 /***/ function(module, exports) {
 
 	var myDisplayCheckField = {
@@ -69240,7 +69238,7 @@
 	angular.module('myComponents').component("myDisplayCheckField", myDisplayCheckField);
 
 /***/ },
-/* 138 */
+/* 136 */
 /***/ function(module, exports) {
 
 	/**
@@ -69343,7 +69341,7 @@
 	angular.module("myComponents").component("myTagsFilterList", myTagsFilterList);
 
 /***/ },
-/* 139 */
+/* 137 */
 /***/ function(module, exports) {
 
 	var myTagsMultiSelect = {
@@ -69377,7 +69375,7 @@
 
 
 /***/ },
-/* 140 */
+/* 138 */
 /***/ function(module, exports) {
 
 	var myReportViewer = {
@@ -69430,7 +69428,7 @@
 
 
 /***/ },
-/* 141 */
+/* 139 */
 /***/ function(module, exports) {
 
 	var modalButtons = {
@@ -69462,7 +69460,7 @@
 
 
 /***/ },
-/* 142 */
+/* 140 */
 /***/ function(module, exports) {
 
 	var okModalButtons = {
@@ -69487,7 +69485,7 @@
 
 
 /***/ },
-/* 143 */
+/* 141 */
 /***/ function(module, exports) {
 
 	var modalHeader = {
@@ -69504,7 +69502,7 @@
 
 
 /***/ },
-/* 144 */
+/* 142 */
 /***/ function(module, exports) {
 
 	/**
@@ -69596,7 +69594,7 @@
 
 
 /***/ },
-/* 145 */
+/* 143 */
 /***/ function(module, exports) {
 
 	var myDisplayDateField = {
@@ -69631,7 +69629,7 @@
 	angular.module('myComponents').component("myDisplayDateField", myDisplayDateField);
 
 /***/ },
-/* 146 */
+/* 144 */
 /***/ function(module, exports) {
 
 	// /**
@@ -69784,7 +69782,7 @@
 	// angular.module("myComponents").component("myRelativeDateFilter", myRelativeDateFilter);
 
 /***/ },
-/* 147 */
+/* 145 */
 /***/ function(module, exports) {
 
 	var mySpinner = {
