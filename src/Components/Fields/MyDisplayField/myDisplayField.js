@@ -16,4 +16,4 @@ var myDisplayField = {
 	    templateUrl: "myDisplayField.html"
 };
 
-var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
+angular.module('myComponents').component("myDisplayField", myDisplayField);

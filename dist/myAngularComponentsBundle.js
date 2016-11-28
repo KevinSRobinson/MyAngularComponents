@@ -56,11 +56,6 @@
 
 
 
-
-
-
-
-
 	//moment
 	var $moment = __webpack_require__(6);
 	__webpack_require__(113);
@@ -68759,13 +68754,13 @@
 		    templateUrl: "myDisplayField.html"
 	};
 
-	var app = angular.module('myComponents').component("myDisplayField", myDisplayField);
+	angular.module('myComponents').component("myDisplayField", myDisplayField);
 
 /***/ },
 /* 123 */
 /***/ function(module, exports) {
 
-	var myDispalyTextareaField = {
+	var myDispalyTextarea= {
 	   bindings: {
 	        fieldLabel: '@',
 	        ngModel: '='
@@ -68775,12 +68770,12 @@
 	      var vm = this;
 	      vm.fieldLabel = "You can set this text using field-label=''";
 	      
-	    },
+	      },
 	    templateUrl:"myDisplayTextArea.html"
 	};
 
 
-	angular.module("myComponents").component("myDisplayTextareaField", myDispalyTextareaField);
+	angular.module("myComponents").component("myDisplayTextarea", myDispalyTextarea);
 
 
 /***/ },

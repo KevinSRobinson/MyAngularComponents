@@ -15,10 +15,16 @@
   "ignore": [
     "web/**/.*",
     "web/node_modules",
-    "web/bower_components"
+    "web/bower_components",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ],
   "dependencies": {
     "my-angular-components": "*",
     "angular-momentjs": "*"
-  }
+  },
+  "private": true
 }
