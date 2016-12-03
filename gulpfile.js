@@ -1,98 +1,196 @@
-var gulp = require("gulp");
-var webpack = require("gulp-webpack");
-var templateCache = require("gulp-angular-templatecache");
-var sass = require('gulp-sass');
+var gulp = require('gulp');
+var webpack = require('gulp-webpack');
+var config = require('./gulp.config.js')();
+var templateCache = require('gulp-angular-templatecache');
+var gulpCopy = require('gulp-copy');
+var args = require('yargs').argv;
+var $ = require('gulp-load-plugins')({lazy : true});
+var webpack = require('webpack-stream');
+var server = require('gulp-server-livereload');
+var browserSync = require('browser-sync');
+var watch = require('gulp-watch');
 
-//gulp.task("default", ["components", "html", "watch-templates", "sassbuild"]);
-// default task
-
-gulp.task("components", function() {
-    return gulp.src("./entry.js")
-        .pipe(webpack( require("./webpack.config.js") ))
-        .pipe(gulp.dest("./dist/"));
-});
-
-
+gulp.task('default', ['components']);
 
 
-var config = {
-    srcTemplates:[
-        './src/Components/**/**/**/**/**/*.html'
-    ],
-    base: function(file) {
-        return  file.path.replace(/^.*(\\|\/|\:)/, '');
-    },
-    standalone: false,
-    destPartials: 'dist/',
-    module: "myComponents"
-};
-
-
-gulp.task("watch-templates", function() {
-    gulp.watch('src/Components/**/**/**/*.html', ['html']);
-});
-
-gulp.task('html', function() {
-    return gulp.src(config.srcTemplates)
-        .pipe(templateCache('templateCache.js', config))
-        .pipe(gulp.dest(config.destPartials));
-});
-/* gulpfile.js */
-var 
-    gulp = require('gulp'),
-    sass = require('gulp-sass');
-
-// source and distribution folder
-var
-    source = './src/',
-    dest = './dist/';
-
-// Bootstrap scss source
-var bootstrapSass = {
-        in: './node-modules/bootstrap-sass/assets/'
-    };
+gulp.task('vet', function(){
+    log('Analyzing source with jsHint and JSCS');
     
-// fonts
-var fonts = {
-        in: [source + 'fonts/*.*', bootstrapSass.in + 'assets/fonts/**/*'],
-        out: dest + 'fonts/'
+
+   gulp.src('./src/Components/**/**/*.js')
+    .pipe($.plumber())
+    .pipe($.if(args.verbose, $.print()))
+    .pipe($.jscs())
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish', {verbose: true})
+    
+    );
+    
+    
+});
+
+
+gulp.task('components', function() {
+   return gulp.src('./webpack/componentsEntry.js')
+    .pipe(webpack( require('./webpack/conmponentsWebpack.config.js') ))
+    .pipe(gulp.dest('dist/'));                     
+});
+
+
+gulp.task('vendor', function() {
+  return gulp.src('webpack/vendorWebpack.config.js')
+   .pipe(webpack( require('./webpack/vendorWebpack.config.js') ))
+    .pipe(gulp.dest('dist/'));      
+});
+
+
+
+
+
+
+// Copy dist Contents to Example folder
+gulp.task('examplesdev', ['html', 'components'], function(){
+    return gulp.src('./dist/*.*')
+          .pipe(gulp.dest('./Examples/dist/'));
+          
+});
+
+
+
+
+gulp.task('webserver', function() {
+  gulp.src('./Examples/')
+    .pipe(server({
+      livereload: true,
+      directoryListing: true,
+      open: true,
+      defaultFile: "index.html"
+    }));
+});
+
+
+///Styles
+gulp.task('styles',  function(){
+    log('Compiling Less ->> Css from =' + config.less );
+
+    return gulp
+                .src(config.less)
+                .pipe($.plumber())
+                .pipe($.less())
+                .on('error',  errorLogger)
+                .pipe($.autoprefixer({browsers: ['last 2 version', '> 5%']}))
+                .pipe(gulp.dest(config.dest));
+
+});
+gulp.task('clean-styles', function(done){
+    var files = config.temp + '**/*.css';
+    clean(files, done);    
+});
+gulp.task('less-watcher', function(){
+    log('Watching ' + config.less);
+    gulp.watch([config.less], ['styles']);
+});
+
+
+// html Templates
+gulp.task('templatecache', function(){
+
+    log('Creating templatecache');
+    log(config.srcTemplates);
+    log(config.templateCache.file);
+    log(config.templateCache.options);
+    log(config.dest);
+
+    return gulp.src(config.srcTemplates)
+            .pipe($.debug())
+            .pipe($.minifyHtml({empty: true}))
+            .pipe($.debug())
+            .pipe(
+            $.angularTemplatecache(
+                config.templateCache.file,
+                config.templateCache.options
+            ))      
+            .pipe($.debug())       
+            .pipe(gulp.dest(config.dest));
+          
+
+});
+
+gulp.task('watch-templates', function(){
+    log('Watching ' + config.srcTemplates);
+       gulp.watch([config.srcTemplates], ['templatecache']);
+});
+
+
+
+
+gulp.task('serve-dev', function(){
+    var isDev= true;
+
+    var nodeOptions = {
+        script: config.nodeServer,
+        delayTime: 1,
+        env: {
+            'PORT': config.defaultPort,
+            'NODE_ENV': isDev ? 'dev' : 'build'
+        },
+        watch: [config.server]
     };
 
-// css source file: .scss files
-var css = {
-    in: './src/css/main.scss',
-    out: dest + 'css/',
-    watch: source + 'css/**/*',
-    sassOpts: {
-        outputStyle: 'nested',
-        precison: 3,
-        errLogToConsole: true,
-        includePaths: [bootstrapSass.in + 'assets/stylesheets']
+    return $.nodemon(nodeOptions)
+        .on('restart', function(ev) {
+            log('noode server restarted');            
+            log(ev);
+
+            setTimeout(function(){
+                browserSync.notify('reloading now ...');
+                browserSync.reload({stream: false});
+            }, config.browserReloadDelay);
+        })
+        .on('start', function() {
+            log('noode server started');
+            startBrowserSync();
+        })
+        .on('crash', function() {
+            log('noode server crashed');
+        })
+        .on('exit', function() {
+           log('noode server exit');
+        });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+//functions
+function clean(path, done){
+    log('Cleaning: ' + $.util.colors.blue(path));
+    del(path, done);
+}
+function errorLogger(error){
+    log(' *** Start of Error ***' );
+    log(error);
+    log(' *** Start of Error ***' );
+    this.emit('end');
+}
+
+function log(msg){
+    if(typeof(msg) === 'object'){
+        for (var item in msg){
+            if(msg.hasOwnProperty(item)){
+                $.util.log($.util.colors.blue(msg[item]));
+            }
+        }
     }
-};
-
-// copy bootstrap required fonts to dest
-gulp.task('fonts', function () {
-    return gulp
-        .src(fonts.in)
-        .pipe(gulp.dest(fonts.out));
-});
-
-// copy bootstrap required fonts to dest
-gulp.task('fonts', function () {
-    return gulp
-        .src(fonts.in)
-        .pipe(gulp.dest(fonts.out));
-});
-
-// compile scss
-gulp.task('sass', ['fonts'], function () {
-    return gulp.src(css.in)
-        .pipe(sass(css.sassOpts))
-        .pipe(gulp.dest(css.out));
-});
-
-// default task
-gulp.task('default', ['sass'], function () {
-     gulp.watch(css.watch, ['sass']);
-});
+    else{
+        $.util.log($.util.colors.red(msg));
+    }
+}

@@ -36,11 +36,7 @@ var myInfoPanel = {
         //
 
     },
-    template: ["<div class='myInfoPanel'" +
-    " style='{{vm.getStyle()}}'>",
-        " <i class='fa fa-{{vm.icon}} fa-2x' style='margin: 4px;  color: #64518A' ></i>" +
-        "{{vm.info}}",
-        "<ul class='on-page-nav'></ul></div>"].join("")
+    templateUrl: "infoPanelTemplate.html"
 };
 
 
