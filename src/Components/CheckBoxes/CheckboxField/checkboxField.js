@@ -1,17 +1,17 @@
 var myCheckboxField = {
   bindings: {
-    checked: "@",
-    Label: "@",
-    icon: "@"
+    checked: '@',
+    Label: '@',
+    icon: '@'
   },
-  controllerAs:"vm",
+  controllerAs:'vm',
   controller:function(){
     var vm = this;
     vm.checked = true;
   },
-  templateUrl: "myCheckboxField.html"
+  templateUrl: 'myCheckboxField.html'
 
 };
 
-angular.module("myComponents").component("myCheckboxField", myCheckboxField);
+angular.module('myComponents').component('myCheckboxField', myCheckboxField);
   

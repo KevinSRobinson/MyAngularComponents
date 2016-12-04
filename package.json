@@ -31,6 +31,7 @@
     "webpack": "^1.13.3"
   },
   "devDependencies": {
+    "angular-messages": "^1.5.9",
     "browser-sync": "^2.18.2",
     "express": "^4.14.0",
     "gulp-angular-templatecache": "^2.0.0",
@@ -38,6 +39,7 @@
     "gulp-copy": "^1.0.0",
     "gulp-debug": "^3.0.0",
     "gulp-if": "^2.0.2",
+    "gulp-inject": "^4.1.0",
     "gulp-jscs": "^4.0.0",
     "gulp-jshint": "^2.0.4",
     "gulp-less": "^3.3.0",
@@ -47,14 +49,17 @@
     "gulp-plumber": "^1.1.0",
     "gulp-print": "^2.0.1",
     "gulp-server-livereload": "^1.9.2",
+    "gulp-useref": "^1.0.2",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.11",
     "jscs": "^3.0.7",
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
+    "moment": "^2.17.0",
     "nodemon": "^1.11.0",
     "webpack": "^1.13.3",
     "webpack-stream": "^3.2.0",
+    "wiredep": "^4.0.0",
     "yargs": "^6.4.0"
   },
   "scripts": {

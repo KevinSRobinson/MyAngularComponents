@@ -23,8 +23,8 @@
     "tests"
   ],
   "dependencies": {
-    "my-angular-components": "*",
-    "angular-momentjs": "*"
+    "angular-momentjs": "^0.2.2",
+    "angular": "^1.5.9"
   },
   "private": true
 }

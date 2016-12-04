@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+    <link href='./dist/bootstrap.css' rel='stylesheet'>
+
+</head>
+
+<body ng-app='examples'>
+    <h1>examplese</h1>
+    <div class='container' style='padding:70px'>
+        <div class='btn btn-success'>dsfsdfsdf</div>
+        <!--<dates></dates>-->
+        <panels></panels>
+        <combo-boxes></combo-boxes>
+        <buttons></buttons>
+        <check-boxes></check-boxes>
+
+
+        <!--<status></status>-->
+        <!--     <div ej-reportviewer id='container'-->
+        <!--e-reportServiceUrl='https://volnowreportserver.azurewebsites.net'-->
+        <!-- e-processingmode='ej.ReportViewer.ProcessingMode.Remote'-->
+        <!--e-reportpath='Sample%20Reports/Activities' style='height:680px'></div>-->
+
+        <fields></fields>
+        <select-lists></select-lists>
+
+
+
+
+
+
+    </div>
+
+
+
+    <!-- build:js ./lib.js -->
+        <!--bower:js -->
+            <script src='./bower_components/angular/angular.js'></script>
+            <script src='./bower_components/moment/moment.js'></script>
+            <script src='./bower_components/angular-momentjs/angular-momentjs.js'></script>
+        <!--endbower-->
+    <!-- endbuild -->
+
+    <!-- build:js ./js/app.js -->
+         <!-- inject:js -->
+            <script src='./src/app.js'></script>
+            <script src='./src/Components/Buttons/CreateButton/createButton.js'></script>
+            <script src='./src/Components/Buttons/DeleteButton/deleteButton.js'></script>
+            <script src='./src/Components/Buttons/EditButton/editButton.js'></script>
+
+            <script src='./src/Components/Buttons/EditButton/editButton.js'></script>
+        <!--endinject-->
+
+        <!-- inject:templates:js -->
+        <!--endinject-->
+    <!--endbuild-->
+
+    <!-- build:js ./js/examples.js -->
+        <!--inject:examples -->
+            <script src='./src/Examples/app.js'></script>
+            <script src='./src/Examples/Components/Buttons/buttons.js'></script>
+        <!--endinject-->
+
+        <!-- inject:exampletemplates:js -->
+        <!--endinject-->
+    <!-- endbuild -->
+
+
+
+</body>
+
+
+</html>

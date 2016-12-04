@@ -2,3 +2,7 @@ node_modules
 webpack.config.js
 entry.js
 .idea/
+styles/
+less/
+bower_components/
+theme/

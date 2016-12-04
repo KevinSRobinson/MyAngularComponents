@@ -1,36 +1,21 @@
 <!DOCTYPE html>
-<html ng-app="examples">
+<html >
 
 <head>
 
- <script type="text/javascript" src="./dist/vendorBundle.js"></script>
-    <script type="text/javascript" src="./dist/myAngularComponents.js"></script>
-    <script type="text/javascript" src="./dist/templateCache.js"></script>
-     <script type="text/javascript" src="./dist/styles.css"></script>
 
-
-    <script type="text/javascript" src="./app.js"></script>
-    <script type="text/javascript" src="./Components/Panels/panels.js"></script>
-    
-    
-    <script type="text/javascript" src="./Components/ComboBoxes/comboBoxes.js"></script>
-    <script type="text/javascript" src="./Components/Buttons/buttons.js"></script>
-    <script type="text/javascript" src="./Components/Dates/dates.js"></script>
-    <script type="text/javascript" src="./Components/CheckBoxes/checkBoxes.js"></script>
-    <!--<script type="text/javascript" src="./Components/Status/status.js"></script>-->
-    <!--<script type="text/javascript" src="./Components/SelectLists/selectLists.js"></script>-->
-    <script type="text/javascript" src="./Components/Fields/fields.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
+ 
+   <link href="./dist/bootstrap.css" rel="stylesheet">
  
 </head>
 
-<body ng-controller="examplesController as vm">
+<body ng-app='examples'>
     <h1>examplese</h1>
-    <div class="container" style="padding:70px">
-  <dates></dates>
- <panels></panels>
-  <combo-boxes></combo-boxes>
+    <div class='container' style='padding:70px'>
+        <div class="btn btn-success">dsfsdfsdf</div>
+  <!--<dates></dates>-->
+        <panels></panels>
+        <combo-boxes></combo-boxes>
         <buttons></buttons>
         <check-boxes></check-boxes>
       
@@ -50,6 +35,23 @@
         
 
     </div>
+   
+<!-- build:js /lib.js -->
+    <!--bower:js -->
+          <script src="/bower_components/angular/angular.js"></script>
+    <!--endbower-->
+    <!-- endbuild -->
+
+    <!-- build:js js/app.js -->
+    <!-- inject:js -->
+    
+    <!--endinject-->
+
+    <!-- inject:templates:js -->
+
+    <!--endinject-->
+
+    <!--endbuild-->
 
 </body>
 

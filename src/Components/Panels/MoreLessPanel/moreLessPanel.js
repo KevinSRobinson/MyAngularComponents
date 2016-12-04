@@ -1,50 +1,50 @@
 var myPanel = {
     transclude: true,
     bindings: {
-        title: "@",
-        fieldName: "@",
-        style: "@",
-        icon: "@",
-        iconSize: "@",
-        smallHeading: "@",
-        showAddButton: "@",
-        showEditButton: "@",
-        addButtonId: "@",
-        editButtonId: "@",
-        add: "&",
-        edit: "&",
-        showFooter: "@",
-        footerLeftLabel: "@",
-        footerRightLabel: "@",
-        height: "@",
-        showVerticalScrollBar: "@",
-        buttonText:"@"
+        title: '@',
+        fieldName: '@',
+        style: '@',
+        icon: '@',
+        iconSize: '@',
+        smallHeading: '@',
+        showAddButton: '@',
+        showEditButton: '@',
+        addButtonId: '@',
+        editButtonId: '@',
+        add: '&',
+        edit: '&',
+        showFooter: '@',
+        footerLeftLabel: '@',
+        footerRightLabel: '@',
+        height: '@',
+        showVerticalScrollBar: '@',
+        buttonText:'@'
     },
-    controllerAs: "vm",
+    controllerAs: 'vm',
     controller: function () {
-        "use strict";
+        'use strict';
 
         var vm = this;
-        vm.buttonText = "";
+        vm.buttonText = '';
         vm.isCollapsed = false;
-         vm.ngModel = "You can set this text using ng-model"
+         vm.ngModel = 'You can set this text using ng-model'
         
         vm.getButtonText = function() {
             if (vm.isCollapsed) {
-                return "More Search Options";
+                return 'More Search Options';
             }
             else {
-                return "Fewer Search Options";
+                return 'Fewer Search Options';
             }
         };
 
         vm.getButtonIcon = function() {
 
             if (vm.isCollapsed) {
-                return "fa fa-arrow-down";
+                return 'fa fa-arrow-down';
             }
             else {
-                return "fa fa-arrow-up";
+                return 'fa fa-arrow-up';
             }
         };
 
@@ -68,58 +68,58 @@ var myPanel = {
                 vm.showEditButton = false;
             }
             if (vm.editButtonId == undefined) {
-                vm.editButtonId = "panelEditButton"
+                vm.editButtonId = 'panelEditButton'
             }
             if (vm.addButtonId == undefined) {
-                vm.addButtonId = "panelAddButton"
+                vm.addButtonId = 'panelAddButton'
             }
             if (vm.showFooter = undefined) {
                 vm.showFooter = false;
             }
             if (vm.footerLeftLabel = undefined) {
-                vm.footerLeftLabel = "";
+                vm.footerLeftLabel = '';
             }
             if (vm.footerRightLabel = undefined) {
-                vm.footerRightLabel = "";
+                vm.footerRightLabel = '';
             }
         };
 
 
         vm.getPanelStyle = function () {
 
-            var s = "overflow-y: " + vm.getScrollBarVisibility(vm.showVerticalScrollBar) ;
+            var s = 'overflow-y: ' + vm.getScrollBarVisibility(vm.showVerticalScrollBar) ;
             console.log(s);
             
-            return "overflow-y: " + vm.getScrollBarVisibility(vm.showVerticalScrollBar) ;
+            return 'overflow-y: ' + vm.getScrollBarVisibility(vm.showVerticalScrollBar) ;
             
         };
         
         vm.getPanelHeadingStyle = function () {
            if (vm.smallHeading != undefined) {
-                return   "padding: 3px 5px !important; ";
+                return   'padding: 3px 5px !important; ';
             }
-            return   "padding: 10px 15px";
+            return   'padding: 10px 15px';
         };
 
         vm.getPanelContentStyle = function () {
-            return "overflow-y: auto;"
+            return 'overflow-y: auto;'
         };
 
         
         vm.getScrollBarVisibility = function (showVerticalScrollBar) {
             if(showVerticalScrollBar){
-                return "scroll";
+                return 'scroll';
             }
             else {
-                return "hidden";
+                return 'hidden';
             }
         };
 
         vm.getButtonStyle = function () {
             if (vm.smallHeading != undefined) {
-                return "margin-left: 5px; padding: 3px;";
+                return 'margin-left: 5px; padding: 3px;';
             }
-            return "margin-left: 5px; padding: 10px;";
+            return 'margin-left: 5px; padding: 10px;';
         };
 
         vm.init();

@@ -1,19 +1,20 @@
-var myMoodalButtons = {
+var modalButtons = {
 
     bindings: {
-        save: "&save",
-        close: "&close",
-        saveText: "@",
-        hideSave: "@",
+        save: '&save',
+        close: '&close',
+        saveText: '@',
+        hideSave: '@',
     },
-    controllerAs: "vm",
+    controllerAs: 'vm',
       controller: function(){
         var vm = this;
         
-        vm.savetext= "Save";
+        
+        vm.savetext= 'Save';
          
       },
-    template: "modalButtonsTempalte.html"
+    template: 'modalButtonsTempalte.html'
 };
 
-var app = angular.module("myComponents").component("modalButtons", modalButtons);
+var app = angular.module('myComponents').component('modalButtons', modalButtons);

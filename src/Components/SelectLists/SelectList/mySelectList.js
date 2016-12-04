@@ -1,25 +1,24 @@
 var mySelectList = {
     bindings: {
-        ngModel: "=",
-        items: "=",
-        fieldLabel: "@",
-        fieldName: "@"
+        ngModel: '=',
+        items: '=',
+        fieldLabel: '@',
+        fieldName: '@'
     },
-    controllerAs: "vm",
+    controllerAs: 'vm',
     controller: function() {
         var vm = this;
         
         vm.items = [];
         
-        vm.fieldLabel = "You can set this text using field-label=''";
-        vm.fieldName = "mySelectField";
-        
-        vm.ngModel = null;
+        vm.fieldLabel = 'You can set this text using field-label';
+        vm.fieldName = 'mySelectField';
+        vm.ngModel = 'null';
         
 
     },
-    templateUrl: "mySelectList.html"
+    templateUrl: 'mySelectList.html'
 };
 
 
-angular.module("myComponents").component("mySelectList", mySelectList);
+angular.module('myComponents').component('mySelectList', mySelectList);

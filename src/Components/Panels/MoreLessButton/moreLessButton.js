@@ -1,37 +1,37 @@
 var myMoreLessButton = {
     bindings: {
-        id: "@",
-        buttonText: "@",
-        click: "&",
-        cssClass:"@",
-        isCollapsed: "="
+        id: '@',
+        buttonText: '@',
+        click: '&',
+        cssClass:'@',
+        isCollapsed: '='
     },
-    controllerAs: "vm",
+    controllerAs: 'vm',
     controller: function () {
-        "use strict";
+        'use strict';
         var vm = this;
-        vm.buttonText = "";
+        vm.buttonText = '';
 
         vm.getButtonText = function () {
             if (vm.isCollapsed) {
-                return "More Search Options";
+                return 'More Search Options';
             }
             else {
-                return "Fewer Search Options";
+                return 'Fewer Search Options';
             }
         };
 
         vm.getButtonIcon = function () {
 
             if (vm.isCollapsed) {
-                return "fa fa-arrow-down";
+                return 'fa fa-arrow-down';
             }
             else {
-                return "fa fa-arrow-up";
+                return 'fa fa-arrow-up';
             }
         };
     },
-    templateUrl: "moreLessButtonTemplate" 
+    templateUrl: 'moreLessButtonTemplate' 
 };
 
-angular.module("myComponents").component("myMoreLessButton", myMoreLessButton);
+angular.module('myComponents').component('myMoreLessButton', myMoreLessButton);

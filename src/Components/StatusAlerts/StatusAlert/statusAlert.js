@@ -1,13 +1,13 @@
 var myStatusMessage = {
     bindings: {
-        ngModel: "<",
-        form: "<",
-        successMessage:"@"
+        ngModel: '<',
+        form: '<',
+        successMessage:'@'
     },
-    controllerAs: "vm",
+    controllerAs: 'vm',
     controller: function () {
         var vm = this;
-        vm.message = "";
+        vm.message = '';
         vm.error = false;
         vm.success = false;
 
@@ -22,7 +22,7 @@ var myStatusMessage = {
                     vm.error = true;
                     vm.message = vm.ngModel.ExceptionMessage;
                 }
-                else if (vm.ngModel != "") {
+                else if (vm.ngModel != '') {
                     vm.success = true;
                     vm.message = vm.successMessage;
                 }
@@ -30,11 +30,11 @@ var myStatusMessage = {
         };
 
     },
-    templateUrl: "myStatusMessage.html"
+    templateUrl: 'myStatusMessage.html'
 };
 
 
-angular.module("myComponents").component("myStatusMessage", myStatusMessage);
+angular.module('myComponents').component('myStatusMessage', myStatusMessage);
 
 
 

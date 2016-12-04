@@ -5,13 +5,13 @@
  */
 var myTagsFilterList = {
     bindings: {
-        items: "=",
-        tagsFieldName: "@",
-        selected: "="
+        items: '=',
+        tagsFieldName: '@',
+        selected: '='
     },
-    controllerAs: "vm",
+    controllerAs: 'vm',
     controller: function ($scope) {
-        "use strict";
+        'use strict';
 
         var vm = this;
         vm.selected = {};
@@ -19,7 +19,7 @@ var myTagsFilterList = {
 
         //use the default field for tags if none is specified
         if (vm.tagsFieldName == undefined) {
-            vm.tagsFieldName = "Tags";
+            vm.tagsFieldName = 'Tags';
         }
 
 
@@ -40,19 +40,19 @@ var myTagsFilterList = {
                 return angular.fromJson(tags);
             }
             else {
-                return tags.split(",");
+                return tags.split(',');
             }
 
         };
 
 
         // watch for changes
-        $scope.$watch("vm.items", function () {
+        $scope.$watch('vm.items', function () {
 
 
             if (vm.items != undefined) {
 
-                vm.tagList.push("All");
+                vm.tagList.push('All');
                 
                 // loop through all the tags in the list
                 angular.forEach(vm.items, function (key, value) {
@@ -71,7 +71,7 @@ var myTagsFilterList = {
                     }
                 });
 
-                vm.selected = "All"
+                vm.selected = 'All'
             }
         });
 
@@ -81,18 +81,11 @@ var myTagsFilterList = {
 
 
     },
-    template: ["<div class='form-group'>",
-        "<label class='control-label' style='min-width: 110px; text-align: left'>Tags</label>",
-        "<div class='form-control'>",
-        "<span ng-repeat='tag in vm.tagList track by $index'>",
-        "<span class='badge' ng-click='vm.tagClicked(tag)' style='cursor: pointer' >{{tag}}</span>",
-        "</span>",
-        "</div>",
-        "</div>"].join("")
+    template: 'tagsFilterTemplate.html'
 };
 
 
-myTagsFilterList.$inject = ["$scope"];
+myTagsFilterList.$inject = ['$scope'];
 
 
-angular.module("myComponents").component("myTagsFilterList", myTagsFilterList);
+angular.module('myComponents').component('myTagsFilterList', myTagsFilterList);

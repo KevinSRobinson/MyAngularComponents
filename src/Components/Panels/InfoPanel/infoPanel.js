@@ -1,43 +1,43 @@
 var myInfoPanel = {
     bindings: {
-        info: "@",
-        icon: "@",
-        color: "@"
+        info: '@',
+        icon: '@',
+        color: '@'
     },
-    controllerAs: "vm",
+    controllerAs: 'vm',
     controller: function () {
-        "use strict";
+        'use strict';
         var vm = this;
 
         vm.init = function () {
 
 
             if (vm.icon == undefined) {
-                vm.icon = "fa fa-info fa-2x";
+                vm.icon = 'fa fa-info fa-2x';
             }
 
             if (vm.color == undefined) {
-                vm.color = "#64518A";
+                vm.color = '#64518A';
             }
         };
 
 
         vm.getStyle = function () {
-            return " border-left: 5px solid #64518A;" +
-                " border-radius: 0 15px 15px 0; !important; " +
-                " padding: 1rem 1rem;   !important; " +
-                " background: " + vm.color + " !important;" +
-                " font-size: 1.65rem; !important; margin: 0;  !important; " +
-                " color: " + vm.color + " !important;"
+            return ' border-left: 5px solid #64518A;' +
+                ' border-radius: 0 15px 15px 0; !important; ' +
+                ' padding: 1rem 1rem;   !important; ' +
+                ' background: ' + vm.color + ' !important;' +
+                ' font-size: 1.65rem; !important; margin: 0;  !important; ' +
+                ' color: ' + vm.color + ' !important;';
         };
 
-        console.log(vm.getStyle());
+        
         vm.init();
-        //
+      
 
     },
-    templateUrl: "infoPanelTemplate.html"
+    templateUrl: 'infoPanelTemplate.html'
 };
 
 
-angular.module("myComponents").component("myInfoPanel", myInfoPanel);
+angular.module('myComponents').component('myInfoPanel', myInfoPanel);
