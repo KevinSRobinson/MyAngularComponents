@@ -17,7 +17,7 @@ var mySelectList = {
         
 
     },
-    templateUrl:'app/SelectLists//panelTemplate.html'
+    templateUrl:'app/SelectLists/panelTemplate.html'
 
 };
 

@@ -1,28 +1,31 @@
 var myTagsMultiSelect = {
     bindings: {
-        fieldLabel: "@",
-        fieldName: "@",
-        selected: "=",
-        tags: "="
+        fieldLabel: '@',
+        fieldName: '@',
+        selected: '=',
+        tags: '=',
+        ngModel:'='
     },
-    controllerAs: "vm",
-    controller: function () {
-        "use strict";
+    controllerAs: 'vm',
+    controller: function ($scope) {
+        'use strict';
         
         var vm = this;
-        
-           console.log(vm.tags);
+         
+
+      $scope.itemArray = [
+        {id: 1, name: 'first'},
+        {id: 2, name: 'second'},
+        {id: 3, name: 'third'},
+        {id: 4, name: 'fourth'},
+        {id: 5, name: 'fifth'},
+    ];
+
+    $scope.selected = { value: $scope.itemArray[0] };
+    
         
     },
-    template: ["<div class='form-group'>",
-        "<span for='tags'>{{vm.fieldLabel}}</span>",
-        "<ui-select multiple ng-model='vm.selected' id='tags' >",
-        "<ui-select-match placeholder='Select Tag...'>{{vm.Name}}</ui-select-match>",
-        "<ui-select-choices repeat='tag in vm.tags'>",
-        "<div ng-bind-html='tag'></div>",
-        "</ui-select-choices>",
-        "</ui-select>",
-        "</div>"].join("")
+    templateUrl: 'app/Tags/TagsField/tagsFieldTemplate.html'
 };
 
-angular.module("myComponents").component("myTagsMultiSelect", myTagsMultiSelect);
+angular.module('myComponents').component('myTagsMultiSelect', myTagsMultiSelect);

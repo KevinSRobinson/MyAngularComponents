@@ -30,7 +30,7 @@ var myStatusMessage = {
         };
 
     },
-    templateUrl: 'myStatusMessage.html'
+    templateUrl: 'app/StatusAlerts/StatusAlert/StatusAlertTemplate.html'
 };
 
 

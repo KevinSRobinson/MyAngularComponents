@@ -81,7 +81,7 @@ var myTagsFilterList = {
 
 
     },
-    template: 'tagsFilterTemplate.html'
+    templateUrl: 'app/Tags/TagFilter/tagsFielterTemplate.html'
 };
 
 

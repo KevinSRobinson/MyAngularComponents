@@ -36,7 +36,7 @@ var myInfoPanel = {
       
 
     },
-    templateUrl: 'infoPanelTemplate.html'
+    templateUrl: 'app/Panels/InfoPanel/infoPanelTemplate.html'
 };
 
 

@@ -1,15 +1,16 @@
-<div class=form-group>
+Example {{vm.ngModel}}
+<div class='form-group'>
+    
     
     <!--label-->
-    <span for=tags>{{vm.fieldLabel}}</span>
-
-    <!--list of tags-->
-    <ui-select multiple ng-model=vm.selected id=tags>
-        <ui-select-match placeholder=Select Tag...>{{vm.Name}}</ui-select-match>
-        <ui-select-choices repeat=tag in vm.tags>
-            <div ng-bind-html=tag></div>
-        </ui-select-choices>
-    </ui-select>
-
+    <span for='tags'>{{vm.fieldLabel}}</span>
+<ui-select multiple ng-model="selected.value">
+    <ui-select-match>
+        <span ng-bind="$select.selected.name"></span>
+    </ui-select-match>
+    <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id">
+        <span ng-bind="item.name"></span>
+    </ui-select-choices>
+</ui-select>
 
 </div>

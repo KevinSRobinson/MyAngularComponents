@@ -18,7 +18,7 @@ module.exports = function() {
         less: './less/less/bootstrap.less',
 
         defaultPort: 7203,
-        nodeServer: './server.js',
+         nodeServer: server + 'app.js',
 
         bower: {
             json: require('./bower.json'),
@@ -38,6 +38,7 @@ module.exports = function() {
                 root: 'app/'
             }
         },
+        browsersyncPort:5454, 
         examplesTemplateCache: {
             file: 'exampleTemplates.js',
             options: {

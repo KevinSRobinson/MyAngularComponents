@@ -2,7 +2,7 @@ var myModalHeader = {
     bindings: {
         title: "@"
     },
-    templateUrl: "modalHeaderTemplate.html"
+   templateUrl: 'app/Modals/ModalHeader/modalHeaderTemplate.html'
 };
 
 

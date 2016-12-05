@@ -14,7 +14,7 @@ var modalButtons = {
         vm.savetext= 'Save';
          
       },
-    template: 'modalButtonsTempalte.html'
+    templateUrl: 'app/Modals/ModalButtons/modalButtonsTemplate.html'
 };
 
 var app = angular.module('myComponents').component('modalButtons', modalButtons);
