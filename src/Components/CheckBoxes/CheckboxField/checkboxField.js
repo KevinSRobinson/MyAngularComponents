@@ -9,7 +9,7 @@ var myCheckboxField = {
     var vm = this;
     vm.checked = true;
   },
-  templateUrl: 'myCheckboxField.html'
+  templateUrl: 'app/CheckBoxes/CheckboxField/checkboxField.html'
 
 };
 

@@ -7,7 +7,7 @@ var dates = {
        vm.date = new Date();
        vm.defaultDate = new Date(1, 1, 0000);
     },
-    templateUrl: './Components/Dates/dates.html'
+    templateUrl: 'app/Dates/dates.html'
 };
 
 

@@ -15,7 +15,7 @@ var myDeleteButton = {
         vm.icon = 'cross';
 
     },
-    templateUrl: 'deleteButtonTemplate.html'
+    templateUrl: 'app/Buttons/DeleteButton/deleteButtonTemplate.html'
 
 };
 

@@ -16,7 +16,7 @@ var myDateField = {
         var vm = this;
 
 
-        vm.fieldLabel = "Set this Text using field-label='sample label'"
+        vm.fieldLabel = "Set this Text using field-label";
         
 
         this.$onInit = function() {
@@ -45,25 +45,8 @@ var myDateField = {
 
 
 
-        var initializeDate = function() {
-            console.log("initializeDate");
-             console.log(vm.ngModel);
-            
-            if (!vm.ngModel == undefined) {
-                 
-                  
-                //if the date is not a date object - convert
-                if (typeof vm.ngModel != 'date') {
-                    vm.ngModel = new Date(vm.ngModel);
-                }
-            }
-            else
-            {
-                vm.ngModel = new Date();
-                $log.warn("Set the Date useing ngModel=''");
-            }
-        }
-
+         vm.dateValue = new Date('2/3/2013');
+               vm.locale = "en-US";
 
 
 
@@ -78,7 +61,7 @@ var myDateField = {
 
 
     },
-    templateUrl: "myeDateFieldTemplate.html"
+    templateUrl: "app/Dates/DateField/dateFieldTemplate.html"
 };
 
 

@@ -3,14 +3,14 @@ var myDispalyTextarea= {
         fieldLabel: '@',
         ngModel: '='
     },
-    controllerAs:"vm",
+    controllerAs:'vm',
     controller: function(){
       var vm = this;
-      vm.fieldLabel = "You can set this text using field-label=''";
+      vm.fieldLabel = 'You can set this text using field-label=';
       
       },
-    templateUrl:"myDisplayTextArea.html"
+    templateUrl: 'app/Fields/DisplayField/displayFieldTemplate.html'
 };
 
 
-angular.module("myComponents").component("myDisplayTextarea", myDispalyTextarea);
+angular.module('myComponents').component('myDisplayTextarea', myDispalyTextarea);

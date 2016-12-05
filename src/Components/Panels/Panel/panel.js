@@ -103,7 +103,7 @@ var myPanel = {
         vm.init();
 
     },
-    templateUrl:'panelTemplate.html'
+    templateUrl:'app/Panels/Panel/panelTemplate.html'
 };
 
 

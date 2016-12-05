@@ -34,7 +34,7 @@ module.exports = function() {
             file: 'templates.js',
             options: {
                 module: 'myComponents',
-                standalone: true,
+                standalone: false,
                 root: 'app/'
             }
         },
@@ -42,7 +42,7 @@ module.exports = function() {
             file: 'exampleTemplates.js',
             options: {
                 module: 'examples',
-                standalone: true,
+                standalone: false,
                 root: 'app/'
             }
         },

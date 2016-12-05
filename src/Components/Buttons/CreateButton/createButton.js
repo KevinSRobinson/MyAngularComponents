@@ -8,7 +8,7 @@ var myCreateButton = {
     controllerAs: 'vm',
     controller: function(){
         var vm = this;
-
+       
         vm.$onInit = function () {
             //default options
             vm.id = 'create';

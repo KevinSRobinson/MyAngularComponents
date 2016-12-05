@@ -31,7 +31,7 @@ var myMoreLessButton = {
             }
         };
     },
-    templateUrl: 'moreLessButtonTemplate' 
+    templateUrl: 'app/Panels/Panel/moreLessButtonTemplate.html' 
 };
 
 angular.module('myComponents').component('myMoreLessButton', myMoreLessButton);

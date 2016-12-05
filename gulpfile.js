@@ -87,7 +87,7 @@ gulp.task('webserver', function() {
 //////////////////////////////////////////////
 // Injects
 //////////////////////////////////////////////
-gulp.task('inject',  function(){
+gulp.task('inject', ['example-templates', 'templatecache'], function(){
 
     log('inject starting');
     log('index : ' + config.index);
@@ -129,11 +129,13 @@ gulp.task('optimize', ['inject'], function(){
 
     log('Optimize the javascrtipt');
     
-    log(config.index);
+ 
 
     var assets = $.useref.assets({searchPath: './'});
     var templateCache = config.temp + config.templateCache.file;
     var exampleTemplateCache = config.temp + config.examplesTemplateCache.file;
+
+       log(exampleTemplateCache);
 
     return gulp
         .src(config.index)
@@ -141,7 +143,7 @@ gulp.task('optimize', ['inject'], function(){
         .pipe($.inject(gulp.src(templateCache, { read: false}), {
             starttag: '<!-- inject:templates:js -->'
         }))
-         .pipe($.inject(gulp.src(templateCache, { read: false}), {
+         .pipe($.inject(gulp.src(exampleTemplateCache, { read: false}), {
             starttag: '<!-- inject:exampletemplates:js -->'
         }))
         .pipe(assets)
@@ -210,9 +212,9 @@ gulp.task('templatecache', function() {
 gulp.task('example-templates', function() {
 
     log('Creating examples templatecache');
-    log(config.examplesTemplateCache);
-    log(config.examplesTemplateCache.file);
-    log(config.examplesTemplateCache.options);
+    log(config.srcExampleTemplates);
+
+    log(config.examplesTemplateCache.options.module);
     log(config.dest);
 
     return gulp.src(config.srcExampleTemplates)
@@ -231,11 +233,14 @@ gulp.task('example-templates', function() {
 });
 
 
-gulp.task('watch-templates', ['templatecache'], function() {
+gulp.task('watch-templates', ['templatecache', 'optimize'], function() {
     log('Watching ' + config.srcTemplates);
-    gulp.watch([config.srcTemplates], ['templatecache', 'copy-to-examples']);
+    gulp.watch([config.srcTemplates], ['templatecache',  'optimize']);
 });
-
+gulp.task('watch-exampletemplates', ['example-templates', 'optimize'], function() {
+    log('Watching ' + config.srcExampleTemplates);
+    gulp.watch([config.srcExampleTemplates], ['example-templates', 'optimize']);
+});
 ///////////////////////////////////////
 
 

@@ -9,8 +9,8 @@ var checkBoxes = {
             alert('Edit Clicked');
         };
     },
-    templateUrl: "Components/CheckBoxes/checkBoxes.html"
+    templateUrl: 'app/CheckBoxes/checkBoxes.html'
 };
 
 
-angular.module("examples").component("checkBoxes", checkBoxes);
+angular.module('examples').component('checkBoxes', checkBoxes);

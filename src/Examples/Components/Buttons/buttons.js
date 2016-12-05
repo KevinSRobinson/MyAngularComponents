@@ -9,7 +9,7 @@ var buttons = {
             alert('Edit Clicked');
         };
     },
-    templateUrl: 'Components/Buttons/buttons.html'
+    templateUrl: 'app/Buttons/buttons.html'
 };
 
 

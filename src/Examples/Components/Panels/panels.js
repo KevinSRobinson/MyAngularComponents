@@ -9,7 +9,8 @@ var panels = {
             alert('Edit Clicked');
         };
     },
-    templateUrl: './Components/Panels/panels.html'
+    
+    templateUrl: 'app/Panels/panels.html'
 };
 
 

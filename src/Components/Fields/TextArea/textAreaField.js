@@ -1,13 +1,13 @@
 var myTextareaField = {
     bindings: {
-        fieldLabel: "@",
-        fieldName: "@",
-        ngModel: "=",
-        required: "@",
-        toolTip: "@",
-        showToolTip: "@"
+        fieldLabel: '@',
+        fieldName: '@',
+        ngModel: '=',
+        required: '@',
+        toolTip: '@',
+        showToolTip: '@'
     },
-    controllerAs: "vm",
+    controllerAs: 'vm',
     controller: function () {
         var vm = this;
 
@@ -16,15 +16,15 @@ var myTextareaField = {
         }
 
         if (vm.fieldName == null) {
-            vm.fieldName = vm.fieldLabel.replace(" ", "");
+            vm.fieldName = vm.fieldLabel.replace(' ', '');
         }
 
         if (vm.required == null) {
             vm.required = false;
         }
     },
-    template: [].join("")
+    template: [].join('')
 };
 
 
-angular.module("myComponents").component("myTextareaField", myTextareaField);
+angular.module('myComponents').component('myTextareaField', myTextareaField);

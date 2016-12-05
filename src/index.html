@@ -5,20 +5,23 @@
 
 
 
-    <link href='./dist/bootstrap.css' rel='stylesheet'>
-
+    <link href='./bootstrap.css' rel='stylesheet'>
+   
 </head>
 
 <body ng-app='examples'>
     <h1>examplese</h1>
     <div class='container' style='padding:70px'>
         <div class='btn btn-success'>dsfsdfsdf</div>
-        <!--<dates></dates>-->
-        <panels></panels>
-        <combo-boxes></combo-boxes>
+        
+        
         <buttons></buttons>
+        
+        <combo-boxes></combo-boxes>
+       
         <check-boxes></check-boxes>
 
+        <dates></dates>
 
         <!--<status></status>-->
         <!--     <div ej-reportviewer id='container'-->
@@ -31,7 +34,7 @@
 
 
 
-
+        <panels></panels>
 
 
     </div>
@@ -40,20 +43,57 @@
 
     <!-- build:js ./lib.js -->
         <!--bower:js -->
+     
+
             <script src='./bower_components/angular/angular.js'></script>
             <script src='./bower_components/moment/moment.js'></script>
             <script src='./bower_components/angular-momentjs/angular-momentjs.js'></script>
+            <script src='./bower_components/angular-animate/angular-animate.js'></script>
+            <script src='./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'></script>
+            
+            
+            
+            
+        
+           
         <!--endbower-->
     <!-- endbuild -->
-
+ <link href="http://cdn.syncfusion.com/14.4.0.15/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery-3.0.0.min.js"></script>
+    <script src="http://cdn.syncfusion.com/js/assets/external/jsrender.min.js"></script>
+	<script src="http://cdn.syncfusion.com/14.4.0.15/js/web/ej.web.all.min.js"></script>
+	<script src="http://cdn.syncfusion.com/14.4.0.15/js/common/ej.widget.angular.min.js"></script>
     <!-- build:js ./js/app.js -->
          <!-- inject:js -->
+         
+           
+           
             <script src='./src/app.js'></script>
             <script src='./src/Components/Buttons/CreateButton/createButton.js'></script>
             <script src='./src/Components/Buttons/DeleteButton/deleteButton.js'></script>
             <script src='./src/Components/Buttons/EditButton/editButton.js'></script>
 
-            <script src='./src/Components/Buttons/EditButton/editButton.js'></script>
+            <script src='./src/Components/CheckBoxes/Checkboxfield/checkboxfield.js'></script>
+            <script src='./src/Components/CheckBoxes/DisplayCheckField/displayCheckField.js'></script>
+
+            <script src='./src/Components/Dates/DateField/dateField.js'></script>
+            <script src='./src/Components/Dates/DisplayDate/displayDate.js'></script>
+
+            <script src='./src/Components/Fields/DisplayField/displayField.js'></script>
+            <script src='./src/Components/Fields/DisplayTextArea/displayTextArea.js'></script>
+            <script src='./src/Components/Fields/TextArea/textAreaField.js'></script>
+            <script src='./src/Components/Fields/TextField/textField.js'></script>
+
+            <script src='./src/Components/Filters/FilterTextbox/filterTextbox.js'></script>
+
+            <script src='./src/Components/Headers/PageHeader/pageHeader.js'></script>
+
+
+            <!--Panels-->
+            <script src='./src/Components/Panels/Panel/panel.js'></script>
+            <script src='./src/Components/Panels/InfoPanel/InfoPanel.js'></script>            
+
+            <!--<script src='./src/Components/Fields/TextArea/textAreaField.js>'></script>-->
         <!--endinject-->
 
         <!-- inject:templates:js -->
@@ -64,6 +104,12 @@
         <!--inject:examples -->
             <script src='./src/Examples/app.js'></script>
             <script src='./src/Examples/Components/Buttons/buttons.js'></script>
+            <script src='./src/Examples/Components/CheckBoxes/checkboxes.js'></script>
+            <script src='./src/Examples/Components/ComboBoxes/comboboxes.js'></script>
+            <script src='./src/Examples/Components/Dates/dates.js'></script>
+            <script src='./src/Examples/Components/Fields/fields.js'></script>
+            <script src='./src/Examples/Components/Panels/panels.js'></script>
+
         <!--endinject-->
 
         <!-- inject:exampletemplates:js -->

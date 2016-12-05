@@ -1,16 +1,16 @@
 var selectLists = {
-    controllerAs: "vm",
+    controllerAs: 'vm',
     controller: function() {
         var vm = this;
 
         vm.fakeItems = [{
             Id: 1,
-            Name : "Kevin"
+            Name : 'Kevin'
         }]
 
     },
-    templateUrl: "Components/SelectLists/selectLists.html"
+    templateUrl: 'app/SelectLists/selectLists.html'
 };
 
 
-angular.module("examples").component("selectLists", selectLists);
+angular.module('examples').component('selectLists', selectLists);

@@ -1,2 +1,2 @@
- var app = angular.module('examples', ['myComponents']);
+ var app = angular.module('examples', ['myComponents', 'ejangular']);
 

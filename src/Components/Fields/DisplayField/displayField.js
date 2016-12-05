@@ -13,7 +13,7 @@ var myDisplayField = {
 			}
 			
 		},
-	    templateUrl: "myDisplayField.html"
+	    templateUrl: "app/Fields/DisplayField/displayFieldTemplate.html"
 };
 
 angular.module('myComponents').component("myDisplayField", myDisplayField);

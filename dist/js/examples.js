@@ -1,4 +1,4 @@
- var app = angular.module('examples', ['myComponents']);
+ var app = angular.module('examples', ['myComponents', 'ejangular']);
 
 
 var buttons = {
@@ -12,35 +12,122 @@ var buttons = {
             alert('Edit Clicked');
         };
     },
-    templateUrl: 'Components/Buttons/buttons.html'
+    templateUrl: 'app/Buttons/buttons.html'
 };
 
 
 angular.module('examples').component('buttons', buttons);
 
-angular.module('myComponents', []).run(['$templateCache', function($templateCache) {$templateCache.put('app/Buttons/CreateButton/createButtonTemplate.html','dddd<div class={{vm.cssClass} id={{vm.id}} ng-click=vm.click()>{{vm.buttonText}} <i class="fa fa-{{vm.icon}}"></i></div>]');
-$templateCache.put('app/Buttons/DeleteButton/deleteButtonTemplate.html','<div class={{vm.cssClass} id={{vm.id}} ng-click=vm.click()>{{vm.buttonText}} <i class="fa fa-{{vm.icon}}"></i></div>]');
-$templateCache.put('app/Buttons/EditButton/editButtonTemplate.html','<div class={{vm.cssClass} id={{vm.id}} ng-click=vm.click()>{{vm.buttonText}} <i class="fa fa-{{vm.icon}}"></i></div>]');
-$templateCache.put('app/CheckBoxes/CheckboxField/checkboxField.html','<input type=checkbox class=nodetext id=check1> <label for=check1 class=clslab>Music</label>');
-$templateCache.put('app/CheckBoxes/DisplayCheckField/displayCheckFieldTemplate.html','');
-$templateCache.put('app/Dates/DateField/dateFieldTemplate.html','qweqweqwe<div class=form-group>asdasdasd <label class=control-label style="min-width: 110px; text-align: left">{{vm.fieldLabel}}</label><div class=input-group><input type=text class=form-control id={{vm.fieldName}} uib-datepicker-popup=dd-MMMM-yyyy ng-model=vm.ngModel datepicker-options=vm.dateOptions is-open=vm.popup1.opened> <span class=input-group-btn><button type=button class="btn btn-default" ng-click=vm.open()><i class="fa fa-calendar"></i></button></span><div class=input-group-addon style="line-height: 0 !important;" ng-show=vm.showToolTip><my-popover ng-model=vm.toolTip></my-popover></div></div></div>');
-$templateCache.put('app/Dates/DisplayDate/displayDateTemplate.html','<div class=row><div class=col-md-4><span class=control-label><strong>{{vm.fieldLabel}}</strong></span></div><div class=col-md-8>{{vm.ngModel | date:\'medium\' }}</div></div>');
-$templateCache.put('app/ComboBoxes/CategorySelect/categorySelectTemplate.html','<div class=form-group><label class=control-label style="min-width: 110px; text-align: left">{{vm.fieldLabel}}</label><select ng-model=vm.selected class=form-control><option ng-repeat="category in vm.cats" value={{category}}>{{category}}</option></select></div>');
-$templateCache.put('app/Filters/FilterTextbox/filterTextboxTemplate.html','<div class=input-group style="display: flex"><input type=text ng-model=vm.ngModel placeholder={{vm.placeholder}} id={{vm.fieldName}} class=form-control> <button class="btn btn-default class=" input-group-btn\' id=searchFilter><i class="glyphicon glyphicon-search"></i></button></div>');
-$templateCache.put('app/Fields/DisplayField/displayFieldTemplate.html','<div class=row><div class={{vm.fieldLabelWitdh}}><label class=control-label><strong>{{vm.fieldLabel}}</strong></label></div><div class=col-sm-6>{{vm.ngModel}}</div></div>');
-$templateCache.put('app/Fields/DisplayTextArea/displayTextAreaTemplate.html','<div class=well><strong>{{vm.fieldLabel}}</strong><p>{{vm.ngModel}}</p></div>');
-$templateCache.put('app/Fields/TextArea/textAreaFieldTemplate.html','<div class=form-group><label class=control-label style="min-width: 80px !important;">{{vm.fieldLabel}}</label><div class=input-group style="width: 80% !important;"><textarea type=text class=form-control id={{vm.fieldName}} ng-model=vm.ngModel ng-required="{{ vm.required }}">\r\n           <div class=input-group-addon style="line-height: 0 !important;" ng-show=vm.showToolTip><my-popover ng-model=vm.toolTip></my-popover></div>\r\n        </textarea></div></div>');
-$templateCache.put('app/Fields/TextField/textFieldTemplate.html','');
-$templateCache.put('app/Headers/PageHeader/pageHeaderTemplate.html','<h1 id=pagetitle>{{ vm.title }}</h1>');
-$templateCache.put('app/Modals/ModalButtons/modalButtonsTempalte.html','<div class=modal-footer><span><button type=submit id=save class="btn btn-primary btn-large pull-left" ng-click=vm.save()>{{vm.savetext}}</button> <button type=button class="btn btn-default pull-left" id=close ng-click=vm.close()>Close</button></span></div>');
-$templateCache.put('app/Modals/ModalHeader/modalHeaderTempalte.html','<div class=modal-header><h3 class=modal-title>{{$ctrl.title}}</h3></div>');
-$templateCache.put('app/Other/PopOver/popOverTemplate.html','');
-$templateCache.put('app/Other/Spinner/spinnerTemplate.html','<div class="row text-center"><img style="height: 100px" ng-src=http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif></div>');
-$templateCache.put('app/Panels/InfoPanel/infoPanelTemplate.html','<div class=myInfoPanel + style={{vm.getStyle()}}><i class="fa fa-{{vm.icon}} fa-2x" style="margin: 4px; color: #64518A"></i> + {{vm.info}}<ul class=on-page-nav></ul></div>');
-$templateCache.put('app/Panels/MoreLessButton/moreLessButtonTemplate.html','<button type=button class={{vm.cssClass} id={{vm.id}} ng-click="vm.isCollapsed = !vm.isCollapsed"><i ng-class=vm.getButtonIcon() aria-hidden=true></i>{{vm.getButtonText() }}</button>');
-$templateCache.put('app/Panels/MoreLessPanel/moreLessPanel.html','<div class="panel panel-{{vm.style}}" style={{vm.getPanelStyle()}}><div class=panel-heading style={{vm.getPanelHeadingStyle()}} id={{vm.fieldName}}><i class="fa fa-{{vm.icon}} fa-{{vm.iconSize}}x"></i> <span style="padding-left: 10px; font-weight: 700">{{vm.title}}</span><div ng-show=vm.showAddButton id={{vm.addButtonId}} ng-click=vm.add() style={{vm.getButtonStyle()}} class="btn btn-default pull-right"><i class="fa fa-plus"></i></div><div ng-show=vm.showEditButton id={{vm.editButtonId}} ng-click=vm.edit() style={{vm.getButtonStyle()}} class="btn btn-default pull-right"><i class="fa fa-bars"></i></div></div><div class=panel-body ng-transclude style={{vm.getPanelContentStyle()}} ng-if=!vm.isCollapsed>{{vm.ngModel}}</div><div class=panel-footer ng-if=vm.showFooter style={{vm.getPanelStyle()}}><div class=row><div class=col-md-6><span class=pull-left>{{vm.footerLeftLabel}}</span></div><div class=col-md-6><span class=pull-right>{{vm.footerRightLabel}}</span></div></div></div></div>');
-$templateCache.put('app/Panels/Panel/panelTemplate.html','<div class="panel panel-{{vm.style}}" style={{vm.getPanelStyle()}}><div class=panel-heading style={{vm.getPanelHeadingStyle()}} id={{vm.fieldName}}><i class="fa fa-{{vm.icon}} fa-{{vm.iconSize}}x"></i> //////////// /// title <span style="padding-left: 10px; font-weight: 700">{{vm.title}}</span> //////////// /// buttons<div ng-show=vm.showAddButton id={{vm.addButtonId}} ng-click=vm.add() style={{vm.getButtonStyle()}} class="btn btn-default pull-right"><i class="fa fa-plus"></i></div><div ng-show=vm.showEditButton id={{vm.editButtonId}} ng-click=vm.edit() style={{vm.getButtonStyle()}} class="btn btn-default pull-right"><i class="fa fa-bars"></i></div></div>//////////// /// body<div class=panel-body ng-transclude style={{vm.getPanelContentStyle()}}></div>///////////// // footer<div class=panel-footer ng-if=vm.showFooter style={{vm.getPanelStyle()}}><div class=row><div class=col-md-6><span class=pull-left>{{vm.footerLeftLabel}}</span></div><div class=col-md-6><span class=pull-right>{{vm.footerRightLabel}}</span></div></div></div></div>');
-$templateCache.put('app/SelectLists/SelectList/mySelectList.html','<div class=form-group><label class=control-label style="min-width: 110px; text-align: left">{{vm.fieldLabel}}</label><select ng-model=vm.ngModel class=form-control id={{vm.fieldName}}><option ng-repeat="option in vm.items" value={{option.Id}}>{{option.Id}}</option></select></div>');
-$templateCache.put('app/StatusAlerts/StatusAlert/statusAlert.html','<div ng-hide=vm.form.$dirty><div id=errorMessage style="margin-top: 10px;" ng-show=vm.error><div class=well style="color: white; background: red; font-size: large" role=alert><i class="fa fa-warning"></i>{{vm.message}}<br><small>This is a system error. An alert has been send to the developer and will let you know when this has been fixed.</small></div></div><div id=successMessage style="margin-top: 10px;" ng-show=vm.success><div class=well style="color: white; background: green; font-size: large" role=alert><i class="fa fa-check"></i>{{vm.message}}</div></div></div>');
-$templateCache.put('app/Tags/TagsField/tagsFieldTemplate.html','<div class=form-group><span for=tags>{{vm.fieldLabel}}</span><ui-select multiple ng-model=vm.selected id=tags><ui-select-match placeholder=Select tag...>{{vm.Name}}</ui-select-match><ui-select-choices repeat=tag in vm.tags><div ng-bind-html=tag></div></ui-select-choices></ui-select></div>');
-$templateCache.put('app/Tags/TagsFilter/tagsFilterTemplate.html','<div class=form-group><label class=control-label style="min-width: 110px; text-align: left">Tags</label><div class=form-control><span ng-repeat="tag in vm.tagList track by $index"><span class=badge ng-click=vm.tagClicked(tag) style="cursor: pointer">{{tag}}</span></span></div></div>');}]);
+var checkBoxes = {
+    controller: function($location) {
+        var vm = this;
+        vm.add = function() {
+            alert('Add Clicked');
+        };
+
+        vm.edit = function() {
+            alert('Edit Clicked');
+        };
+    },
+    templateUrl: 'app/CheckBoxes/checkBoxes.html'
+};
+
+
+angular.module('examples').component('checkBoxes', checkBoxes);
+
+var comboBoxes = {
+    controllerAs:'vm',
+    controller:function(){
+      var vm = this;
+      
+     vm.fakeItems = [{
+         id: 1,
+         Title: 'Test 1',
+         Tags: 'Tag1, Tag2',
+         Category: 'Category 1, Category 5',
+         Types: 'Type 1, Type 5',
+         Town: 'Town 1, Town 5',
+         Dates: '28/7/2016'
+     }, {
+         id: 2,
+         Title: 'Test 1',
+         Tags: 'Tag3, Tag2',
+         Category: 'Category 3, Category 2',
+         Types: 'Type 2, Type4',
+         Town: 'Town 1, Town 5',
+         Dates: '28/7/2016'
+     }, {
+         id: 3,
+         Title: 'Test 1',
+         Tags: 'Tag4, Tag5',
+         Category: 'Category 4, Category 2',
+         Types: 'Type 11, Type 13',
+         Town: 'Town 1, Town 5',
+         Dates: '28/7/2016'
+     }];
+
+
+     vm.filterText = '';  
+    },
+    templateUrl:'app/ComboBoxes/comboBoxes.html'
+};
+
+
+angular.module('examples').component('comboBoxes', comboBoxes);
+var dates = {
+    controllerAs:'vm',
+    controller: function() {
+       var vm = this;
+       vm.dateValue = '2/3/2013';
+       
+       vm.date = new Date();
+       vm.defaultDate = new Date(1, 1, 0000);
+    },
+    templateUrl: 'app/Dates/dates.html'
+};
+
+
+angular.module('examples').component('dates', dates);
+
+var fields = {
+    controllerAs:'vm',
+    controller: function() {
+        var vm = this;
+       
+       vm.firstName ='Kevin'
+       
+        vm.sampleText= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a aliquet elit. Morbi at ligula nulla. Etiam dolor lorem, placerat id laoreet quis, interdum nec ante. Ut tempus dictum suscipit. Ut auctor turpis maximus diam porta, at tincidunt diam posuere. In non tristique lacus, pellentesque cursus ante. Nunc hendrerit pellentesque ex, eu pulvinar dui porttitor accumsan. Quisque pretium congue diam, at lacinia orci. Nulla consectetur urna sed nulla efficitur maximus. Nunc et massa sit amet ante mattis tristique fringilla eget neque. Mauris quis magna neque.';
+   
+    },
+    templateUrl: 'app/Fields/fields.html'
+};
+
+
+angular.module('examples').component('fields', fields);
+
+var panels = {
+    controller: function($location) {
+        var vm = this;
+        vm.add = function() {
+            alert('Add Clicked');
+        };
+
+        vm.edit = function() {
+            alert('Edit Clicked');
+        };
+    },
+    
+    templateUrl: 'app/Panels/panels.html'
+};
+
+
+angular.module('examples').component('panels', panels);
+
+angular.module('examples').run(['$templateCache', function($templateCache) {$templateCache.put('app/Buttons/buttons.html','<h1>Buttons</h1><hr><blockquote><pre>\r\n       <code>\r\n           &lt;my-create-button&gt;&lt;/my-create-button&gt;\r\n        </code>\r\n    </pre></blockquote><my-create-button></my-create-button><my-delete-button></my-delete-button><my-edit-button></my-edit-button>');
+$templateCache.put('app/CheckBoxes/checkBoxes.html','<h1>Check Boxes</h1><hr><my-checkbox-field field-label="Question 1" checked=false></my-checkbox-field>');
+$templateCache.put('app/ComboBoxes/comboBoxes.html','<h1>Combo Boxes</h1><hr><div class=well><h4>Category Select</h4><strong>Items :</strong> {{vm.fakeItems}}<br><h4>Using Default</h4><strong>Selected Category:</strong>{{ selectedCategory }}<br><my-category-select items=vm.fakeItems selected=selectedCategory></my-category-select><hr><h4>Specify "Types" Field</h4><strong>Selected Type:</strong>{{ selectedType }}<br><my-category-select items=vm.fakeItems selected=selectedType category-field=Types field-label=Type></my-category-select><hr><h4>Specify "Town" Field</h4><strong>Selected Town:</strong>{{ selectedTown }}<br><my-category-select items=vm.fakeItems selected=selectedTown category-field=Town field-label=Town></my-category-select></div>');
+$templateCache.put('app/Dates/dates.html','<h1>Dates 1</h1><hr><my-date-field field-label="Departure Date" ng-model=vm.date></my-date-field>');
+$templateCache.put('app/Panels/panels.html','<h1>Panels</h1><hr><my-panel title="Text Field" icon=user icon-size=2 style=success small-heading=true>Panel with tight heading with Icon</my-panel><my-panel title="Text Field" icon=user icon-size=2 style=success small-heading=true>Panel with tight heading with Icon</my-panel><my-panel title="Text Field" icon=user icon-size=2 style=success small-heading=true>Panel with tight heading with Icon</my-panel><my-panel title="Text Field" icon=user icon-size=2 style=success small-heading=true>Panel with tight heading with Icon</my-panel><my-panel title="Text Field" style=success small-heading=true>Panel with tight heading and no Icon</my-panel><my-panel title="Text Field" style=success show-edit-button=true show-add-button=true show-footer=true footer-right-label="Footer Right label" footer-left-label="Footer Left label" small-heading=true>Panel with tight heading and no Icon</my-panel><h3>My-more-less-panel</h3><my-more-less-panel title="Text Field" icon=user icon-size=2 style=success small-heading=true>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia "</my-more-less-panel>');
+$templateCache.put('app/Fields/fields.html','<h1>Fields</h1><hr><h5>Display Field</h5><my-display-field field-label="First Name" field-name=FirstName ng-model=vm.firstName></my-display-field><my-display-textarea field-label=Description field-name=Description ng-model=vm.sampleText></my-display-textarea><hr><h5>Text Field</h5><my-text-field field-label="First Name" field-name=FirstName ng-model=vm.firstName></my-text-field><my-textarea-field field-label="First Name" field-name=FirstName ng-model=vm.sampleText></my-textarea-field>');
+$templateCache.put('app/SelectLists/selectLists.html','<h1>Select Lists</h1><hr>{{vm.fakeItems}}<my-select-list items=vm.fakeItems field-label="Select Contact" field-name=contact></my-select-list>');
+$templateCache.put('app/Status/status.html','<h1>Status</h1><hr>');}]);

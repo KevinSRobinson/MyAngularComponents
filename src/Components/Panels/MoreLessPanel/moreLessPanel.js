@@ -125,5 +125,6 @@ var myPanel = {
         vm.init();
 
     },
+    templateUrl: 'app/Panels/MoreLessPanel/moreLessPanelTemplate.html' 
 };
 
