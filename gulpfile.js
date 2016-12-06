@@ -288,8 +288,8 @@ gulp.task('clean-styles', function () {
 
 
 gulp.task('less-watcher', function() {
-    log('Watching ' + config.less);
-    gulp.watch([config.less], ['styles']);
+    log('Watching ' + myConfig.less);
+    gulp.watch([myConfig.less], ['styles']);
 });
 
 
