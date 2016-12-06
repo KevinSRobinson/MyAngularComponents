@@ -1,8 +1,9 @@
 var comboBoxes = {
     controllerAs:'vm',
     controller:function(){
-      var vm = this;
-      
+    var vm = this;
+    vm.filterText = '';  
+    
      vm.fakeItems = [{
          id: 1,
          Title: 'Test 1',
@@ -30,7 +31,7 @@ var comboBoxes = {
      }];
 
 
-     vm.filterText = '';  
+    
     },
     templateUrl:'app/ComboBoxes/comboBoxes.html'
 };

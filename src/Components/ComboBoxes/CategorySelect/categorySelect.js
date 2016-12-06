@@ -1,73 +1,37 @@
 /**
  * 
  * @type {
- * {bindings: 
- * {selected: string, items: string, fieldName: string, fieldLabel: string, categoryField: string}, controllerAs: string, controller: myCategorySelect.controller, template: string}}
- */
+ 
+  */
 var myCategorySelect = {
     bindings: {
-        selected: "=",
-        items: "=",
-        fieldName: "@",
-        fieldLabel: "@",
-        categoryField: "@"
+        selected: '=',
+        items: '=',
+        fieldName: '@',
+        fieldLabel: '@',
+        categoryField: '@'
     },
-    controllerAs: "vm",
+    controllerAs: 'vm',
     controller: function ($scope) {
-        "use strict";
+        'use strict';
 
         var vm = this;
         vm.cats = [];
 
         vm.init = function () {
             if(vm.fieldLabel === undefined){
-                vm.fieldLabel = "Category";
+                vm.fieldLabel = 'Category';
             }
 
-            if(vm.categoryField == undefined){
-                vm.categoryField = "Category";
+            if(vm.categoryField === undefined){
+                vm.categoryField = 'Category';
             }
         };
 
-        // watch for changes
-        $scope.$watch("vm.items", function () {
-
-            if (vm.items != undefined) {
-                buildList();
-            }
-        });
+       
 
 
-        var buildList = function () {
-
-            //create a temporary list for building the list
-            var catsList = [];
-
-
-            // loop through all the tags in the list
-            angular.forEach(vm.items, function (key, value) {
-
-                // separate out tags
-                var cats = getCats(key[vm.categoryField]);
-                                
-                //add unique values to the temporary list
-                angular.forEach(cats, function (key, value) {
-                    if (catsList.indexOf(key.trim()) == -1) {
-                        catsList.push(key.trim())
-                    }
-                });
-
-            });
-
-            // copy sorted list to the main category list*/
-            vm.cats = catsList.sort();
-
-            //add an All option to the first item in the list
-            vm.cats.unshift("All");
-
-            // set the default option to All
-            vm.selected = "All";
-        };
+        
 
 
         var isJson = function isJson(str) {
@@ -85,19 +49,58 @@ var myCategorySelect = {
                 return angular.fromJson(tags);
             }
             else {
-                return tags.split(",");
+                return tags.split(',');
             }
 
         };
 
 
+var buildList = function () {
+
+            //create a temporary list for building the list
+            var catsList = [];
+
+
+            // loop through all the tags in the list
+            angular.forEach(vm.items, function (key, value) {
+
+                // separate out tags
+                var cats = getCats(key[vm.categoryField]);
+                                
+                //add unique values to the temporary list
+                angular.forEach(cats, function (key, value) {
+                    if (catsList.indexOf(key.trim()) === -1) {
+                        catsList.push(key.trim());
+                    }
+                });
+
+            });
+
+            // copy sorted list to the main category list*/
+            vm.cats = catsList.sort();
+
+            //add an All option to the first item in the list
+            vm.cats.unshift('All');
+
+            // set the default option to All
+            vm.selected = 'All';
+        };
+
+        // watch for changes
+        $scope.$watch('vm.items', function () {
+
+            if (vm.items !== undefined) {
+                buildList();
+            }
+        });
+
 
         vm.init();
 
     },
-    template: "categorySelectTemplate.html"
+    template: 'categorySelectTemplate.html'
 };
 
-myCategorySelect.$inject = ["$scope"];
+myCategorySelect.$inject = ['$scope'];
 
-angular.module("myComponents").component("myCategorySelect", myCategorySelect);
+angular.module('myComponents').component('myCategorySelect', myCategorySelect);

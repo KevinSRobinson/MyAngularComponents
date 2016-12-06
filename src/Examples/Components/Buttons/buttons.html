@@ -1,16 +1,22 @@
-<h1> Buttons </h1>
+<h1>Buttons</h1>
 <hr>
-
-<blockquote>
-   <pre>
-       <code>
+  <blockquote>
+    <pre>
+       
+<code>
            &lt;my-create-button&gt;&lt;/my-create-button&gt;
         </code>
-    </pre>
-</blockquote>
-
-<my-create-button></my-create-button>
-
-<my-delete-button></my-delete-button>
-
-<my-edit-button></my-edit-button>
+    
+</pre>
+  </blockquote>
+  <div class="well">
+    <ul>
+      <div ng-repeat="buttonEvent in vm.buttonEvents">
+        <li>{{buttonEvent}}</li>
+      </div>
+    </ul>
+  </div>
+  <my-create-button></my-create-button>
+  <my-delete-button></my-delete-button>
+  <my-edit-button></my-edit-button>
+</hr>

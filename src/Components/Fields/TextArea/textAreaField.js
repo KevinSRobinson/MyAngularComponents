@@ -23,7 +23,7 @@ var myTextareaField = {
             vm.required = false;
         }
     },
-    template: [].join('')
+   templateUrl: 'app/Fields/TextArea/textAreaFieldTemplate.html'
 };
 
 

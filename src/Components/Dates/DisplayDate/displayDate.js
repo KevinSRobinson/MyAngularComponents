@@ -4,20 +4,16 @@ var myDisplayDateField = {
         ngModel: '=',
         fieldName: '@'
     },
-    controllerAs:"vm",
+    controllerAs:'vm',
     controller: function () {
-        "use strict";
+        'use strict';
         
         
         var vm = this;
-        
-        //if the date is not a date object - convert
-        if(typeof vm.ngModel !== 'date'){
-            vm.ngModel = new Date(vm.ngModel);
-        }
+       
         
     },
-    templateUrl: "displayDate.html"
+   templateUrl: 'app/Dates/DisplayDate/displayDateTemplate.html'
 };
 
-angular.module('myComponents').component("myDisplayDateField", myDisplayDateField);
+angular.module('myComponents').component('myDisplayDateField', myDisplayDateField);

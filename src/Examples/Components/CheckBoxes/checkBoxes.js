@@ -1,13 +1,6 @@
 var checkBoxes = {
-    controller: function($location) {
-        var vm = this;
-        vm.add = function() {
-            alert('Add Clicked');
-        };
-
-        vm.edit = function() {
-            alert('Edit Clicked');
-        };
+    controller: function() {
+        
     },
     templateUrl: 'app/CheckBoxes/checkBoxes.html'
 };

@@ -1,20 +1,23 @@
 var modalButtons = {
-
     bindings: {
-        save: '&save',
-        close: '&close',
+        save: '&',
+        close: '&',
         saveText: '@',
-        hideSave: '@',
+        saveVisible: '@',
+        closeVisible: '@',
     },
     controllerAs: 'vm',
-      controller: function(){
+    controller: function(){
         var vm = this;
         
-        
-        vm.savetext= 'Save';
-         
+        //defaults        
+        vm.saveText= 'Save';
+        vm.closeText= 'Close';
+
+        vm.saveVisible=true;
+        vm.closeVisible = true;        
       },
     templateUrl: 'app/Modals/ModalButtons/modalButtonsTemplate.html'
 };
 
-var app = angular.module('myComponents').component('modalButtons', modalButtons);
+angular.module('myComponents').component('modalButtons', modalButtons);

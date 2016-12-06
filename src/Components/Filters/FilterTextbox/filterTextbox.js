@@ -1,21 +1,21 @@
 var myFilterTextbox = {
   bindings: {
-    placeholder: "@",
-    ngModel: "=",
-    fieldName: "@"
+    placeholder: '@',
+    ngModel: '=',
+    fieldName: '@'
   },
-  controllerAs: "vm",
+  controllerAs: 'vm',
   controller: function () {
-    "use strict";
+    'use strict';
 
     var vm = this;
 
-    vm.fieldName = "filterTextBox";
-    vm.placeholder = "Filter ";
+    vm.fieldName = 'filterTextBox';
+    vm.placeholder = 'Filter ';
     
   },
-  templateUrl: "FilterTemplate.html"
+  templateUrl: 'app/Filters/FilterTextBox/filterTextBoxTemplate.html'
 };
 
 
-angular.module("myComponents").component("myFilterTextbox", myFilterTextbox);
+angular.module('myComponents').component('myFilterTextbox', myFilterTextbox);

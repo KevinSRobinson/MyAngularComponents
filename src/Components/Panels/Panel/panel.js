@@ -31,35 +31,15 @@ var myPanel = {
         };
 
         vm.setDefaults = function () {
-            if (vm.height == undefined) {
-                vm.height = 150;
-            }
-
-            if (vm.showVerticalScrollBar == undefined) {
-                vm.showVerticalScrollBar = false;
-            }
-            
-            if (vm.showAddButton == undefined) {
-                vm.showAddButton = false;
-            }
-            if (vm.showEditButton == undefined) {
-                vm.showEditButton = false;
-            }
-            if (vm.editButtonId == undefined) {
-                vm.editButtonId = 'panelEditButton'
-            }
-            if (vm.addButtonId == undefined) {
-                vm.addButtonId = 'panelAddButton'
-            }
-            if (vm.showFooter = undefined) {
-                vm.showFooter = false;
-            }
-            if (vm.footerLeftLabel = undefined) {
-                vm.footerLeftLabel = '';
-            }
-            if (vm.footerRightLabel = undefined) {
-                vm.footerRightLabel = '';
-            }
+            vm.height = 150;
+            vm.showVerticalScrollBar = false;
+            vm.showAddButton = false;
+            vm.showEditButton = false;
+            vm.editButtonId = 'panelEditButton';
+            vm.addButtonId = 'panelAddButton';
+            vm.showFooter = false;
+            vm.footerLeftLabel = '';
+            vm.footerRightLabel = '';
         };
 
 
@@ -73,14 +53,14 @@ var myPanel = {
         };
         
         vm.getPanelHeadingStyle = function () {
-           if (vm.smallHeading != undefined) {
-                return   'padding: 3px 5px !important; ';
+           if (vm.smallHeading !== undefined) {
+                return  'padding: 3px 5px !important; ';
             }
             return   'padding: 10px 15px';
         };
 
         vm.getPanelContentStyle = function () {
-            return 'overflow-y: auto;'
+            return 'overflow-y: auto;';
         };
 
         
@@ -94,7 +74,7 @@ var myPanel = {
         };
 
         vm.getButtonStyle = function () {
-            if (vm.smallHeading != undefined) {
+            if (vm.smallHeading !== undefined) {
                 return 'margin-left: 5px; padding: 3px;';
             }
             return 'margin-left: 5px; padding: 10px;';

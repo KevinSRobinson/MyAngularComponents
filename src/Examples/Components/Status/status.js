@@ -1,6 +1,7 @@
 var status = {
-    controller: function($) {
-        
+    controllerAs: 'vm',
+    controller: function() {
+        var vm = this;
         
     },
     templateUrl: './Components/Status/status.html'

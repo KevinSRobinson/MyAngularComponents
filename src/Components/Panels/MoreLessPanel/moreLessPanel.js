@@ -1,122 +1,97 @@
 var myPanel = {
-    transclude: true,
-    bindings: {
-        title: '@',
-        fieldName: '@',
-        style: '@',
-        icon: '@',
-        iconSize: '@',
-        smallHeading: '@',
-        showAddButton: '@',
-        showEditButton: '@',
-        addButtonId: '@',
-        editButtonId: '@',
-        add: '&',
-        edit: '&',
-        showFooter: '@',
-        footerLeftLabel: '@',
-        footerRightLabel: '@',
-        height: '@',
-        showVerticalScrollBar: '@',
-        buttonText:'@'
-    },
-    controllerAs: 'vm',
-    controller: function () {
-        'use strict';
+        transclude: true,
+        bindings: {
+            title: '@',
+            fieldName: '@',
+            style: '@',
+            icon: '@',
+            iconSize: '@',
+            smallHeading: '@',
+            showAddButton: '@',
+            showEditButton: '@',
+            addButtonId: '@',
+            editButtonId: '@',
+            add: '&',
+            edit: '&',
+            showFooter: '@',
+            footerLeftLabel: '@',
+            footerRightLabel: '@',
+            height: '@',
+            showVerticalScrollBar: '@',
+            buttonText: '@'
+        },
+        controllerAs: 'vm',
+        controller: function() {
+            'use strict';
 
-        var vm = this;
-        vm.buttonText = '';
-        vm.isCollapsed = false;
-         vm.ngModel = 'You can set this text using ng-model'
-        
-        vm.getButtonText = function() {
-            if (vm.isCollapsed) {
-                return 'More Search Options';
-            }
-            else {
-                return 'Fewer Search Options';
-            }
-        };
+            var vm = this;
 
-        vm.getButtonIcon = function() {
+            vm.buttonText = '';
+            vm.isCollapsed = false;
+            vm.ngModel = 'You can set this text using ng-model';
+            vm.height = 150;
+            vm.showVerticalScrollBar = false;
 
-            if (vm.isCollapsed) {
-                return 'fa fa-arrow-down';
-            }
-            else {
-                return 'fa fa-arrow-up';
-            }
-        };
+            //buttons
+            vm.showAddButton = false;
+            vm.showEditButton = false;
+            vm.editButtonId = 'panelEditButton';
+            vm.addButtonId = 'panelAddButton';
 
-        vm.init = function () {
-            vm.setDefaults();
-        };
+            //footer
+            vm.showFooter = false;
+            vm.footerLeftLabel = '';
+            vm.footerRightLabel = '';
 
-        vm.setDefaults = function () {
-            if (vm.height == undefined) {
-                vm.height = 150;
-            }
+            //TODO: Allow chaning of Button text
+            vm.getButtonText = function() {
+                if (vm.isCollapsed) {
+                    return 'More Search Options';
+                } else {
+                    return 'Fewer Search Options';
+                }
+            };
 
-            if (vm.showVerticalScrollBar == undefined) {
-                vm.showVerticalScrollBar = false;
-            }
-            
-            if (vm.showAddButton == undefined) {
-                vm.showAddButton = false;
-            }
-            if (vm.showEditButton == undefined) {
-                vm.showEditButton = false;
-            }
-            if (vm.editButtonId == undefined) {
-                vm.editButtonId = 'panelEditButton'
-            }
-            if (vm.addButtonId == undefined) {
-                vm.addButtonId = 'panelAddButton'
-            }
-            if (vm.showFooter = undefined) {
-                vm.showFooter = false;
-            }
-            if (vm.footerLeftLabel = undefined) {
-                vm.footerLeftLabel = '';
-            }
-            if (vm.footerRightLabel = undefined) {
-                vm.footerRightLabel = '';
-            }
-        };
+            //TODO: Allow changing of icon;
+            vm.getButtonIcon = function() {
+                if (vm.isCollapsed) {
+                    return 'fa fa-arrow-down';
+                } else {
+                    return 'fa fa-arrow-up';
+                }
+            };
 
-
-        vm.getPanelStyle = function () {
-
-            var s = 'overflow-y: ' + vm.getScrollBarVisibility(vm.showVerticalScrollBar) ;
-            console.log(s);
-            
-            return 'overflow-y: ' + vm.getScrollBarVisibility(vm.showVerticalScrollBar) ;
-            
-        };
-        
-        vm.getPanelHeadingStyle = function () {
-           if (vm.smallHeading != undefined) {
-                return   'padding: 3px 5px !important; ';
-            }
-            return   'padding: 10px 15px';
-        };
-
-        vm.getPanelContentStyle = function () {
-            return 'overflow-y: auto;'
-        };
 
         
-        vm.getScrollBarVisibility = function (showVerticalScrollBar) {
-            if(showVerticalScrollBar){
+        // TODO: don't like this tidy
+        // Returs a constructed style
+        vm.getPanelStyle = function() {
+            return 'overflow-y: ' + vm.getScrollBarVisibility(vm.showVerticalScrollBar);
+        };
+
+        vm.getPanelHeadingStyle = function() {
+            if (vm.smallHeading !== undefined) {
+                return 'padding: 3px 5px !important; ';
+            }
+            return 'padding: 10px 15px';
+        };
+
+        vm.getPanelContentStyle = function() {
+            return 'overflow-y: auto;';
+        };
+
+
+        vm.getScrollBarVisibility = function(showVerticalScrollBar) {
+            if (showVerticalScrollBar) {
                 return 'scroll';
-            }
-            else {
+            } else {
                 return 'hidden';
             }
         };
 
-        vm.getButtonStyle = function () {
-            if (vm.smallHeading != undefined) {
+        //TODO: allow customization here
+        vm.getButtonStyle = function() {
+            if (vm.smallHeading !== undefined) {
                 return 'margin-left: 5px; padding: 3px;';
             }
             return 'margin-left: 5px; padding: 10px;';
@@ -125,6 +100,5 @@ var myPanel = {
         vm.init();
 
     },
-    templateUrl: 'app/Panels/MoreLessPanel/moreLessPanelTemplate.html' 
+    templateUrl: 'app/Panels/MoreLessPanel/moreLessPanelTemplate.html'
 };
-

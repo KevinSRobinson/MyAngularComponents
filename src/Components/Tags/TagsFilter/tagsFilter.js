@@ -1,8 +1,7 @@
 /**
  * This component displays a list of clickable tags.
  * It extracts out unique Tag values from the supplied list *
- * @type {{bindings: {ngModel: string}, controllerAs: string, controller: myTagsFilterList.controller, templateUrl: string}}
- */
+  */
 var myTagsFilterList = {
     bindings: {
         items: '=',
@@ -18,7 +17,7 @@ var myTagsFilterList = {
 
 
         //use the default field for tags if none is specified
-        if (vm.tagsFieldName == undefined) {
+        if (vm.tagsFieldName === undefined) {
             vm.tagsFieldName = 'Tags';
         }
 
@@ -50,13 +49,13 @@ var myTagsFilterList = {
         $scope.$watch('vm.items', function () {
 
 
-            if (vm.items != undefined) {
+            if (vm.items !== undefined) {
 
                 vm.tagList.push('All');
                 
                 // loop through all the tags in the list
                 angular.forEach(vm.items, function (key, value) {
-                    if (key[vm.tagsFieldName] != undefined) {
+                    if (key[vm.tagsFieldName] !== undefined) {
 
                         // separate out tags
                         var tags = getTags(key[vm.tagsFieldName]);
@@ -64,14 +63,14 @@ var myTagsFilterList = {
 
                         // add the tags to the tagList if not already
                         angular.forEach(tags, function (key, value) {
-                            if (vm.tagList.indexOf(key) == -1) {
+                            if (vm.tagList.indexOf(key) === -1) {
                                 vm.tagList.push(key);
                             }
                         });
                     }
                 });
 
-                vm.selected = 'All'
+                vm.selected = 'All';
             }
         });
 

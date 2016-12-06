@@ -9,19 +9,13 @@ var myInfoPanel = {
         'use strict';
         var vm = this;
 
-        vm.init = function () {
+        //deafults
+        vm.icon = 'fa fa-info fa-2x';
+        vm.color = '#64518A';
+        
 
 
-            if (vm.icon == undefined) {
-                vm.icon = 'fa fa-info fa-2x';
-            }
-
-            if (vm.color == undefined) {
-                vm.color = '#64518A';
-            }
-        };
-
-
+        //TODO: Improve this
         vm.getStyle = function () {
             return ' border-left: 5px solid #64518A;' +
                 ' border-radius: 0 15px 15px 0; !important; ' +
@@ -30,10 +24,7 @@ var myInfoPanel = {
                 ' font-size: 1.65rem; !important; margin: 0;  !important; ' +
                 ' color: ' + vm.color + ' !important;';
         };
-
-        
-        vm.init();
-      
+    
 
     },
     templateUrl: 'app/Panels/InfoPanel/infoPanelTemplate.html'

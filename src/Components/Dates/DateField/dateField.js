@@ -1,22 +1,21 @@
 /**
  * Date field component with Field Label, Date Popup, Help Popup
- * @type {{bindings: {ngModel: string, fieldName: string, fieldLabel: string, toolTip: string, showToolTip: string}, controllerAs: string, controller: myDateField.controller, template: string}}
- */
+  */
 var myDateField = {
     bindings: {
-        ngModel: "=",
-        fieldName: "@",
-        fieldLabel: "@",
-        toolTip: "@",
-        showToolTip: "@"
+        ngModel: '=',
+        fieldName: '@',
+        fieldLabel: '@',
+        toolTip: '@',
+        showToolTip: '@'
     },
-    controllerAs: "vm",
+    controllerAs: 'vm',
     controller: function($log) {
-        "use strict";
+        'use strict';
         var vm = this;
 
 
-        vm.fieldLabel = "Set this Text using field-label";
+        vm.fieldLabel = 'Set this Text using field-label';
         
 
         this.$onInit = function() {
@@ -26,7 +25,7 @@ var myDateField = {
 
             // if the field name is not specified set the field name to the label text 
             if (vm.fieldName == null) {
-                vm.fieldName = vm.fieldLabel.replace(" ", "");
+                vm.fieldName = vm.fieldLabel.replace(' ', '');
             }
 
             // if the tooltip text is specified show the tooltip
@@ -46,7 +45,7 @@ var myDateField = {
 
 
          vm.dateValue = new Date('2/3/2013');
-               vm.locale = "en-US";
+               vm.locale = 'en-US';
 
 
 
@@ -61,7 +60,7 @@ var myDateField = {
 
 
     },
-    templateUrl: "app/Dates/DateField/dateFieldTemplate.html"
+    templateUrl: 'app/Dates/DateField/dateFieldTemplate.html'
 };
 
 

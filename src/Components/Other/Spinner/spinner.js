@@ -1,12 +1,12 @@
+//todo: allow customize height
 var mySpinner = {
     bindings: {
-        ngModel: "="
+        ngModel: '='
     },
-    template: [].join("")
+    templateUrl: 'app/Other/Spinner/spinnerTemplate.html'
 };
 
-
-angular.module("myComponents").component("mySpinner", mySpinner);
+angular.module('myComponents').component('mySpinner', mySpinner);
 
 
 

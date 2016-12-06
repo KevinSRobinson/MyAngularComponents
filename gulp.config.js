@@ -4,14 +4,22 @@ module.exports = function() {
     var clientApp = client + 'app/';
     var temp = './.tmp/';
     var server = './src/server/';
+    var root = './';
 
     var config = {
-
+        root: root,  
+         packages: [        './package.json',
+            './bower.json'
+        
+        ],          
         temp: temp,
         client: client,
+
+
         //all js to vet
-        alljs: [
-            './src/Components/**/**/**/*.js'
+        sourceFiles: [
+            './src/Components/**/**/**/*.js',
+            './src/Examples/**/**/*.js'
         ],
         index: './src/index.html',
         server: server,
@@ -69,8 +77,13 @@ module.exports = function() {
         standalone: false,
         dest: 'dist',
         destPartials: 'dist/',
-        module: 'app'
+        module: 'app',
 
+        optimized : {
+            lib : 'lib.js',
+            app : 'app.js',
+            examples: 'examples.js'
+        }
     };
 
     config.getWiredepDefaultOptions = function() {

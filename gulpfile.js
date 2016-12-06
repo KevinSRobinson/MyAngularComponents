@@ -1,16 +1,18 @@
 var gulp = require('gulp');
-var webpack = require('gulp-webpack');
+
+//load the gulp config file
 var config = require('./gulp.config.js')();
-var templateCache = require('gulp-angular-templatecache');
-var gulpCopy = require('gulp-copy');
+
+//used to allow the use of arguments with gulp commands
 var args = require('yargs').argv;
-var $ = require('gulp-load-plugins')({
-    lazy: true
-});
-var webpack = require('webpack-stream');
-var server = require('gulp-server-livereload');
+
+//used to load any 'gulp-' plugins 
+var $ = require('gulp-load-plugins')({ lazy: true });
+
+
+
+
 var browserSync = require('browser-sync');
-var watch = require('gulp-watch');
 var wiredep = require('wiredep').stream;
 var port = 7203;
 
@@ -21,20 +23,34 @@ gulp.task('default', ['components']);
 ///////////////////////////////////////
 /// Code Quality
 ///////////////////////////////////////
-gulp.task('vet', function() {
-    log('Analyzing source with jsHint and JSCS');
+////////////////////////////////
+// Analyze code
+gulp.task('vet', function(){
+    
+    log ('Analyzing Code');
 
-    gulp.src('./src/Components/**/**/*.js')
-        .pipe($.plumber())
-        .pipe($.if(args.verbose, $.print()))
-        .pipe($.jscs())
-        .pipe($.jshint())
-        .pipe($.jshint.reporter('jshint-stylish', {
-                verbose: true
-            })
+    return gulp
 
-        );
+            //load all the source js files
+            .src(config.sourceFiles)
+            
+            //print out files being Analyzed
+            //use gulp-if & yargs to allow switching this
+            .pipe($.if(args.verbose, $.print())) 
+
+            //code linter
+            .pipe($.jscs()) // check codestyling - config = .jscsrc
+            .pipe($.jshint()) // check for code issues - config = .jshintrc
+
+            //use a reporter for nicer output
+            .pipe($.jshint.reporter('jshint-stylish'), {verbose: true})
+
+            //fail if any there are any codind issues
+            .pipe($.jshint.reporter('fail'));
+
 });
+
+
 ///////////////////////////////////////
 
 
@@ -45,16 +61,16 @@ gulp.task('watch',   ['components'], function() {
     gulp.watch('dist/*.*', ['components']);
 });
 
-gulp.task('components', function() {
-    return gulp.src('./componentsEntry.js')
-        .pipe(webpack(require('./conmponentsWebpack.config.js')))
-        .pipe(gulp.dest('dist/'));
-});
-gulp.task('vendor', function() {
-    return gulp.src('./vendorWebpack.config.js')
-        .pipe(webpack(require('./vendorWebpack.config.js')))
-        .pipe(gulp.dest('dist/'));
-});
+// gulp.task('components', function() {
+//     return gulp.src('./componentsEntry.js')
+//         .pipe($.webpack(require('./conmponentsWebpack.config.js')))
+//         .pipe(gulp.dest('dist/'));
+// });
+// gulp.task('vendor', function() {
+//     return gulp.src('./vendorWebpack.config.js')
+//         .pipe($.webpack(require('./vendorWebpack.config.js')))
+//         .pipe(gulp.dest('dist/'));
+// });
 
 
 
@@ -74,7 +90,7 @@ gulp.task('copy-to-examples', function() {
 ///////////////////////////////////////
 gulp.task('webserver', function() {
     gulp.src('./Examples/')
-        .pipe(server({
+        .pipe($.server({
             livereload: true,
             directoryListing: true,
             open: true,
@@ -130,30 +146,98 @@ gulp.task('optimize', ['inject'], function(){
     log('Optimize the javascrtipt');
     
  
-
+    //get assets for useref
     var assets = $.useref.assets({searchPath: './'});
+
+    //template cachefolders
     var templateCache = config.temp + config.templateCache.file;
     var exampleTemplateCache = config.temp + config.examplesTemplateCache.file;
 
-       log(exampleTemplateCache);
+    //filters for minifiing
+    var cssFilter = $.filter('**/*.css', { restore: true });
+    var jsLibFilter = $.filter('**/' + config.optimized.lib, { restore: true });
+    var jsAppFilter = $.filter('**/' + config.optimized.app, { restore: true });
+    var jsExamplesFilter = $.filter('**/' + config.optimized.examples, { restore: true });
 
     return gulp
+        //main index file src/index.html
         .src(config.index)
         .pipe($.debug())
+
+
+        //template cache
         .pipe($.inject(gulp.src(templateCache, { read: false}), {
             starttag: '<!-- inject:templates:js -->'
         }))
-         .pipe($.inject(gulp.src(exampleTemplateCache, { read: false}), {
+        .pipe($.inject(gulp.src(exampleTemplateCache, { read: false}), {
             starttag: '<!-- inject:exampletemplates:js -->'
         }))
+
+
+        // assets
         .pipe(assets)
         .pipe(assets.restore())
         .pipe($.useref())
+       
+
+         //js
+         //minify vendor librarys 
+        .pipe(jsLibFilter)
+        .pipe($.uglify())
+        .pipe(jsLibFilter.restore)
+
+
+        //minify app librarys
+        .pipe(jsAppFilter)
+        .pipe($.ngAnnotate()) //di helper
+        .pipe($.uglify())
+        .pipe(jsAppFilter.restore)
+
+        //minify examples librarys
+        .pipe(jsExamplesFilter)
+        .pipe($.ngAnnotate()) //di helper
+        .pipe($.uglify())
+        .pipe(jsExamplesFilter.restore)
+
+        .pipe($.iife({
+            useStrict: true,
+            trimCode: true,
+            prependSemicolon: false,
+            bindThis: false,
+        }))
+
+        //copy files to destination
         .pipe(gulp.dest(config.dest));
 });
 
 
 
+
+gulp.task('bump', function(){
+
+    var msg = 'Bumping Versions';
+    var type = args.type;
+    var version  = args.version;
+    var options = {
+        version: ''
+    };
+
+    if(version){
+        options.version = version;
+        msg += ' to ' + version;        
+    }
+    else{
+        options.type = type;
+        msg += ' fora a ' + type;
+    }
+    log(msg);
+    return gulp
+        .src(config.packages)
+        .pipe($.print())
+        .pipe($.bump(options))
+        .pipe(gulp.dest(config.root));
+
+});
 
 
 
@@ -235,11 +319,11 @@ gulp.task('example-templates', function() {
 
 gulp.task('watch-templates',  function() {
     log('Watching ' + config.srcTemplates);
-    gulp.watch([config.srcTemplates], ['templatecache']);
+    gulp.watch([config.srcTemplates], ['templatecache',  'optimize']);
 });
 gulp.task('watch-exampletemplates',  function() {
     log('Watching ' + config.srcExampleTemplates);
-    gulp.watch([config.srcExampleTemplates], ['example-templates']);
+    gulp.watch([config.srcExampleTemplates], ['example-templates', 'optimize']);
 });
 ///////////////////////////////////////
 
@@ -381,6 +465,9 @@ function  startBrowserSync(isDev){
 function clean(path, done) {
     log('Cleaning: ' + $.util.colors.blue(path));
     del(path, done);
+}
+function del(path, done) {
+  
 }
 
 function errorLogger(error) {

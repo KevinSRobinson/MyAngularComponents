@@ -1,13 +1,13 @@
 var myPageTitle = {
     bindings: {
-        title: "@"
+        title: '@'
     },
-    controllerAs: "vm",
-    template: "pageHeaderTemplate.html"
+    controllerAs: 'vm',
+    templateUrl: 'app/Dates/DateField/dateFieldTemplate.html'
 };
 
 
-angular.module("myComponents").component("myPageTitle", myPageTitle);
+angular.module('myComponents').component('myPageTitle', myPageTitle);
 
 
 
