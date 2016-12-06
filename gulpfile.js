@@ -3,6 +3,9 @@ var gulp = require('gulp');
 //load the gulp config file
 var config = require('./gulp.config.js')();
 
+//tidying config
+var myConfig = require('./gulp.config1.js')();
+
 //used to allow the use of arguments with gulp commands
 var args = require('yargs').argv;
 
@@ -32,7 +35,7 @@ gulp.task('vet', function(){
     return gulp
 
             //load all the source js files
-            .src(config.sourceFiles)
+            .src(myConfig.sourceFiles)
             
             //print out files being Analyzed
             //use gulp-if & yargs to allow switching this
@@ -243,23 +246,46 @@ gulp.task('bump', function(){
 
 
 
-///////////////////////////////////////
-///Styles
-///////////////////////////////////////
-gulp.task('styles', function() {
-    log('Compiling Less ->> Css from =' + config.less);
+
+////////////////////////////////
+// Styles
+gulp.task('styles', ['clean-styles'], function(){
+
+    log('Compiling Less ->> Css');
 
     return gulp
-        .src(config.less)
-        .pipe($.plumber())
-        .pipe($.less())
-        .on('error', errorLogger)
-        .pipe($.autoprefixer({
-            browsers: ['last 2 version', '> 5%']
-        }))
-        .pipe(gulp.dest(config.dest));
+                //loads the less file
+                .src(myConfig.less)
+                
+                .pipe($.plumber())               
+                
+                //add less compiler
+                .pipe($.less())
+
+                //PostCSS plugin to parse CSS and add vendor prefixes to CSS rules
+                // using values from Can I Use. It is recommended by Google 
+                //and used in Twitter, and Taobao. https://github.com/postcss/autoprefixer
+                .pipe($.autoprefixer({browsers: ['last 2 version', '> 5%']}))
+
+                //write compiled files to temp folder
+                .pipe(gulp.dest(myConfig.temp));
 
 });
+
+
+
+gulp.task('clean-styles', function () {
+
+  return gulp
+    .src(myConfig.compiledLess, {read: false})
+
+    //clean using gulp-clean https://www.npmjs.com/package/gulp-clean
+    .pipe($.clean());
+});
+
+
+/////////////////////////////////////////////////////////
+
 
 gulp.task('less-watcher', function() {
     log('Watching ' + config.less);
@@ -380,22 +406,6 @@ function serve(isDev){
         });
 }
 
-
-
-
-
-
-///////////////////////////////////////
-/// Clean Tasks
-///////////////////////////////////////
-gulp.task('clean-styles', function(done) {
-    var files = config.temp + '**/*.css';
-    clean(files, done);
-});
-
-
-
-///////////////////////////////////////
 
 
 

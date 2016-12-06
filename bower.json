@@ -35,7 +35,8 @@
     "angular-ui-select3": "ui-select#*",
     "angular-ui-select": "^0.19.6",
     "angular-sanitize": "^1.5.9",
-    "angular-ui-select2": "^0.0.5"
+    "angular-ui-select2": "^0.0.5",
+    "bootstrap": "^3.3.7"
   },
   "private": true,
   "devDependencies": {
