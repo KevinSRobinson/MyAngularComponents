@@ -60,79 +60,29 @@ gulp.task('vet', function(){
 
 
 
-gulp.task('watch',   ['components'], function() {
-    gulp.watch('dist/*.*', ['components']);
-});
 
-// gulp.task('components', function() {
-//     return gulp.src('./componentsEntry.js')
-//         .pipe($.webpack(require('./conmponentsWebpack.config.js')))
-//         .pipe(gulp.dest('dist/'));
-// });
-// gulp.task('vendor', function() {
-//     return gulp.src('./vendorWebpack.config.js')
-//         .pipe($.webpack(require('./vendorWebpack.config.js')))
-//         .pipe(gulp.dest('dist/'));
-// });
-
-
-
-
-
-
-// Copy dist Contents to Example folder
-gulp.task('copy-to-examples', function() {
-    return gulp.src('./dist/*.*')
-        .pipe(gulp.dest('./Examples/dist/'));
-
-});
-
-
-///////////////////////////////////////
-/// Server
-///////////////////////////////////////
-gulp.task('webserver', function() {
-    gulp.src('./Examples/')
-        .pipe($.server({
-            livereload: true,
-            directoryListing: true,
-            open: true,
-            defaultFile: 'index.html'
-        }));
-});
-
-
-
-//////////////////////////////////////////////
-// Injects
-//////////////////////////////////////////////
-gulp.task('inject',  function(){
-
-    log('inject starting');
-    log('index : ' + config.index);
-    log('client : ' + config.client);
-    log('css : ' + config.css);
-
-    return gulp
-            .src(config.index)
-            ///.pipe($.inject(gulp.src(config.css)))
-            .pipe(gulp.dest(config.client));
-});
 
 
 gulp.task('wiredep',  function(){
 
-    log('wiredep starting');
-    log('index : ' + config.index );
-    log('js : ' + config.js );
-    var options = config.getWiredepDefaultOptions();
+    logWireDepSettings();
 
     return gulp
-            .src(config.index)
-            .pipe(wiredep(options))
-            .pipe($.inject(gulp.src(config.js)))
-            .pipe($.inject(gulp.src(config.examples)))
-            .pipe(gulp.dest(config.client));
+            //use the client index.html file 
+            .src(myConfig.clientIndexFile)
+    
+            //add the wiredep config using the options from config
+            //uses the bower.json file to file the app dependencies
+            .pipe(wiredep(myConfig.getWiredepDefaultOptions()))
+
+            //inject the client js files
+            .pipe($.inject(gulp.src(myConfig.appSourceFiles)))
+
+            //inject the css
+            .pipe($.inject(gulp.src(myConfig.compiledLess)))
+
+            // the desination is the same location as the index.html file 
+            .pipe(gulp.dest(myConfig.sourceFolderRoot));
 });
 //////////////////////////////////////////////
 
@@ -415,6 +365,17 @@ function serve(isDev){
 ///////////////////////////////////////
 /// functions
 ///////////////////////////////////////
+
+function logWireDepSettings(){
+    log('wiredep starting');
+    log('using index.html file =' + myConfig.clientIndexFile);
+    log('using source files =' + myConfig.appSourceFiles);
+    log('using css file =' + myConfig.myConfig);
+    log('Writing backto  =' + myConfig.sourceFolderRoot);
+}
+
+
+
 function changeEvent(event){
     var srcPattern = new RegExp('./.*(?=/' + config.source + ')/');
 
