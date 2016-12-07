@@ -10,11 +10,15 @@ module.exports = function(){
     var componetsSource = sourceFolderRoot + 'Components/**/*.js';
     var examplesSource = sourceFolderRoot + 'Examples/**/*.js';
 
+    //server
+    var serverFolder = sourceFolderRoot + 'server/';
+
     //bower
     var bowerFilesPath = './bower_components/';
     var bowerJsonFile = './bower.json';
 
- 
+    
+
     var config = {
 
 
@@ -33,13 +37,29 @@ module.exports = function(){
         //main index.html file
         clientIndexFile: sourceFolderRoot + 'index.html',
 
+
+
+        ///////////////////////////////////////
+        ///  Node Server
+        nodeServerOptions: function (isDev) {
+            return {
+                script: serverFolder + 'app.js',
+                delayTime: 1,
+                port: 7203,
+                env: {
+                    'PORT': 7203,
+                    'NODE_ENV': isDev ? 'dev' : 'build'
+                },
+                watch: [serverFolder]
+            };
+        }
     };
 
     // wiredef config settings
     config.getWiredepDefaultOptions = function(){
         return {
             //location of the bower.json file
-            bowerJson: bowerJsonFile,
+            bowerJson: require(bowerJsonFile),
 
             //location of bower_components
             directory: bowerFilesPath,

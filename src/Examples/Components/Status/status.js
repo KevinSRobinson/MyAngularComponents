@@ -1,11 +1,11 @@
-var status = {
-    controllerAs: 'vm',
-    controller: function() {
-        var vm = this;
+// var status = {
+//     controllerAs: 'vm',
+//     controller: function() {
+//         var vm = this;
         
-    },
-    templateUrl: './Components/Status/status.html'
-};
+//     },
+//     templateUrl: './Components/Status/status.html'
+// };
 
 
-angular.module('examples').component('status', status);
+// angular.module('examples').component('status', status);

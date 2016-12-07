@@ -90,6 +90,77 @@ gulp.task('wiredep',  function(){
 
 
 
+////////////////////////////////
+// Build
+
+
+
+gulp.task('serve-dev', ['wiredep'], function(){
+   serve(true);
+});
+
+
+
+function serve(isDev){
+   
+    return $.nodemon(myConfig.nodeServerOptions(isDev))
+
+        .on('restart', function(ev) {
+            log('noode server restarted');            
+            log(ev);
+        })
+        .on('start', function() {
+            log('noode server started');
+            startBrowserSync(isDev);
+        })
+        .on('crash', function() {
+            log('noode server crashed');
+        })
+        .on('exit', function() {
+           log('noode server exit');
+        });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //////////////////////////////////////////////
 // optimize
@@ -312,51 +383,6 @@ gulp.task('watch-exampletemplates',  function() {
 
 
 
-gulp.task('serve-build', ['optimize'], function(){
-   serve(false);
-});
-
-gulp.task('serve-dev', ['inject'], function(){
-   serve(true);
-});
-
-
-
-function serve(isDev){
-   
-    var nodeOptions = {
-        script: config.nodeServer,
-        delayTime: 1,
-        env: {
-            'PORT': port,
-            'NODE_ENV': isDev ? 'dev' : 'build'
-        },
-        watch: [config.server]
-    };
-
-    return $.nodemon(nodeOptions)
-        .on('restart', function(ev) {
-            log('noode server restarted');            
-            log(ev);
-
-            setTimeout(function(){
-                browserSync.notify('reloading now ...');
-                browserSync.reload({stream: false});
-            }, config.browserReloadDelay);
-        })
-        .on('start', function() {
-            log('noode server started');
-            startBrowserSync(isDev);
-        })
-        .on('crash', function() {
-            log('noode server crashed');
-        })
-        .on('exit', function() {
-           log('noode server exit');
-        });
-}
-
-
 
 
 
@@ -407,7 +433,7 @@ function  startBrowserSync(isDev){
     }
 
     var options = {
-            proxy: 'localhost:' + config.browsersyncPort,
+            proxy: 'localhost:' + 7203,
             port: 4000,
             files:isDev ? [
                     config.client + '**/*.*',
