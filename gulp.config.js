@@ -18,8 +18,8 @@ module.exports = function() {
 
         //all js to vet
         sourceFiles: [
-            './src/Components/**/**/**/*.js',
-            './src/Examples/**/**/*.js'
+            './src/Components/**/*.js',
+            './src/Examples/**/*.js'
         ],
         index: './src/index.html',
         server: server,
@@ -31,13 +31,13 @@ module.exports = function() {
         bower: {
             json: require('./bower.json'),
             directory: './bower_components/',
-            ignorePath: '../..'
         },
         npm: {
             json: require('./package.json'),
             directory: './node_modules/',
             ignorePath: '../..'
         },
+        
         templateCache: {
             file: 'templates.js',
             options: {
@@ -90,7 +90,8 @@ module.exports = function() {
         return {
             bowerJson: config.bower.json,
             directory: config.bower.directory,
-            ignorePath: config.bower.ignorePath
+            ignorePath: '**.**',
+            
         };
     };
 

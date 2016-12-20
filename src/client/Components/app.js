@@ -1,4 +1,4 @@
-var app = angular.module('myComponents', ['ngAnimate', 'ejangular', 'ui.bootstrap', 'ngSanitize', 'ui.select']);
+var app = angular.module('myComponents', ['ngAnimate', 'ui.bootstrap', 'ngSanitize', 'ui.select']);
 
 
 // app.config(function($momentProvider){

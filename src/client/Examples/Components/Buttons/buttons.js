@@ -17,7 +17,7 @@ var buttons = {
             vm.buttonEvents.push('Delete Button Clicked');
         };
     },
-    templateUrl: 'app/Buttons/buttons.html'
+    templateUrl: 'src/client/Buttons/buttons.html'
 };
 
 

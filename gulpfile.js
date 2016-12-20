@@ -31,11 +31,11 @@ gulp.task('default', ['components']);
 gulp.task('vet', function(){
     
     log ('Analyzing Code');
-
+    log (myConfig.appSourceFiles);
     return gulp
 
             //load all the source js files
-            .src(myConfig.sourceFiles)
+            .src(myConfig.appSourceFiles)
             
             //print out files being Analyzed
             //use gulp-if & yargs to allow switching this
@@ -67,6 +67,9 @@ gulp.task('wiredep',  function(){
 
     logWireDepSettings();
 
+    console.log(myConfig.clientFolderRoot);
+
+
     return gulp
             //use the client index.html file 
             .src(myConfig.clientIndexFile)
@@ -76,13 +79,17 @@ gulp.task('wiredep',  function(){
             .pipe(wiredep(myConfig.getWiredepDefaultOptions()))
 
             //inject the client js files
-            .pipe($.inject(gulp.src(myConfig.appSourceFiles)))
+            .pipe($.inject(gulp.src(myConfig.componentSourceFiles)))
 
-            //inject the css
-            .pipe($.inject(gulp.src(myConfig.compiledLess)))
+            //inject the client js files
+            // .pipe($.inject(gulp.src(myConfig.examplesSourceFiles), {
+            //     starttag: '<!-- inject:examples:js -->'
+            // }))
+            // //inject the css
+            // .pipe($.inject(gulp.src(myConfig.compiledLess)))
 
             // the desination is the same location as the index.html file 
-            .pipe(gulp.dest(myConfig.sourceFolderRoot));
+            .pipe(gulp.dest(myConfig.clientFolderRoot));
 });
 //////////////////////////////////////////////
 
@@ -95,7 +102,7 @@ gulp.task('wiredep',  function(){
 
 
 
-gulp.task('serve-dev', ['wiredep'], function(){
+gulp.task('serve-dev', ['wiredep', 'template-cache'], function(){
    serve(true);
 });
 
@@ -123,9 +130,49 @@ function serve(isDev){
 
 
 
+gulp.task('start-browsersync', function(){
+    startBrowserSync(true);
+});
 
 
+////////////////////////////////
+// Browser Sync
+function  startBrowserSync(isDev){
+    // if(args.nosync || browserSync.active){
+    //     return;
+    // }
 
+    log('starting browser-sync');
+
+    // if(isDev)
+    // {
+    //     gulp.watch([config.less], ['styles'])
+    //         .on('change', function(event) { changeEvent(event); });
+    // }
+    // else {
+    //      gulp.watch([config.less, config.js, config.html], ['optimize', browserSync.reload])
+    //         .on('change', function(event) { changeEvent(event); });
+    // }
+
+    var options = {
+            proxy: 'localhost:' + myConfig.nodeServerPort,
+            port: myConfig.browserSyncPort,
+            files:isDev ? [
+                    config.allSourceFiles,
+                    '!' + config.less,
+                    config.temp + '**/*.css'
+                ] : [],
+           //injectChanges: true,
+            logFileChanges: true,
+            logLevel: 'debug',
+            logPrefix: 'gulp-patterns',
+            notify: true,
+            reloadDelay: 0,
+            
+    };
+
+    browserSync(options);    
+} 
 
 
 
@@ -317,7 +364,7 @@ gulp.task('less-watcher', function() {
 ///////////////////////////////////////
 /// templatecache
 ///////////////////////////////////////
-gulp.task('templatecache', function() {
+gulp.task('template-cache', function() {
 
     log('Creating templatecache');
     log(config.srcTemplates);
@@ -325,7 +372,7 @@ gulp.task('templatecache', function() {
     log(config.templateCache.options);
     log(config.dest);
 
-    return gulp.src(config.srcTemplates)
+    return gulp.src(myConfig.componetTemplates)
         .pipe($.debug())
         .pipe($.minifyHtml({
             empty: true
@@ -413,50 +460,6 @@ function changeEvent(event){
 
 
 
-
-//functions
-function  startBrowserSync(isDev){
-    if(args.nosync || browserSync.active){
-        return;
-    }
-
-    log('starting browser-sync');
-
-    if(isDev)
-    {
-        gulp.watch([config.less], ['styles'])
-            .on('change', function(event) { changeEvent(event); });
-    }
-    else{
-         gulp.watch([config.less, config.js, config.html], ['optimize', browserSync.reload])
-            .on('change', function(event) { changeEvent(event); });
-    }
-
-    var options = {
-            proxy: 'localhost:' + 7203,
-            port: 4000,
-            files:isDev ? [
-                    config.client + '**/*.*',
-                    '!' + config.less,
-                    config.temp + '**/*.css'
-                ] : [],
-            ghostMode:{
-                clicks: true,
-                location: false,
-                forms: true,
-                scroll: true
-            },
-            injectChangees: true,
-            logFileChanges: true,
-            logLevel: 'debug',
-            logPrefix: 'gulp-patterns',
-            notify: true,
-            reloadDelay: 0
-            
-    };
-
-    browserSync(options);    
-} 
 
 
 function clean(path, done) {
